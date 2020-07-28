@@ -1,8 +1,11 @@
-mixin card-info(img,title,text1,text2)
-    .card-info
+mixin card-info(img,title,text1,text2,label)
+    .card-info&attributes(attributes)
         .card-info__icon
-            img(src="img/emoji/"+img+".png" alt='emoji' width='55')
+            img(src="img/emoji/"+img+".png" alt='emoji')
         .card-info__text
             h4.title-4 #{title}
             p !{text1}
             p !{text2}
+
+        if label
+            .card-label #{label}
