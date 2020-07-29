@@ -1,4 +1,6 @@
 .video-review{
+	background: #F9F5E6;
+	padding-top: 80px;
 	.title-2{
 		max-width: 400px;
 		margin-bottom: 1.15em;
@@ -61,6 +63,27 @@
 	filter: drop-shadow(0px 15px 30px rgba(82, 82, 82, 0.15));
 	border-radius: 10px;
 	overflow: hidden;
+	position: relative;
+	}
+	.play-button{
+		position: absolute;
+		bottom: 30px;
+		left: 55px;
+		transition: .5s;
+
+		&:hover{
+			opacity: .6;
+		}
+
+		span{
+			position: absolute;
+			top: 41%;
+			left: 40%;
+			font-size: 20px;
+			transform: translate(-50%, -50%);
+			font-weight: 700;
+		}
+
 	}
 
 .video-review__item:nth-child(2n){
