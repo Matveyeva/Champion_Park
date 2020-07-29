@@ -1,7 +1,7 @@
 mixin card-info(img,title,text1,text2,label)
     .card-info&attributes(attributes)
         .card-info__icon
-            img(src="img/emoji/"+img+".png" alt='emoji')
+            img(src="img/emoji/"+img+".svg" alt='emoji')
         .card-info__text
             h4.title-4 #{title}
             p !{text1}
@@ -9,3 +9,18 @@ mixin card-info(img,title,text1,text2,label)
 
         if label
             .card-label #{label}
+
+
+mixin card-team(img,title,text2,label,icon)
+    .card-team&attributes(attributes)
+        .card-team__img
+            img(src="img/team/" + img + ".jpg" alt='team')
+        .card-info__text
+            h4.title-4 #{title}
+            p !{text2}
+
+        if label
+            .card-label #{label}
+        if icon
+            .card-icon
+                img(src="img/team/" + icon + ".svg" alt='icon')

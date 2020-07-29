@@ -1,0 +1,61 @@
+//Блок О детях заботятся
+.team{
+  background-color: @bcg;
+  padding-top: 80px;
+  padding-bottom: 160px;
+  .title-2{
+    margin-bottom: 60px;
+  }
+}
+
+
+//Карточка блока Сотрудники
+.card-team{
+  position: relative;
+  max-width: 300px;
+  min-height: 380px;
+  border: 2px solid transparent;
+  padding: 20px 20px 30px 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: .5s;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  .card-team__img{
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .card-info__text{
+    p{
+      font-style: 14px;
+      line-height: 16px;
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+.dark-bg{
+  background-color: @black;
+}
+
+
+.card-icon{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: @yellow;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -44px;
+  right: -20px;
+  z-index: 2;
+  @media(max-width: 767px){
+    right: -10px;
+  }
+}
