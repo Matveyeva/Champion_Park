@@ -15,10 +15,11 @@
 	right: 0;
 	bottom: 0;
 	z-index: 5;
-	min-width: 1000px;
+	width: 1000px;
 
 	@media(max-width:1439px) {
-		min-width: 600px;
+		max-width: 900px;
+		width: 65%;
 	}
 }
 
@@ -66,6 +67,10 @@
 		display: inline-block;
 		padding: 6px 10px;
 	}
+}
+
+.contacts a {
+	white-space: nowrap;
 }
 
 .contacts:hover a {
@@ -119,6 +124,7 @@
 	width: 70%;
 	max-width: 600px;
 
+
 	.badge,
 	.title-1 {
 		margin-bottom: 15px;
@@ -133,5 +139,25 @@
 
 .header .button {
 	margin-top: 2em;
-	margin-left: 15px;
+}
+
+.description-block {
+	margin-top: 15vh;
+
+	span {
+		display: inline-block;
+
+		&+span {
+			margin-left: 0.5em;
+		}
+	}
+
+	.description-row {
+		display: flex;
+		align-items: center;
+
+		p {
+			margin-right: 14px;
+		}
+	}
 }
