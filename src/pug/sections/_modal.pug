@@ -1,0 +1,34 @@
+//МОДАЛЬНАЯ ФОРМА ОБРАТНОЙ СВЯЗИ
+section.feedback#feedback
+	.close-modal
+		+close
+	.child-img
+		img(src="img/header/child2.png", alt="image")
+	.container
+		.feedback-content
+			.brand-logo
+				img(src="img/logo/brand.png", alt="logo")
+			h1.title-3 Запись на бесплатный пробный день
+			.feedback-info
+				p Посещения пробного дня не обязывает к платному обучению
+				p Мы хотим, чтобы перед поступлением в сад, вы были уверены, <br> что «Champion Park» станет надежным вторым дом для вашего ребенка 
+			.feedback-form
+				form.contact-form(action="#")
+					.form-group
+						input(type="text", name="userName" )
+						.badge ваше имя
+						.fake-placeholder Ваше имя
+					.form-group
+						input.phone(type="text", name="tel")
+						.badge телефон
+						.fake-placeholder Телефон
+					.form-button
+						input(type="submit" value="Отправить")
+					.agree-info
+						p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+						p Не шлем спам и надежно храним персональные данные
+
+
+
+
+
