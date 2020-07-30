@@ -9,7 +9,6 @@
   }
 }
 
-
 //Карточка блока Сотрудники
 .card-team {
   position: relative;
@@ -17,11 +16,11 @@
   min-height: 380px;
   border: 2px solid transparent;
   padding: 20px 20px 30px 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
   border-radius: 15px;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -45,7 +44,6 @@
   background-color: @black;
 }
 
-
 .card-icon {
   position: absolute;
   display: flex;
@@ -62,7 +60,7 @@
   right: -20px;
   z-index: 2;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     right: -10px;
   }
 }
@@ -80,15 +78,63 @@
 }
 
 .card-team.card-team--label {
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 45px;
   }
 }
 
-
 //Цитата блока Сотрудники
 .quote-block {
   display: flex;
+  position: relative;
+  width: 1280px;
+  height: 492px;
+  font-size: 10px;
+  padding: 80px 80px 90px 70px;
+  background: @bcg-block;
+  border-radius: 20px;
+
+  .quote-author {
+    margin-top: 30px;
+
+    span {
+      display: block;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    span:last-child{
+			font-size: 14px;
+			line-height: 16px;
+			opacity: .6;
+			margin-top: 6px;
+		}
+  }
 }
 
-.quote-block__img {}
+.brand-logo {
+  position: absolute;
+  right: 40px;
+  bottom: 50px;
+  z-index: 2;
+}
+
+.quote-block__img {
+  overflow: hidden;
+  border-radius: 50%;
+  height: 280px;
+  width: 280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 50px;
+}
+
+.quote-block__text {
+  position: relative;
+
+  .quote-decor {
+    position: absolute;
+    top: -20px;
+    left: -8px;
+    transform: translateY(-100%);
+  }
+}

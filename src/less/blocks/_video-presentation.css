@@ -1,4 +1,3 @@
-//============ Секция Видеопрезентация ============
 .video-presentasion {
   padding-top: 100px;
   padding-bottom: 128px;
@@ -9,22 +8,22 @@
   overflow: hidden;
   border: 2px solid transparent;
   transition: 0.5s;
-  .play-button {
-    position: absolute;
-    width: 198px;
-    left: 38px;
-    bottom: 40px;
-    z-index: 2;
-  }
-  .badge {
-    position: absolute;
-    top: 35px;
-    left: 50px;
-    z-index: 2;
-  }
-  &:hover {
-    border: 2px solid #cf3a3a;
-  }
+}
+.video-presentasion__frame .play-button {
+  position: absolute;
+  width: 198px;
+  left: 38px;
+  bottom: 40px;
+  z-index: 2;
+}
+.video-presentasion__frame .badge {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  z-index: 2;
+}
+.video-presentasion__frame:hover {
+  border: 2px solid #cf3a3a;
 }
 .video-presentasion__text {
   position: absolute;

@@ -1,0 +1,87 @@
+.video-review {
+  background: #f9f5e6;
+  padding-top: 80px;
+  padding-bottom: 250px;
+  font-size: 16px;
+}
+.video-review .title-2 {
+  max-width: 400px;
+  margin-bottom: 1.15em;
+}
+.video-review .video-review__wrapper {
+  margin-top: -140px;
+}
+.video-review .video-review__item {
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.video-review .video-review__item + .video-review__item {
+  margin-top: 50px;
+}
+.video-review .video-review__text {
+  width: 38%;
+  max-width: 470px;
+  padding-bottom: 30px;
+}
+@media (max-width: 1359px) {
+  .video-review .video-review__text {
+    padding-bottom: 0;
+  }
+}
+.video-review .text-paragraf p {
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 1.14;
+}
+.video-review .text-paragraf p + p {
+  margin-top: 14px;
+}
+.video-review .quote-author {
+  margin-top: 20px;
+}
+.video-review .quote-author span {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.video-review .quote-author span:last-child {
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.6;
+  margin-top: 6px;
+}
+.video-review .video-review__frame {
+  width: 60%;
+  max-width: 770px;
+  filter: drop-shadow(0px 15px 30px rgba(82, 82, 82, 0.15));
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.video-review .video-review__item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.play-button {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  transition: 0.5s;
+  width: 112px;
+}
+.play-button:hover {
+  opacity: 0.6;
+}
+.play-button span {
+  position: absolute;
+  top: 44%;
+  left: 39%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+}
+.play-button--big span {
+  font-size: 28px;
+}

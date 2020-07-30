@@ -1,101 +1,94 @@
 // ============Секция Родители говорят============
-.video-review{
-	background: #F9F5E6;
-	padding-top: 80px;
-	padding-bottom: 250px;
-	.title-2{
-		max-width: 400px;
-		margin-bottom: 1.15em;
-	}
-	.video-review__wrapper{
-		margin-top: -140px;
-	}
-	.video-review__item{
-		display: flex;
-		-webkit-justify-content: space-between;
-		        justify-content: space-between;
-		-webkit-align-items: flex-end;
-		        align-items: flex-end;
-	&+.video-review__item{
-		margin-top: 50px;
-	}
+.video-review {
+  background: #f9f5e6;
+  padding-top: 80px;
+  padding-bottom: 250px;
+  font-size: 16px;
+  .title-2 {
+    max-width: 400px;
+    margin-bottom: 1.15em;
+  }
+  .video-review__wrapper {
+    margin-top: -140px;
+  }
+  .video-review__item {
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    & + .video-review__item {
+      margin-top: 50px;
+    }
+  }
 
-	}
-	font-size: 16px;
-	.quote-decor{
-	color: @green;
-	font-size: 3em;
-	margin-bottom: 15px;
-	line-height: 1;
-	}
-	.video-review__text{
-		width: 38%;
-		max-width: 470px;
-		padding-bottom: 30px;
-		@media(max-width: 1359px){
-			padding-bottom: 0;
-		}
-	}
-	.text-paragraf{
-		p{
-			font-size: 1.75em;
-		font-weight: 700;
-		line-height: 1.14;
-		&+p{margin-top: 14px;}
-		}
-
-	}
-	.quote-author{
-		margin-top: 20px;
-		span{
-			display: block;
-			font-size: 20px;
-			line-height: 1.2;
-			}
-		span:last-child{
-			font-size: 14px;
-			line-height: 16px;
-			opacity: .6;
-			margin-top: 6px;
-		}
-	}
-.video-review__frame{
-	width: 60%;
-	max-width: 770px;
-	filter: drop-shadow(0px 15px 30px rgba(82, 82, 82, 0.15));
-	border-radius: 10px;
-	overflow: hidden;
-	position: relative;
+  .video-review__text {
+    width: 38%;
+    max-width: 470px;
+    padding-bottom: 30px;
+    @media (max-width: 1359px) {
+      padding-bottom: 0;
+    }
+  }
+  .text-paragraf {
+    p {
+      font-size: 1.75em;
+      font-weight: 700;
+      line-height: 1.14;
+      & + p {
+        margin-top: 14px;
+      }
+    }
+  }
+  .quote-author {
+    margin-top: 20px;
+    span {
+      display: block;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    span:last-child {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.6;
+      margin-top: 6px;
+    }
+  }
+  .video-review__frame {
+    width: 60%;
+    max-width: 770px;
+    filter: drop-shadow(0px 15px 30px rgba(82, 82, 82, 0.15));
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .video-review__item:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
 }
-.video-review__item:nth-child(2n){
+.play-button {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  transition: 0.5s;
+  width: 112px;
 
-	 flex-direction: row-reverse;
-	}
+  &:hover {
+    opacity: 0.6;
+  }
+
+  span {
+    position: absolute;
+    top: 44%;
+    left: 39%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+  }
+  &--big {
+    span {
+      font-size: 28px;
+    }
+  }
 }
-.play-button{
-		position: absolute;
-		bottom: 40px;
-		left: 60px;
-		transition: .5s;
-		width: 112px;
-
-		&:hover{
-			opacity: .6;
-		}
-
-		span{
-			position: absolute;
-			top: 44%;
-			left: 39%;
-			font-size: 20px;
-			transform: translate(-50%, -50%);
-			font-weight: 700;
-		}
-		&--big{
-			span{font-size: 28px;}
-
-		}
-
-	}
 // ============Секция Родители говорят============
-

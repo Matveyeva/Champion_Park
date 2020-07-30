@@ -5,31 +5,33 @@ section.team
         .wrapper
             .row
                 .col-md-6.col-xl-3
-                    +card-team('team1','Антонина Захарова','Руководитель','','corona')(class='dark-bg')
+                    +card-team(1,'team1','Антонина Захарова','Руководитель','','corona')(class='dark-bg')
                 .col-md-6.col-xl-3
-                    +card-team('team2','Ирина Григорьевна Чепенко','Врач-педиатр','','cross')(class='card-team--cross')
+                    +card-team(2,'team2','Ирина Григорьевна Чепенко','Врач-педиатр','','cross')(class='card-team--cross')
                 .col-md-6.col-xl-3
-                    +card-team('team3','Юлия Хащук','Методист','магистр')(class='card-team--label')
+                    +card-team(3,'team3','Юлия Хащук','Методист','магистр')(class='card-team--label')
                 .col-md-6.col-xl-3
-                    +card-team('team4','Георгий Саман','Тренер по восточным единоборствам')
+                    +card-team(4,'team4','Георгий Саман','Тренер по восточным единоборствам')
                 .col-md-6.col-xl-3
-                    +card-team('team5','Юлия Занина','Воспитатель')
+                    +card-team(5,'team5','Юлия Занина','Воспитатель')
                 .col-md-6.col-xl-3
-                    +card-team('team6','Денис Кацалап','Тренер по шахматам')
+                    +card-team(6,'team6','Денис Кацалап','Тренер по шахматам')
                 .col-md-6.col-xl-3
-                    +card-team('team7','Анастасия Иванова','Руководитель')(class='card-team--bg')
+                    +card-team(7,'team7','Анастасия Иванова','Руководитель')(class='card-team--bg')
                 .col-md-6.col-xl-3
-                    +card-team('team8','Светлана Зверева','Воспитатель')
+                    +card-team(8,'team8','Светлана Зверева','Воспитатель')
         .quote-block
+            .brand-logo
+                +brand-logo
             .quote-block__img
-                img(src='img/avatar/av3.jpg' alt='avatar')
+                img(src='img/avatar/Rosa.png' alt='avatar')
             .quote-block__text
                 .quote-decor
-                    i.fas.fa-quote-left
-                .text-paragraf
-                    p У дочки легко прошла адаптация, через месяц перешли на полный<br>день. Ей очень нравится,<br> очень приятная атмосфера, <br>домой не хочет уходить
+                    +quote
+                .text-paragraf.text-40
+                    p Настоящее сокровище — это увлеченная<br>команда профессионалов, наградой<br>за ежедневный труд которых,<br>являются счастливые дети и родители 
                 .quote-author
-                    span  Вера Рахимова
-                    span  18 марта 2020
+                    span  Роза Саргсян
+                    span  Управляющая общеобразовательным<br>комплексом «Дари Детям Добро»
 
 //============ Конец Секции О детях заботятся ============
