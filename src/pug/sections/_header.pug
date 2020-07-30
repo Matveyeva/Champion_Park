@@ -1,6 +1,6 @@
 //- HEADER
 header.header
-	.header-img
+	.child-img
 		img(src="img/header/child.png", alt="image")
 	.container--large
 		.header-nav
@@ -8,12 +8,59 @@ header.header
 			//- menu
 			.header-menu.text-14
 				ul
-					li
+					li.header-menu__item
 						a(href="#") Школы
-					li.active
+						.drop-menu
+							.drop-menu__body
+								.drop-img
+									img(src="img/emoji/teacher.png", alt="emoji")
+								nav
+									a(href="#!")
+										h4.title-4 Champion Park
+										.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+									
+									a(href="#!")
+										h4.title-4.badge-inner Garden Square
+											.badge.badge--small.badge-azure скоро открытие
+										.text-16  ул. Усачева, 11
+
+					li.header-menu__item.active
 						a(href="#") Детские сады
-					li
+						.drop-menu
+							.drop-menu__body
+								.drop-img.b-20
+									img(src="img/emoji/bear.png", alt="emoji")
+								nav
+									a(href="#!").active
+										h4.title-4.badge-inner Champion Park
+											.badge.badge--small.badge-red вы здесь
+										.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+									
+									a(href="#!")
+										h4.title-4 Garden Square
+										.text-16  ул. Ефремова 10, корп. 1
+									a(href="#!")
+										h4.title-4 Marfino
+										.text-16  ул. Большая Марфинская 1, корп. 2
+					li.header-menu__item
 						a(href="#") Образовательный комплекс
+						.drop-menu
+							.drop-menu__body
+								.flex-block
+									nav
+										a(href="#") Концепция
+										a(href="#") Галерея
+										a(href="#") Отзывы
+										a(href="#") Интервью с выпускниками
+									nav
+										a(href="#") События
+										a(href="#") Статьи
+										a(href="#") Награды
+										a(href="#") Партнеры
+								.drop-menu__bottom
+									a(href="#!").badge-inner Летняя программа
+										.badge.badge--small.badge-red Набор на 2020 закрыт
+							
 			.contacts.text-28
 				a(href="tel:+74957960504") 8 (495) 796-05-04
 			
@@ -26,4 +73,38 @@ header.header
 			.text-22
 				p Укрепляем здоровье и психологический комфорт детей, развиваем интеллект и социальные навыки.
 				p  Собственная кухня, врач-педиатр, логопед и психолог
-		button.button Записаться на бесплатный пробный день
+			button.button Записаться на бесплатный пробный день
+		.description-block
+			.text-40
+				span 1 &mdash; 7 лет
+				span 07:30 &mdash; 22:00
+			.description-row
+				p Москва, Мичуринский проспект, ул. Олимпийская Деревня 1, корп. 
+				a(href="#!").button-light на карте
+
+//- МОДАЛЬНАЯ ФОРМА ОБРАТНОЙ СВЯЗИ
+section.feedback#feedback
+	.close-modal
+		span +
+	.child-img
+		img(src="img/header/child2.png", alt="image")
+	.container
+		.feedback-content
+			h1.title-3 Запись на бесплатный пробный день
+			.feedback-info
+				p Посещения пробного дня не обязывает к платному обучению
+				p Мы хотим, чтобы перед поступлением в сад, вы были уверены, <br> что «Champion Park» станет надежным вторым дом для вашего ребенка 
+			.feedback-form
+				form.contact-form(action="#")
+					.form-group
+						input(type="text", name="userName" )
+						.badge ваше имя
+					.form-group
+						input.phone(type="text", name="tel")
+						.badge телефон
+					.form-button
+						input(type="submit" value="Отправить")
+					.agree-info
+						p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+						p Не шлем спам и надежно храним персональные данные 
+

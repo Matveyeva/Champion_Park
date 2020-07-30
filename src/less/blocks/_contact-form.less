@@ -1,0 +1,152 @@
+.feedback {
+	background-color: @yellow;
+	padding-top: 70px;
+	position: relative;
+	height: 100vh;
+	// display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+}
+
+.feedback.active {
+	display: block;
+}
+
+.feedback-content {
+	height: 82vh;
+	width: 65%;
+	max-width: 850px;
+	max-height: 696px;
+	background-color: @black;
+	color: #fff;
+	box-shadow: 0px 15px 30px rgba(153, 124, 38, 0.5);
+	border-radius: 20px;
+	padding: 40px 50px;
+
+	h1 {
+		max-width: 420px;
+		margin-bottom: 16px;
+	}
+
+	.feedback-info {
+		font-size: 16px;
+		max-width: 520px;
+
+		p:first-child {
+
+			line-height: 18px;
+		}
+
+		p:last-child {
+			font-family: @fc;
+			line-height: 20px;
+			font-weight: 400;
+			margin-top: 10px;
+		}
+	}
+}
+
+.feedback-form {
+	max-width: 550px;
+	padding-top: 30px;
+}
+
+.form-group+.form-group {
+	margin-top: 30px;
+}
+
+.form-group {
+	position: relative;
+
+	input {
+		display: block;
+		height: 60px;
+		border-radius: 10px;
+		background-color: #fff;
+		padding-left: 20px;
+		padding-right: 40px;
+		width: 100%;
+		border: none;
+		font-size: 20px;
+		line-height: 1.2;
+
+	}
+}
+
+.form-group .badge {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	z-index: 2;
+	background-color: @bcg-grey;
+	color: rgba(51, 51, 51, .9);
+	letter-spacing: 1.5px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.form-button {
+	margin-top: 40px;
+
+	input {
+		height: 70px;
+		width: 300px;
+		background-color: #FFE9C8;
+		background: #FFE9C8;
+		box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
+		border-radius: 10px;
+		border: 0px;
+		font-size: 20px;
+
+
+	}
+}
+
+.agree-info {
+
+	color: rgba(255, 255, 255, .8);
+	font-size: 16px;
+	line-height: 20px;
+
+	p {
+		font-family: @fc;
+		font-weight: 400;
+		padding-top: 20px;
+
+	}
+
+	a {
+		color: @yellow;
+		font-family: @fc;
+		font-weight: 400;
+	}
+}
+
+.close-modal {
+	position: absolute;
+	top: 33px;
+	right: 65px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 6;
+
+	span {
+		display: inline-block;
+		transform: rotate(45deg);
+		color: @black;
+
+	}
+}
