@@ -8,40 +8,59 @@ header.header
 			//- menu
 			.header-menu.text-14
 				ul
-					li
+					li.header-menu__item
 						a(href="#") Школы
 						.drop-menu
-							.drop-img
-								img(src="img/emoji/teacher.png", alt="emoji")
-							nav
-								a(href="#!")
-									h4.title-4 Champion Park
-									.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
-								
-								a(href="#!")
-									h4.title-4 Garden Square
-										.badge.badge--small.badge-azure скоро открытие
-									.text-16  ул. Усачева, 11
+							.drop-menu__body
+								.drop-img
+									img(src="img/emoji/teacher.png", alt="emoji")
+								nav
+									a(href="#!")
+										h4.title-4 Champion Park
+										.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+									
+									a(href="#!")
+										h4.title-4.badge-inner Garden Square
+											.badge.badge--small.badge-azure скоро открытие
+										.text-16  ул. Усачева, 11
 
-					li.active
+					li.header-menu__item.active
 						a(href="#") Детские сады
 						.drop-menu
-							.drop-img.b-20
-								img(src="img/emoji/bear.png", alt="emoji")
-							nav
-								a(href="#!").active
-									h4.title-4 Champion Park
-										.badge.badge--small.badge-red вы здесь
-									.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
-								
-								a(href="#!")
-									h4.title-4.text-red Garden Square
-									.text-16  ул. Ефремова 10, корп. 1
-								a(href="#!")
-									h4.title-4 Marfino
-									.text-16  ул. Большая Марфинская 1, корп. 2
-					li
+							.drop-menu__body
+								.drop-img.b-20
+									img(src="img/emoji/bear.png", alt="emoji")
+								nav
+									a(href="#!").active
+										h4.title-4.badge-inner Champion Park
+											.badge.badge--small.badge-red вы здесь
+										.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+									
+									a(href="#!")
+										h4.title-4 Garden Square
+										.text-16  ул. Ефремова 10, корп. 1
+									a(href="#!")
+										h4.title-4 Marfino
+										.text-16  ул. Большая Марфинская 1, корп. 2
+					li.header-menu__item
 						a(href="#") Образовательный комплекс
+						.drop-menu
+							.drop-menu__body
+								.flex-block
+									nav
+										a(href="#") Концепция
+										a(href="#") Галерея
+										a(href="#") Отзывы
+										a(href="#") Интервью с выпускниками
+									nav
+										a(href="#") События
+										a(href="#") Статьи
+										a(href="#") Награды
+										a(href="#") Партнеры
+								.drop-menu__bottom
+									a(href="#!").badge-inner Летняя программа
+										.badge.badge--small.badge-red Набор на 2020 закрыт
+							
 			.contacts.text-28
 				a(href="tel:+74957960504") 8 (495) 796-05-04
 			

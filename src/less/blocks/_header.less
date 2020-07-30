@@ -75,10 +75,22 @@
 
 			a.active {
 				color: rgba(51, 51, 51, .5);
+
+				.text-16 {
+					color: @black;
+				}
+
+				&:hover {
+					color: rgba(51, 51, 51, .5);
+				}
 			}
 
 			a:hover {
 				color: @red;
+
+				.text-16 {
+					color: @black;
+				}
 			}
 		}
 
@@ -107,7 +119,12 @@
 	z-index: 5;
 	transform: translateY(100%);
 	left: 0;
-	bottom: -20px;
+	bottom: 0px;
+	display: none;
+}
+
+.drop-menu__body {
+	margin-top: 20px;
 	background: #FFFFFF;
 	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
 	border-radius: 10px;
@@ -117,33 +134,60 @@
 	animation-name: showSlow;
 	-webkit-animation-duration: .5s;
 	animation-duration: .5s;
-	display: none;
+
 
 	a {
 		margin-bottom: 8px;
 	}
 
 	.title-4 {
-		position: relative;
 		width: fit-content;
 		text-transform: none;
 		letter-spacing: 0px;
 		margin-bottom: 5px;
-
-		.badge {
-			margin-left: 5px;
-			position: relative;
-			top: -2px
-		}
-
 	}
 
 	.text-16 {
 		text-transform: none;
 		font-family: @fc;
 		letter-spacing: 0px;
-
 	}
+}
+
+.badge-inner {
+	position: relative;
+
+	.badge {
+		margin-left: 5px;
+		position: relative;
+		top: -2px
+	}
+}
+
+.flex-block {
+	display: flex;
+}
+
+.drop-menu .drop-menu__bottom a {
+	font-size: 20px;
+	text-transform: none;
+	margin-bottom: 0;
+
+}
+
+.flex-block {
+	nav {
+		max-width: 210px;
+	}
+
+	a {
+
+
+		&:hover {
+			color: @red;
+		}
+	}
+
 }
 
 .header-menu li:hover {
@@ -204,7 +248,7 @@
 // header title
 .header-text {
 	margin-top: 75px;
-	padding-left: 15px;
+	padding-left: 10px;
 	width: 70%;
 	max-width: 600px;
 
@@ -226,7 +270,13 @@
 }
 
 .description-block {
-	margin-top: 15vh;
+	margin-top: 130px;
+	padding-left: 10px;
+
+	@media(max-width:1439px) {
+		margin-top: 15vh;
+		padding-left: 0;
+	}
 
 	span {
 		display: inline-block;
@@ -239,9 +289,10 @@
 	.description-row {
 		display: flex;
 		align-items: center;
+		margin-top: 10px;
 
 		p {
-			margin-right: 14px;
+			margin-right: 8px;
 		}
 	}
 }
