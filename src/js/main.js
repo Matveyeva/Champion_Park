@@ -33,7 +33,7 @@ $(document).ready(function () {
 			}
 		}
 	});
-	//  если инпут в фокусе
+	//  если инпут в фокусе убирпем предупреждения
 	for (let item of formGroups) {
 		const inputElement = item.querySelector('input');
 		const badgeElement = item.querySelector('.badge');
@@ -43,13 +43,15 @@ $(document).ready(function () {
 			inputElement.classList.remove('error');
 			placeholderElement.classList.remove('active');
 			badgeElement.classList.remove('hide');
-		})
-
-
+		});
 	}
+	//   закрыть success окно по клику на крестик
+	const closeSuccessWindow = document.querySelector('.close-success');
+	const successWindow = document.querySelector('.success-window');
 
-
-
+	closeSuccessWindow.addEventListener('click', function () {
+		successWindow.classList.add('hide');
+	})
 
 
 
