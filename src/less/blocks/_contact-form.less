@@ -3,7 +3,7 @@
 	padding-top: 70px;
 	position: relative;
 	height: 100vh;
-	// display: none;
+	display: none;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -14,6 +14,11 @@
 	animation-name: showSlow;
 	-webkit-animation-duration: .5s;
 	animation-duration: .5s;
+
+	.child-img {
+		width: 55%;
+		max-width: 990px;
+	}
 }
 
 .feedback.active {
@@ -21,6 +26,8 @@
 }
 
 .feedback-content {
+	position: relative;
+	overflow: hidden;
 	height: 82vh;
 	width: 65%;
 	max-width: 850px;
@@ -78,6 +85,10 @@
 		font-size: 20px;
 		line-height: 1.2;
 
+		&.error {
+			background-color: @bcg-modal;
+		}
+
 	}
 }
 
@@ -91,6 +102,28 @@
 	letter-spacing: 1.5px;
 	font-weight: 700;
 	font-size: 15px;
+	.tr;
+
+	&.hide {
+		opacity: 0;
+	}
+}
+
+.form-group .fake-placeholder {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	opacity: .5;
+	font-size: 20px;
+	z-index: 5;
+	color: @black;
+	opacity: 0;
+	pointer-events: none;
+	.tr;
+}
+
+.form-group .fake-placeholder.active {
+	opacity: 1;
 }
 
 .form-button {
@@ -99,15 +132,21 @@
 	input {
 		height: 70px;
 		width: 300px;
-		background-color: #FFE9C8;
-		background: #FFE9C8;
+		background-color: #fff;
+		// background: #FFE9C8;
 		box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
 		border-radius: 10px;
 		border: 0px;
 		font-size: 20px;
+		cursor: pointer;
+		.tr;
 
-
+		&:hover {
+			background-color: #FFE9C8;
+		}
 	}
+
+
 }
 
 .agree-info {
@@ -124,10 +163,25 @@
 	}
 
 	a {
-		color: @yellow;
+		color: rgba(255, 255, 255, .8);
 		font-family: @fc;
 		font-weight: 400;
+		border-bottom: 1px solid rgba(255, 255, 255, .8);
+
+		&:hover {
+			color: @yellow;
+			border-bottom: 1px solid @yellow;
+		}
 	}
+}
+
+.feedback-content .brand-logo {
+	position: absolute;
+	top: -20px;
+	right: -11%;
+	width: 460px;
+	height: 460px;
+	z-index: 3;
 }
 
 .close-modal {
@@ -142,11 +196,16 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 6;
+	padding-top: 5px;
+	cursor: pointer;
+	.tr;
 
-	span {
-		display: inline-block;
-		transform: rotate(45deg);
-		color: @black;
+	&:hover {
+		background-color: @black;
 
+		svg path {
+			fill: #fff;
+		}
 	}
+
 }
