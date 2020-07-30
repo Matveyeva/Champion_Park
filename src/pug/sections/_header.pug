@@ -1,6 +1,6 @@
 //- HEADER
 header.header
-	.header-img
+	.child-img
 		img(src="img/header/child.png", alt="image")
 	.container--large
 		.header-nav
@@ -83,7 +83,11 @@ header.header
 				a(href="#!").button-light на карте
 
 //- МОДАЛЬНАЯ ФОРМА ОБРАТНОЙ СВЯЗИ
-section.feedback
+section.feedback#feedback
+	.close-modal
+		span +
+	.child-img
+		img(src="img/header/child2.png", alt="image")
 	.container
 		.feedback-content
 			h1.title-3 Запись на бесплатный пробный день

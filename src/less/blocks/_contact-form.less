@@ -1,8 +1,23 @@
 .feedback {
 	background-color: @yellow;
 	padding-top: 70px;
+	position: relative;
+	height: 100vh;
+	// display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+}
 
-	.contact-form {}
+.feedback.active {
+	display: block;
 }
 
 .feedback-content {
@@ -112,5 +127,26 @@
 		color: @yellow;
 		font-family: @fc;
 		font-weight: 400;
+	}
+}
+
+.close-modal {
+	position: absolute;
+	top: 33px;
+	right: 65px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 6;
+
+	span {
+		display: inline-block;
+		transform: rotate(45deg);
+		color: @black;
+
 	}
 }
