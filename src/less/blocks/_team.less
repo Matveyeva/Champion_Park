@@ -1,16 +1,17 @@
 //Блок О детях заботятся
-.team{
+.team {
   background-color: @bcg;
   padding-top: 80px;
   padding-bottom: 160px;
-  .title-2{
+
+  .title-2 {
     margin-bottom: 60px;
   }
 }
 
 
 //Карточка блока Сотрудники
-.card-team{
+.card-team {
   position: relative;
   max-width: 300px;
   min-height: 380px;
@@ -24,13 +25,15 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  .card-team__img{
+
+  .card-team__img {
     border-radius: 6px;
     margin-bottom: 10px;
     overflow: hidden;
   }
-  .card-info__text{
-    p{
+
+  .card-info__text {
+    p {
       font-style: 14px;
       line-height: 16px;
       letter-spacing: -0.5px;
@@ -38,19 +41,19 @@
   }
 }
 
-.dark-bg{
+.dark-bg {
   background-color: @black;
 }
 
 
-.card-icon{
+.card-icon {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-team.dark-bg .card-icon{
+.card-team.dark-bg .card-icon {
   width: 80px;
   height: 80px;
   background-color: @yellow;
@@ -58,32 +61,34 @@
   top: -44px;
   right: -20px;
   z-index: 2;
-  @media(max-width: 767px){
+
+  @media(max-width: 767px) {
     right: -10px;
   }
 }
 
-.card-team.card-team--cross .card-icon{
+.card-team.card-team--cross .card-icon {
   right: 20px;
   bottom: 30px;
 }
 
-.card-team.card-team--bg{
+.card-team.card-team--bg {
   background-image: url("../img/team/bcg.png");
   background-size: contain;
   background-position: -28px 57px;
   background-repeat: no-repeat;
 }
 
-.card-team.card-team--label{
-  @media(max-width: 768px){
+.card-team.card-team--label {
+  @media(max-width: 768px) {
     margin-top: 45px;
   }
 }
 
 
 //Цитата блока Сотрудники
-.quote-block{
+.quote-block {
   display: flex;
 }
-.quote-block__img
+
+.quote-block__img {}

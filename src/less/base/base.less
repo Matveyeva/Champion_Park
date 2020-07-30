@@ -2,8 +2,8 @@
 	font-family: 'Calibri Regular';
 	src: url('../fonts/Calibri/Calibri.eot');
 	src: url('../fonts/Calibri/Calibri.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/Calibri/Calibri.woff') format('woff'),
-	url('../fonts/Calibri/Calibri.ttf') format('truetype');
+		url('../fonts/Calibri/Calibri.woff') format('woff'),
+		url('../fonts/Calibri/Calibri.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -12,8 +12,8 @@
 	font-family: 'Calibri Bold';
 	src: url('../fonts/Calibri/Calibri-Bold.eot');
 	src: url('../fonts/Calibri/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/Calibri/Calibri-Bold.woff') format('woff'),
-	url('../fonts/Calibri/Calibri-Bold.ttf') format('truetype');
+		url('../fonts/Calibri/Calibri-Bold.woff') format('woff'),
+		url('../fonts/Calibri/Calibri-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -21,13 +21,13 @@
 @font-face {
 	font-family: 'rotondac-bold';
 	src: url('../fonts/Rotondac/rotondac-bold.otf') format("opentype"),
-	url('../fonts/Rotondac/rotondac-bold.woff') format('woff'),
-	url('../fonts/Rotondac/rotondac-bold.woff2') format('woff');
+		url('../fonts/Rotondac/rotondac-bold.woff') format('woff'),
+		url('../fonts/Rotondac/rotondac-bold.woff2') format('woff');
 	font-weight: 700;
 }
 
-h1{
-	font-family: 'rotondac-bold' ;
+h1 {
+	font-family: 'rotondac-bold';
 }
 
 //.box-name {font-family: 'Calibri Bold';}
@@ -48,7 +48,7 @@ body {
 	height: 100%;
 	color: #333;
 	font-family: 'Calibri Regular';
-	font-family: 'rotondac-bold' ;
+	font-family: 'rotondac-bold';
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.25;
@@ -61,6 +61,9 @@ a:hover {
 	text-decoration: none;
 }
 
+a {
+	color: @black;
+}
 
 ul {
 	margin: 0;
@@ -92,7 +95,7 @@ button {
 	border: 0px;
 }
 
-
+.container--large,
 .container {
 	width: 100%;
 	max-width: 1290px;
@@ -109,37 +112,88 @@ button {
 	}
 }
 
-//Типографика
-h1,h2,h3,h4{
-	font-family: 'rotondac-bold';
-	color: #333333;
-	font-weight: 700;
+.container--large {
+	max-width: 1310px;
 }
 
-.title-1{
+.button {
+	font-size: 20px;
+	line-height: 24px;
+	font-family: @fc;
+	font-weight: 700;
+	text-align: center;
+	background: #FFFFFF;
+	box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
+	border-radius: 10px;
+	height: 70px;
+	padding-left: 2em;
+	padding-right: 2em;
+	display: inline-block;
+	.tr;
+
+	&:hover {
+		background-color: @black;
+		color: #fff;
+	}
+}
+
+//Типографика
+h1,
+h2,
+h3,
+h4 {
+	// font-family: 'rotondac-bold';
+	// color: #333333;
+	// font-weight: 700;
+}
+
+.title-1 {
 	font-size: 78px;
 	line-height: 1.15;
 }
 
-.title-2{
+.title-2 {
 	font-size: 58px;
 	line-height: 1.15;
-	@media(max-width:767px){
+
+	@media(max-width:767px) {
 		font-size: 40px;
 	}
 }
+
 .text-40,
-.title-3{
+.title-3 {
 	font-size: 40px;
 	line-height: 1.2;
 }
 
-.title-4{
+.title-4 {
 	font-size: 20px;
 	line-height: 1.2;
 }
 
-.text-white{
+.text-14 {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	// font-weight: 700;
+}
+
+.text-22 p,
+.text-22 {
+	font-size: 22px;
+	line-height: 1.2;
+	letter-spacing: -0.8px;
+}
+
+.text-28 {
+	font-size: 28px;
+	line-height: 1.14;
+}
+
+.text-white {
 	color: #fff;
 }
 
@@ -157,7 +211,5 @@ h1,h2,h3,h4{
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 5px;
-	box-shadow: 0px 10px 10px rgba(80, 197, 201, 0.3);
+	// box-shadow: 0px 10px 10px rgba(80, 197, 201, 0.3);
 }
-
-
