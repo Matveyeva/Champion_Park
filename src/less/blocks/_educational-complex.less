@@ -2,7 +2,21 @@
 	background: #F9F5E6;
 	padding-top: 60px;
 	padding-bottom: 54px;
-	position: relative;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: none;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+
+	&.active {
+		display: block;
+	}
 
 	.bg-img {
 		position: absolute;
