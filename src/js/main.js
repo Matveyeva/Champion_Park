@@ -4,15 +4,24 @@ $(document).ready(function () {
 
 	// Показать форму по клику на гамбургер
 	const gamburgerBtn = document.querySelector('.btn-bars');
-	const modalCloseBtn = document.querySelector('.close-modal');
+	const openFormBtn = document.querySelector('#openForm');
+	const modalCloseBtn = document.querySelectorAll('.close-modal');
 	const modalForm = document.querySelector('#feedback');
+	const educComplex = document.querySelector('.educational-complex');
 
 	gamburgerBtn.addEventListener('click', function () {
+		educComplex.classList.add('active')
+	});
+
+	openFormBtn.addEventListener('click', function () {
 		modalForm.classList.add('active')
 	});
-	modalCloseBtn.addEventListener('click', function () {
-		modalForm.classList.remove('active')
-	});
+	for (let item of modalCloseBtn) {
+		item.addEventListener('click', function () {
+			this.closest('section').classList.remove('active')
+		});
+	}
+
 
 	// валидация полей формы
 	const contactForm = document.querySelector('.contact-form');
