@@ -1,37 +1,53 @@
 //============ Cекция О детях заботятся ============
 section.team
-    .container
-        h2.title-2 О детях заботятся
-        .wrapper
-            .row
-                .col-md-6.col-xl-3
-                    +card-team(1,'team1','Антонина Захарова','Руководитель','','corona')(class='dark-bg')
-                .col-md-6.col-xl-3
-                    +card-team(2,'team2','Ирина Григорьевна Чепенко','Врач-педиатр','','cross')(class='card-team--cross')
-                .col-md-6.col-xl-3
-                    +card-team(3,'team3','Юлия Хащук','Методист','магистр')(class='card-team--label')
-                .col-md-6.col-xl-3
-                    +card-team(4,'team4','Георгий Саман','Тренер по восточным единоборствам')
-                .col-md-6.col-xl-3
-                    +card-team(5,'team5','Юлия Занина','Воспитатель')
-                .col-md-6.col-xl-3
-                    +card-team(6,'team6','Денис Кацалап','Тренер по шахматам')
-                .col-md-6.col-xl-3
-                    +card-team(7,'team7','Анастасия Иванова','Руководитель')(class='card-team--bg')
-                .col-md-6.col-xl-3
-                    +card-team(8,'team8','Светлана Зверева','Воспитатель')
-        .quote-block
-            .brand-logo
-                +brand-logo
-            .quote-block__img
-                img(src='img/avatar/Rosa.png' alt='avatar')
-            .quote-block__text
-                .quote-decor
-                    +quote
-                .text-paragraf.text-40
-                    p Настоящее сокровище — это увлеченная<br>команда профессионалов, наградой<br>за ежедневный труд которых,<br>являются счастливые дети и родители 
-                .quote-author
-                    span  Роза Саргсян
-                    span  Управляющая общеобразовательным<br>комплексом «Дари Детям Добро»
+	.container
+		h2.title-2 О детях заботятся
+		.wrapper
+			.row
+				.col-md-6.col-xl-3
+					+card-team(1,'team1','Антонина Захарова','Руководитель','','corona')(class='dark-bg')
+				.col-md-6.col-xl-3
+					+card-team(2,'team2','Ирина Григорьевна Чепенко','Врач-педиатр','','cross')(class='card-team--cross')
+				.col-md-6.col-xl-3
+					+card-team(3,'team3','Юлия Хащук','Методист','магистр')(class='card-team--label')
+				.col-md-6.col-xl-3
+					+card-team(4,'team4','Георгий Саман','Тренер по восточным единоборствам')
+				.col-md-6.col-xl-3
+					+card-team(5,'team5','Юлия Занина','Воспитатель')
+				.col-md-6.col-xl-3
+					+card-team(6,'team6','Денис Кацалап','Тренер по шахматам')
+				.col-md-6.col-xl-3
+					+card-team(7,'team7','Анастасия Иванова','Руководитель')(class='card-team--bg')
+				.col-md-6.col-xl-3
+					+card-team(8,'team8','Светлана Зверева','Воспитатель')
+		.quote-block
+			.brand-logo
+				+brand-logo
+			.quote-block__img
+				img(src='img/avatar/Rosa.png' alt='avatar')
+			.quote-block__text
+				.quote-decor
+					+quote
+				.text-paragraf.text-40
+					p Настоящее сокровище — это увлеченная<br>команда профессионалов, наградой<br>за ежедневный труд которых,<br>являются счастливые дети и родители 
+				.quote-author
+					span  Роза Саргсян
+					span  Управляющая общеобразовательным<br>комплексом «Дари Детям Добро»
 
 //============ Конец Секции О детях заботятся ============
+
+//============ Карточка Сотрудника ============
+section.team-description
+	.container
+		.title-group
+			h3.title-3 Юлия Хащук
+			.badge.badge--light Свернуть
+			span Методист
+		.wrapper
+			.row
+				.col-xl-8
+					.text-block.text-22
+						p Методист — как режиссер в театре. Разработка занятий, сценариев, программ — методист отвечает за все, что делает пребывание ребенка в детском саду интересным, познавательным и развивающим.
+						p Курирует работу воспитателей и других педагогических работников (музыкального руководителя, логопеда, психолога), проверяет планы воспитательной работы, составляет расписания занятий, обязательных и факультативных.
+				.col-xl-4
+					.text-block
