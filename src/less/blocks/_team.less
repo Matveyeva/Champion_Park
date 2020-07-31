@@ -102,12 +102,12 @@
       font-size: 20px;
       line-height: 1.2;
     }
-    span:last-child{
-			font-size: 14px;
-			line-height: 16px;
-			opacity: .6;
-			margin-top: 6px;
-		}
+    span:last-child {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.6;
+      margin-top: 6px;
+    }
   }
 }
 
@@ -136,5 +136,40 @@
     top: -20px;
     left: -8px;
     transform: translateY(-100%);
+  }
+}
+
+//Карточка Сотрудника
+.team-description {
+  background: @bcg-grey;
+  border-radius: 20px;
+  // padding: 30px 50px 60px 40px;
+
+  // span{
+  //   margin-bottom: 30px;
+  // }
+
+  .title-group {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .text-block{
+    font-family: @fc;
+    margin-top: 20px;
+  }
+
+  .team-description__img {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 205px;
+    width: 205px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .team-description__doc {
+    margin-bottom: 22px;
   }
 }
