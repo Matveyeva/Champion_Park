@@ -1,4 +1,7 @@
 section.educational-complex
+	.bg-img
+		img(src="img/logo/brand2.png", alt="logo")
+
 	.container
 		.title-group
 			h1.section-title Образовательный комплекс
@@ -13,8 +16,64 @@ section.educational-complex
 				a(href="#") События
 				a(href="#") Награды
 				a(href="#") Партнеры
+				 
+		//БЛОК С КАРТОЧКАМИ ВЕРХНИЙ
 		.educational-block
-			.row
-				.col-xl-8
-					.educational-card
+			.educational-cards
+				//ПЕРВАЯ КАРТОЧКА
+				.educational-card
+					.educational-card__head
+						.card__head-logo
+							img.lazy(data-src="img/logo/card-educ1.png", alt="logo")
+						.sochial
+							a(href="#!").icon-fb
+								+facebook
+							a(href="#!").icon-inst
+								+inst
+					h2.text-40.title-label Детские сады
+						span 1 &mdash; 7 лет
+					.educational-card__body
+						nav
+							a(href="#!").active
+								h4.title-4.badge-inner Champion Park
+									.badge.badge--small.badge-red вы здесь
+								.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+							
+							a(href="#!")
+								h4.title-4 Garden Square
+								.text-16  ул. Ефремова 10, корп. 1
+							a(href="#!")
+								h4.title-4 Marfino
+								.text-16  ул. Большая Марфинская 1, корп. 2
+			
+				// ВТОРАЯ КАРТОЧКА
+				.educational-card
+					.educational-card__head
+						.card__head-logo
+							img.lazy(data-src="img/logo/card-educ2.png", alt="logo")
 						
+					h2.text-40.title-label Школы
+						span 7 &mdash; 11 лет
+					.educational-card__body
+						nav
+							a(href="#!")
+								h4.title-4 Champion Park
+								.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+						
+							a(href="#!")
+								h4.title-4.badge-inner Garden Square
+									.badge.badge--small.badge-azure скоро открытие
+								.text-16  ул. Усачева, 11
+						.sochial.sochial--abs
+							a(href="#!").icon-fb
+								+facebook
+							a(href="#!").icon-inst
+								+inst
+
+			.educational-column
+				.contacts.text-28
+					a(href="tel:84957960504") 8 (495) 796-05-04
+					button.button-light заказать звонок
+				.text-28
+					p  С понедельника по&nbsp;пятницу
+					p 7:30 &mdash; 22:00

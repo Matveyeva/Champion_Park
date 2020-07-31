@@ -146,7 +146,7 @@ button {
 	color: @black;
 	padding-left: 8px;
 	padding-right: 8px;
-	padding-top: 4px;
+	padding-top: 2px;
 	font-size: 14px;
 	line-height: 16px;
 	height: 28px;
@@ -221,6 +221,21 @@ h4 {
 	line-height: 1.2;
 }
 
+.title-label {
+	position: relative;
+	width: fit-content;
+	margin-bottom: 24px;
+
+	span {
+		position: absolute;
+		font-size: 16px;
+		color: rgba(51, 51, 51, .5);
+		top: 4px;
+		right: -10px;
+		transform: translateX(100%);
+	}
+}
+
 .text-22 p,
 .text-22 {
 	font-size: 22px;
@@ -258,7 +273,7 @@ h4 {
 	.button-light {
 		margin-left: 20px;
 		position: relative;
-		top: 2px;
+		top: 1px;
 	}
 }
 
@@ -310,5 +325,41 @@ h4 {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+// СОЦСЕТИ
+.sochial {
+	display: flex;
+	align-items: center;
+
+	a {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: flex !important;
+		font-size: 24px;
+		color: #fff;
+		margin-bottom: 0 !important;
+
+		&+a {
+			margin-left: 14px;
+		}
+
+		svg {
+			margin: auto;
+		}
+
+		background-color: @yellow;
+
+		&.icon-fb {
+			background-color: #9CB2F9;
+		}
+
+		&.icon-inst {
+			background-color: #F795D0;
+			;
+		}
 	}
 }
