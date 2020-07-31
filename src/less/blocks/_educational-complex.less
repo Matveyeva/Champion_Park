@@ -2,5 +2,181 @@
 	background: #F9F5E6;
 	padding-top: 60px;
 	padding-bottom: 54px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: none;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
 
+	&.active {
+		display: block;
+	}
+
+	.bg-img {
+		position: absolute;
+		top: 0;
+		right: 45px;
+		z-index: 1;
+	}
+
+	.title-group {
+		margin-bottom: 13px;
+	}
+}
+
+.educational-menu {
+	margin-bottom: 60px;
+
+	a:hover {
+		color: @red;
+	}
+
+	a {
+		display: inline-block;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		.tr;
+
+		&+a {
+			margin-left: 30px;
+		}
+
+	}
+}
+
+.educational-block {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.educational-cards {
+	display: flex;
+	justify-content: space-between;
+	max-width: 960px;
+	width: 74.4%;
+}
+
+.educational-column {
+	max-width: 300px;
+	width: 23.25%;
+	padding-bottom: 55px;
+
+	.contacts {
+		&:hover a {
+			opacity: 1;
+		}
+
+		a:hover {
+			opacity: .6;
+		}
+
+		button {
+			margin-top: 12px;
+		}
+	}
+
+	.text-28+.text-28 {
+		margin-top: 42px;
+	}
+
+	.text-28 {
+		p+p {
+			margin-top: 16px;
+		}
+	}
+}
+
+.educational-card {
+	position: relative;
+	background: #FFFFFF;
+	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
+	border-radius: 20px;
+	width: 465px;
+	min-height: 460px;
+	padding: 28px 30px 35px;
+
+	.drop-img--logo {
+		width: 160px;
+		height: 160px;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	a {
+		margin-bottom: 8px;
+	}
+
+	.title-4 {
+		width: fit-content;
+		text-transform: none;
+		letter-spacing: 0px;
+		margin-bottom: 5px;
+	}
+
+	.text-16 {
+		text-transform: none;
+		font-family: @fc;
+		letter-spacing: 0px;
+	}
+}
+
+.educational-card__head {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 31px;
+
+	.sochial {
+		margin-top: -15px;
+	}
+}
+
+.educational-card {
+	a {
+		color: @black;
+		display: block;
+	}
+
+	a.active {
+		color: rgba(51, 51, 51, .5);
+
+		.text-16 {
+			color: @black;
+		}
+
+		&:hover {
+			color: rgba(51, 51, 51, .5);
+		}
+	}
+
+	a:hover {
+		color: @red;
+
+		.text-16 {
+			color: @black;
+		}
+	}
+
+}
+
+.educational-card__body {
+	nav a {
+		&+a {
+			margin-top: 30px;
+		}
+	}
+}
+
+.sochial.sochial--abs {
+	position: absolute;
+	bottom: 40px;
+	left: 30px;
 }
