@@ -1,9 +1,14 @@
 // ============ HEADER ============
 .header {
 	height: 100vh;
+	min-height: 840px;
 	max-height: 840px;
 	background-color: @yellow;
 	position: relative;
+
+	@media(max-width:1439px) {
+		min-height: 768px;
+	}
 
 	.logo {
 		margin-right: 12.5%;

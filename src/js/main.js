@@ -27,6 +27,7 @@ $(document).ready(function () {
 	const contactForm = document.querySelector('.contact-form');
 	const formGroups = contactForm.querySelectorAll('.form-group');
 
+
 	contactForm.addEventListener('submit', function (e) {
 		e.preventDefault();
 
