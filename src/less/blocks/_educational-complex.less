@@ -1,14 +1,23 @@
+.scroll-wrapper {
+	// overflow: auto;
+	// height: 75vh;
+	// padding-bottom: 54px;
+	padding-top: 40px;
+
+}
+
 .educational-complex {
 	background: #F9F5E6;
 	padding-top: 60px;
+	position: relative;
 	padding-bottom: 54px;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
+	// position: fixed;
+	// top: 0;
+	// bottom: 0;
+	// left: 0;
 	right: 0;
 	z-index: 10;
-	display: none;
+	// display: none;
 	-webkit-animation-name: showSlow;
 	animation-name: showSlow;
 	-webkit-animation-duration: .5s;
@@ -28,10 +37,14 @@
 	.title-group {
 		margin-bottom: 13px;
 	}
+
+	.button--visual {
+		margin-top: 60px;
+	}
 }
 
 .educational-menu {
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 
 	a:hover {
 		color: @red;
@@ -48,6 +61,8 @@
 		}
 
 	}
+
+
 }
 
 .educational-block {
@@ -56,8 +71,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+
+	&+.educational-block {
+		margin-top: 30px;
+	}
 }
 
+.educational-banner,
 .educational-cards {
 	display: flex;
 	justify-content: space-between;
@@ -179,4 +199,47 @@
 	position: absolute;
 	bottom: 40px;
 	left: 30px;
+}
+
+.educational-banner {
+	border-radius: 20px;
+	overflow: hidden;
+
+	.img-layout {
+		position: absolute;
+		left: 16px;
+		bottom: 20px;
+		width: 430px;
+		height: 222px;
+		padding: 10px 15px;
+		background-color: rgba(51, 51, 51, .5);
+		backdrop-filter: blur(3px);
+		z-index: 3;
+		color: #fff;
+		border-radius: 10px;
+
+		p {
+			font-family: @fc;
+			padding-top: 4px;
+			padding-bottom: 16px;
+		}
+
+		.button-light {
+			border-color: #fff;
+			color: #fff;
+		}
+
+	}
+
+}
+
+.educational-column__text {
+	margin-top: 20px;
+
+	.text-16 {
+		color: rgba(51, 51, 51, .6);
+		margin-top: 10px;
+		margin-bottom: 30px;
+
+	}
 }

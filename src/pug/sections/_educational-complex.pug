@@ -18,64 +18,92 @@ section.educational-complex
 				a(href="#") События
 				a(href="#") Награды
 				a(href="#") Партнеры
-				 
-		//БЛОК С КАРТОЧКАМИ ВЕРХНИЙ
-		.educational-block
-			.educational-cards
-				//ПЕРВАЯ КАРТОЧКА
-				.educational-card
-					.educational-card__head
-						.card__head-logo
-							img.lazy(data-src="img/logo/card-educ1.png", alt="logo")
-						.sochial
-							a(href="#!").icon-fb
-								+facebook
-							a(href="#!").icon-inst
-								+inst
-					h2.text-40.title-label Детские сады
-						span 1 &mdash; 7 лет
-					.educational-card__body
-						nav
-							a(href="#!").active
-								h4.title-4.badge-inner Champion Park
-									.badge.badge--small.badge-red вы здесь
-								.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+				
+	.scroll-wrapper
+		.container
+			//БЛОК С КАРТОЧКАМИ ВЕРХНИЙ
+			.educational-block
+				.educational-cards
+					//ПЕРВАЯ КАРТОЧКА
+					.educational-card
+						.educational-card__head
+							.card__head-logo
+								img.lazy(data-src="img/logo/card-educ1.png", alt="logo")
+							.sochial
+								a(href="#!").icon-fb
+									+facebook
+								a(href="#!").icon-inst
+									+inst
+						h2.text-40.title-label Детские сады
+							span 1 &mdash; 7 лет
+						.educational-card__body
+							nav
+								a(href="#!").active
+									h4.title-4.badge-inner Champion Park
+										.badge.badge--small.badge-red вы здесь
+									.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+								
+								a(href="#!")
+									h4.title-4 Garden Square
+									.text-16  ул. Ефремова 10, корп. 1
+								a(href="#!")
+									h4.title-4 Marfino
+									.text-16  ул. Большая Марфинская 1, корп. 2
+				
+					// ВТОРАЯ КАРТОЧКА
+					.educational-card
+						.educational-card__head
+							.card__head-logo
+								img.lazy(data-src="img/logo/card-educ2.png", alt="logo")
 							
-							a(href="#!")
-								h4.title-4 Garden Square
-								.text-16  ул. Ефремова 10, корп. 1
-							a(href="#!")
-								h4.title-4 Marfino
-								.text-16  ул. Большая Марфинская 1, корп. 2
-			
-				// ВТОРАЯ КАРТОЧКА
-				.educational-card
-					.educational-card__head
-						.card__head-logo
-							img.lazy(data-src="img/logo/card-educ2.png", alt="logo")
-						
-					h2.text-40.title-label Школы
-						span 7 &mdash; 11 лет
-					.educational-card__body
-						nav
-							a(href="#!")
-								h4.title-4 Champion Park
-								.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
-						
-							a(href="#!")
-								h4.title-4.badge-inner Garden Square
-									.badge.badge--small.badge-azure скоро открытие
-								.text-16  ул. Усачева, 11
-						.sochial.sochial--abs
-							a(href="#!").icon-fb
-								+facebook
-							a(href="#!").icon-inst
-								+inst
+						h2.text-40.title-label Школы
+							span 7 &mdash; 11 лет
+						.educational-card__body
+							nav
+								a(href="#!")
+									h4.title-4 Champion Park
+									.text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+							
+								a(href="#!")
+									h4.title-4.badge-inner Garden Square
+										.badge.badge--small.badge-azure скоро открытие
+									.text-16  ул. Усачева, 11
+							.sochial.sochial--abs
+								a(href="#!").icon-fb
+									+facebook
+								a(href="#!").icon-inst
+									+inst
 
-			.educational-column
-				.contacts.text-28
-					a(href="tel:84957960504") 8 (495) 796-05-04
-					button.button-light заказать звонок
-				.text-28
-					p  С понедельника по&nbsp;пятницу
-					p 7:30 &mdash; 22:00
+				.educational-column
+					.contacts.text-28
+						a(href="tel:84957960504") 8 (495) 796-05-04
+						button.button-light заказать звонок
+					.text-28
+						p  С понедельника по&nbsp;пятницу
+						p 7:30 &mdash; 22:00
+			
+			//БЛОК С БАННЕРОМ НИЖНИЙ
+			.educational-block
+				.educational-banner
+					img(src="img/banners/educ-banner.jpg", alt="banner")
+					.img-layout
+						h3.title-3 Летняя программа
+						p Игры, квесты, продуктивная и&nbsp;познавательно&#8209;исследовательская деятельность, чтение художественной литературы, сюжетно-ролевые игры и многое другое
+						button.button-light Узнать больше 
+					
+				.educational-column
+					.badge.badge-red Набор на 2020 закрыт
+					.educational-column__text
+						p.text-28  1 июня — 31 августа
+						p.text-16 ПН — ПТ, 7:30 — 22:00
+						p.text-28 Для детей от 1 года до 11 лет
+			+btn-visual
+
+
+
+
+			.footer-content
+				a(href="#!") Сведения об общеобразовательной организации
+				a(href="#!") Политика конфиденциальности
+				p &copy; 2012 — 2020 Общеобразовательный комплекс «Дари Детям Добро» 
+

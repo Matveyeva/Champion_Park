@@ -3,6 +3,7 @@
 	padding-top: 70px;
 	position: relative;
 	height: 100vh;
+	min-height: 840px;
 	display: none;
 	position: fixed;
 	top: 0;
@@ -14,6 +15,10 @@
 	animation-name: showSlow;
 	-webkit-animation-duration: .5s;
 	animation-duration: .5s;
+
+	@media(max-width:1439px) {
+		min-height: 768px;
+	}
 
 	.child-img {
 		width: 55%;
