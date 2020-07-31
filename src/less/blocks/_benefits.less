@@ -114,28 +114,58 @@
 
 //Карточка блока Почему мы — Питание
 .benefit-description {
-  background-color: rgba(255, 207, 64,.2);
+  background-color: rgba(255, 207, 64, 0.2);
   padding: 60px 75px 90px 75px;
 
-  .title-3 {
-    padding-bottom: 30px;
+  .title-group{
+    width: 100%;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 30px;
   }
 
+  
   .text-30 {
-    padding-bottom: 40px;
+    font-family: @fc;
+    margin-bottom: 40px;
+    @media(max-width: 1439px){
+      font-size: 26px;
+    }
   }
 
   .text-block {
+    position: relative;
     margin-bottom: 40px;
 
     .title-1 {
       color: @green;
     }
+
+    p+p {
+      margin-top: 20px;
+    }
+
+    .card-label {
+      position: absolute;
+      top: 114px;
+      left: 232px;
+    }
+
+    .brand-logo {
+      border:1px solid red;
+      position: absolute;
+      right: 40px;
+      bottom: 50px;
+      z-index: 2;
+    }
   }
-  .text-block.white {
+  .text-block--white {
     background-color: @bcg-rose;
     box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
     border-radius: 10px;
     padding: 16px 30px 30px 20px;
+    margin-left: -18px;
   }
 }
+
+
