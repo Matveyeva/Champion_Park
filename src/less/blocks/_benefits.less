@@ -126,19 +126,31 @@
 
   
   .text-30 {
-    font-family: @fc;
+    font-family: @fcb;
     margin-bottom: 40px;
     @media(max-width: 1439px){
       font-size: 26px;
     }
   }
 
+  .text-block--title{
+    .title-1 {
+      color: @green;
+    } 
+
+    p{
+      font-size: 20px;
+    }
+  }
+
   .text-block {
+    font-family: @fc;
+    font-size: 20px;
     position: relative;
     margin-bottom: 40px;
 
-    .title-1 {
-      color: @green;
+    .text-28{
+      font-family: @fr;
     }
 
     p+p {
@@ -165,6 +177,18 @@
     border-radius: 10px;
     padding: 16px 30px 30px 20px;
     margin-left: -18px;
+  }
+
+  .logo-block{
+    position: relative;
+    .text-block{
+      top:38px;
+    }
+    .brand-logo{
+      position: absolute;
+      top: 12px;
+      right: 60px;
+    }
   }
 }
 
