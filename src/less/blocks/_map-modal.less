@@ -1,0 +1,111 @@
+.map-modal {
+	padding-top: 50px;
+	background-color: @yellow;
+	padding-bottom: 75px;
+
+	.nav-tabs {
+		border-bottom: 0px;
+	}
+}
+
+.map-content__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.map-wrapper {
+	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
+	border-radius: 20px;
+	width: 74.5%;
+	height: 100%;
+	overflow: hidden;
+
+}
+
+.map-text {
+	width: 23.25%;
+}
+
+.map-content-title {
+	margin-bottom: 40px;
+
+	.section-title {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+// TABS
+.objects__tabs {
+	position: relative;
+
+	#schools-nav,
+	#kindergartens-nav {
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: 0.1em;
+		background: transparent;
+		border: none;
+		border-radius: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 30px;
+		color: @black;
+		.tr;
+
+		&.active {
+			color: #fff;
+			background-color: @black;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	#kindergartens-nav {
+		margin-left: 10px;
+	}
+}
+
+#nav-tab {
+	position: absolute;
+	left: 0;
+	top: 15px;
+}
+
+.objects-menu {
+	background-color: #fff;
+	display: inline-flex;
+	align-items: center;
+	border-radius: 10px;
+	padding: 4px;
+	margin-bottom: 30px;
+	margin-left: 260px;
+
+	a {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-radius: 10px;
+		background-color: transparent;
+		font-size: 20px;
+		.tr;
+
+		&:hover {
+			color: @blackOp;
+		}
+	}
+
+	a.active {
+		background-color: @black;
+		color: #fff;
+		-webkit-animation-name: showSlow;
+		animation-name: showSlow;
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+	}
+}

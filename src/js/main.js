@@ -75,7 +75,6 @@ $(document).ready(function () {
 	// ФЕЙК ПЛЕЙСХОЛДЕР В ФОРМЕ ОБРАТНЫЙ ЗВОНОК 
 	for (let item of orderCallFormInput) {
 		const itemInput = item.querySelector('input');
-		console.log(itemInput);
 		itemInput.addEventListener('keydown', function () {
 			this.closest('.form-group').querySelector('.fake-placeholder2').classList.add('active');
 		})
@@ -98,7 +97,27 @@ $(document).ready(function () {
 
 	closeSuccessWindow.addEventListener('click', function () {
 		successWindow.classList.add('hide');
-	})
+	});
+
+	// КАРТА ОБЪЕКТОВ ДОБАВИТЬ КЛАСС ЭКТИВ ЭЛЕМЕНТАМ МЕНЮ ПО КЛИКУ
+	const objectItems = document.querySelectorAll('.objects-menu');
+
+	if (objectItems) {
+		for (let item of objectItems) {
+			const objectNav = item.querySelectorAll('a');
+			for (let nav of objectNav) {
+				nav.addEventListener('click', function (e) {
+					e.preventDefault();
+					for (let item of objectNav) {
+						item.classList.remove('active');
+					}
+					this.classList.add('active')
+				})
+			}
+
+		}
+	}
+
 
 
 

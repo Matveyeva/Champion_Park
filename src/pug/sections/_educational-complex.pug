@@ -22,10 +22,10 @@ section.educational-complex
 				
 	.scroll-wrapper
 		.container
-			//БЛОК С КАРТОЧКАМИ ВЕРХНИЙ
+			//============ БЛОК С КАРТОЧКАМИ ВЕРХНИЙ ============
 			.educational-block
 				.educational-cards
-					//ПЕРВАЯ КАРТОЧКА
+					//============ ПЕРВАЯ КАРТОЧКА ============
 					.educational-card
 						.educational-card__head
 							.card__head-logo
@@ -51,7 +51,7 @@ section.educational-complex
 									h4.title-4 Marfino
 									.text-16  ул. Большая Марфинская 1, корп. 2
 				
-					// ВТОРАЯ КАРТОЧКА
+					// ============ ВТОРАЯ КАРТОЧКА ============
 					.educational-card
 						.educational-card__head
 							.card__head-logo
@@ -75,11 +75,12 @@ section.educational-complex
 								a(href="#!").icon-inst
 									+inst
 
-				.educational-column
+				.educational-column.sidebar-block
 					.contacts.text-28
 						a(href="tel:84957960504") 8 (495) 796-05-04
 						.form-wrapper
 							button.button-light#showOrderCallForm заказать звонок
+							// ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК
 							.form-block.orderCall-form--block
 								button.button-light.border-none#hideOrderCallForm свернуть
 								.form-body
@@ -96,18 +97,19 @@ section.educational-complex
 										.agree-info
 											p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
 											p.nospam Не шлем СМС спам
+							// ============ КОНЕЦ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК ============
+							// ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
 							.success-orderCallForm
 								.icon-box
 									img(src="img/emoji/happy.svg", alt="emoji")
 								.text-16
 									p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
-
-					
+							//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
 					.text-28
 						p  С понедельника по&nbsp;пятницу
 						p 7:30 &mdash; 22:00
 			
-			//БЛОК С БАННЕРОМ НИЖНИЙ
+			//============ БЛОК С БАННЕРОМ НИЖНИЙ ============
 			.educational-block
 				.educational-banner
 					img(src="img/banners/educ-banner.jpg", alt="banner")
@@ -116,17 +118,13 @@ section.educational-complex
 						p Игры, квесты, продуктивная и&nbsp;познавательно&#8209;исследовательская деятельность, чтение художественной литературы, сюжетно-ролевые игры и многое другое
 						button.button-light Узнать больше 
 					
-				.educational-column
+				.educational-column.sidebar-block
 					.badge.badge-red Набор на 2020 закрыт
 					.educational-column__text
 						p.text-28  1 июня — 31 августа
 						p.text-16 ПН — ПТ, 7:30 — 22:00
 						p.text-28 Для детей от&nbsp;1&nbsp;года&nbsp;до&nbsp;11&nbsp;лет
 			+btn-visual
-
-
-
-
 			.footer-content
 				a(href="#!") Сведения об общеобразовательной организации
 				a(href="#!") Политика конфиденциальности
