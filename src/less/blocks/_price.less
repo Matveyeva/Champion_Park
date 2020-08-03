@@ -1,45 +1,78 @@
 //============ Карточка Стоимость обучения ============
 .price {
+	padding: 100px 75px 160px 45px;
   .heading-price {
-    // width: 100%;
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 19px;
+	margin-bottom: 58px;
   }
 
-  .row-line {
-    display: block;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-    margin-bottom: 50px;
-  }
+  .heading-price__info {
+	display: flex;
 
-  .card-price {
-	width: 410px;
-	height: 350px;
-    background: @bcg;
-    box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.35);
-	border-radius: 15px;
-	padding: 20px 80px 50px 30px;
-	margin-bottom: 100px;
-	.text-head{
+	span {
+	  font-size: 20;
+	}
 
-		margin-bottom: 43px;
+	p{
+		margin-left: 40px;
 	}
   }
 
+  .card-price {
+    width: 410px;
+    height: 350px;
+    background: @bcg;
+    box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.35);
+    border-radius: 15px;
+    padding: 20px 80px 50px 30px;
+    margin-bottom: 100px;
+
+    .text-head {
+      margin-bottom: 43px;
+    }
+
+    
+  }
+
   .btn {
-	font-family: @fc;
-	font-weight: 700;
-	text-align: center;
-	height: 50px;
-	font-size: 20px;
-	font-weight: 700;
+    font-family: @fc;
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
     background-color: @yellow;
     box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
-	border-radius: 10px;
-	padding-right: 82px;
-	padding-left: 82px;
-	margin-top: 10px;
+    border-radius: 10px;
+    padding-right: 82px;
+    padding-left: 82px;
+    margin-top: 10px;
   }
+}
+
+.dark-bg {
+  background-color: @black;
+}
+
+.heading-info {
+  margin-bottom: 58px;
+  overflow-y: scroll;
+  // transform: translate(350px,0);
+  .text-20 {
+    margin-bottom: 40px;
+  }
+
+  .text-desription p {
+    font-family: @fc;
+    font-size: 16px;
+  }
+}
+
+span.rub {
+  font-family: @fc;
+  margin-left: 14px;
 }
