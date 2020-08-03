@@ -23,12 +23,12 @@ $(document).ready(function () {
 	}
 
 
-	// валидация полей формы
-	const contactForm = document.querySelector('.contact-form');
-	const formGroups = contactForm.querySelectorAll('.form-group');
+	// БОЛЬШАЯ ФОРМА В ШАПКЕ  валидация полей формы
+	const fedbackForm = document.querySelector('.fedback-form');
+	const formGroups = fedbackForm.querySelectorAll('.form-group');
 
 
-	contactForm.addEventListener('submit', function (e) {
+	fedbackForm.addEventListener('submit', function (e) {
 		e.preventDefault();
 
 		for (let item of formGroups) {
@@ -55,6 +55,43 @@ $(document).ready(function () {
 			badgeElement.classList.remove('hide');
 		});
 	}
+
+
+	//  ФОРМА ЗАКАЗАТЬ ЗВОНОК
+	const orderCallForm = document.querySelector('.orderCall-form');
+	const orderCallFormInput = orderCallForm.querySelectorAll('.form-group ');
+
+	orderCallForm.addEventListener('submit', function (e) {
+		e.preventDefault();
+		for (let item of orderCallFormInput) {
+			const inputElement = item.querySelector('input');
+
+			if (inputElement.value == '') {
+				inputElement.classList.add('error');
+			}
+		}
+
+	});
+	// ФЕЙК ПЛЕЙСХОЛДЕР В ФОРМЕ ОБРАТНЫЙ ЗВОНОК 
+	for (let item of orderCallFormInput) {
+		const itemInput = item.querySelector('input');
+		console.log(itemInput);
+		itemInput.addEventListener('keydown', function () {
+			this.closest('.form-group').querySelector('.fake-placeholder2').classList.add('active');
+		})
+	}
+	// ПОКАЗАТЬ ФОРМУ ЗАКАЗАТЬ ЗВОНОК
+	const orderCallFormBlock = document.querySelector('.orderCall-form--block');
+	const showOrderCallFormBlock = document.querySelector('#showOrderCallForm');
+	const hideOrderCallFormBlock = document.querySelector('#hideOrderCallForm');
+	showOrderCallFormBlock.addEventListener('click', function () {
+		orderCallFormBlock.classList.add('active');
+	});
+	hideOrderCallFormBlock.addEventListener('click', function () {
+		orderCallFormBlock.classList.remove('active');
+	})
+
+
 	//   закрыть success окно по клику на крестик
 	const closeSuccessWindow = document.querySelector('.close-success');
 	const successWindow = document.querySelector('.success-window');

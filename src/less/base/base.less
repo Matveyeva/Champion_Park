@@ -151,6 +151,7 @@ button {
 	font-size: 14px;
 	line-height: 22px;
 	height: 28px;
+	height: 30px;
 	white-space: nowrap;
 	display: inline-block;
 	.tr;
@@ -160,6 +161,20 @@ button {
 		background-color: @black;
 	}
 
+}
+
+.border-none {
+	border: 0px;
+
+}
+
+.button-light.border-none {
+	color: @blackOp;
+
+	&:hover {
+		background-color: transparent;
+		color: @black;
+	}
 }
 
 .button.button--visual {
