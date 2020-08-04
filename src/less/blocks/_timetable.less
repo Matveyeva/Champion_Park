@@ -1,11 +1,15 @@
 .timetable {
 	padding-top: 100px;
 	background-color: #fff;
+	padding-bottom: 140px;
 }
 
 .timetable-top {
 	display: flex;
 	justify-content: space-between;
+	width: 91.5%;
+	max-width: 1180px;
+	margin-bottom: 56px;
 }
 
 .age-nav {
@@ -14,11 +18,12 @@
 	border-radius: 10px;
 	padding: 4px;
 
+
 	button {
 		cursor: pointer;
 		background-color: transparent;
-		padding-left: 34px;
-		padding-right: 34px;
+		padding-left: 30px;
+		padding-right: 30px;
 		font-size: 20px;
 		height: 50px;
 		border-radius: 10px;
@@ -72,6 +77,10 @@
 		border: 1px solid transparent;
 		position: relative;
 
+		&.disable {
+			opacity: .5;
+		}
+
 		&:hover {
 			border: 1px solid @red;
 
@@ -109,6 +118,7 @@
 	display: flex;
 	justify-content: space-between;
 	max-width: 1180px;
+	margin-bottom: 18px;
 
 	.table-cell {
 		background-color: #fff;
@@ -129,6 +139,7 @@
 
 	.table-col {
 		writing-mode: vertical-rl;
+		margin-left: 18px;
 
 		p {
 			font-size: 40px;

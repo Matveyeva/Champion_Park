@@ -112,13 +112,13 @@ section.timetable
 						// четвертый ряд
 						.timetable-grid-item
 							.table-row-group
-								.table-cell
+								.table-cell.disable
 									
-								.table-cell
+								.table-cell.disable
 									
-								.table-cell
+								.table-cell.disable
 									
-								.table-cell
+								.table-cell.disable
 									
 								.table-cell
 									span Оздоровительная гимнастика
@@ -144,19 +144,21 @@ section.timetable
 						.timetable-grid-item
 							.table-row-group
 								.table-cell
-									span Физическая культура
-								.table-cell(data-index="dance_1")
-									span Хореография
-									span.cell-img
-										img(src="img/emoji/ballet.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell
-									span Физическая культура
+									span Художественное творчество
 								.table-cell
 									span Дзюдо
+								.table-cell
+									span Подготовка к школе
+								.table-cell
+									span Литературное<br>чтение
+									.cell-img
+										img(src="img/emoji/book.svg", alt="img")
+									span.info-icon
+										+info
 								.table-cell(data-index="dance_2")
-									span Хореография
+									span Шахматы
+									.cell-img
+										img(src="img/emoji/chess.svg", alt="img")
 									span.info-icon
 										+info
 							.table-row-description
@@ -169,53 +171,49 @@ section.timetable
 						.timetable-grid-item
 							.table-row-group
 								.table-cell
-									span Музыка
+									span Компьютерная<br>грамотность 
 									span.cell-img
-										img(src="img/emoji/piano.svg", alt="img")
+										img(src="img/emoji/comp.svg", alt="img")
+									span.info-icon
+										+info
+								.table-cell
+									span Физическая культура
+								.table-cell
+									span Финансовая<br>грамотность
+									.cell-img
+										img(src="img/emoji/wallet.svg", alt="img")
+									span.info-icon
+										+info
+								.table-cell
+									span Разговорный<br>английский
+									.cell-img
+										img(src="img/emoji/flag.svg", alt="img")
 									span.info-icon
 										+info
 								.table-cell
 									span Подготовка к школе
-								.table-cell
-									span Английский язык
-								.table-cell
-									span Подготовка к школе
-								.table-cell
-									span Музыка
-									span.info-icon
-										+info
+									
 						.timetable-grid-item
 							.table-row-group
 								.table-cell
-									span Английский язык
+									span Подготовка к школе
 								.table-cell
-									span Развивающее занятие с логопедом
-								.table-cell
-									span Математический<br> интенсив
-									span.cell-img
-										img(src="img/emoji/calc.svg", alt="img")
+									span Разговорный<br>английский
 									span.info-icon
 										+info
 								.table-cell
-									span Ораторское<br>мастерство
+									span Литературное чтение
+									span.info-icon
+										+info
+								.table-cell
+									span Развивающее занятие с психологом
 									span.cell-img
 										img(src="img/emoji/mic.svg", alt="img")
 									span.info-icon
 										+info
 								.table-cell
-									span Английский язык
-						.timetable-grid-item
-							.table-row-group
-								.table-cell
-									
-								.table-cell
-									
-								.table-cell
-									
-								.table-cell
-									
-								.table-cell
-									span Оздоровительная гимнастика
+									span Художественное творчество
+						
 					.table-col
 						p 15:00 &mdash; 20:00
 			
