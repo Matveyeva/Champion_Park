@@ -1,6 +1,6 @@
 section.timetable
 	.container
-		.timetable-header
+		.timetable-top
 			h2.titile-2 Расписание
 			nav.age-nav
 				button.active(data-age="1")
@@ -9,15 +9,107 @@ section.timetable
 				button(data-age="2")
 					span.age-value 5 &mdash; 6
 					span.age-text лет
-				button(data-age="3")
-					span.age-value 4 &mdash; 5
-					span.age-text лет
-				button(data-age="4")
-					span.age-value 3 &mdash; 4
-					span.age-text лет
-				button(data-age="5")
-					span.age-value 2 &mdash; 3
-					span.age-text лет
-				button(data-age="6")
-					span.age-value 1 &mdash; 2
-					span.age-text лет
+				//- button(data-age="3")
+				//- 	span.age-value 4 &mdash; 5
+				//- 	span.age-text лет
+				//- button(data-age="4")
+				//- 	span.age-value 3 &mdash; 4
+				//- 	span.age-text лет
+				//- button(data-age="5")
+				//- 	span.age-value 2 &mdash; 3
+				//- 	span.age-text лет
+				//- button(data-age="6")
+				//- 	span.age-value 1 &mdash; 2
+				//- 	span.age-text лет
+		.timetable-wrapper
+			.timetable-header
+				.table-row-group.table-row-group--day
+					.table-cell
+						span ПН
+					.table-cell
+						span ВТ
+					.table-cell
+						span СР
+					.table-cell
+						span ЧТ
+					.table-cell
+						span ПТ
+			//КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ
+			.timetable-body.active(data-age="1")
+				.timetable-block
+					.timetable-grid
+						.timetable-grid-item
+							.table-row-group
+								.table-cell(data-index="sport")
+									span Физическая культура
+								.table-cell(data-index="dance")
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+							.table-row-description
+								.timetable-article(data-index="dance")
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+								.timetable-article(data-index="sport")
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+							
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									span Физическая культура
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									span Физическая культура
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									span Физическая культура
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+								.table-cell
+									span Хореография
+					.table-col
+						p 8:00 &mdash; 13:00
+			//КОНТЕНТ РАСПИСАНИЯ 5-6 ЛЕТ
+			.timetable-body(data-age="2")
+				.timetable-block
+					.timetable-grid
+						.table-row-group
+							.table-cell
+								span Физическая культура2
+							.table-cell(data-index="dance")
+								span Хореография2
+							.table-cell
+								span Хореография2
+							.table-cell
+								span Хореография2
+							.table-cell
+								span Хореография2	

@@ -3,7 +3,7 @@
 	background-color: #fff;
 }
 
-.timetable-header {
+.timetable-top {
 	display: flex;
 	justify-content: space-between;
 }
@@ -26,6 +26,12 @@
 		justify-content: center;
 		align-items: center;
 
+		&:hover {
+			span {
+				color: @red;
+			}
+		}
+
 	}
 
 	.age-text {
@@ -41,5 +47,74 @@
 		}
 
 	}
+}
 
+
+.timetable-grid {
+	max-width: 1180px;
+	width: 100%;
+
+	.table-cell span {
+		.text-16;
+	}
+
+	.table-cell {
+		width: 18.6%;
+		max-width: 220px;
+		padding-left: 20px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		background-color: #FFF3D1;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.table-row-group.table-row-group--day {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1180px;
+
+	.table-cell {
+		background-color: #fff;
+		width: 18.6%;
+		max-width: 220px;
+
+		span {
+			font-size: 40px;
+			line-height: 52px;
+			letter-spacing: 0.1em;
+		}
+	}
+}
+
+.timetable-block {
+	display: flex;
+	align-items: flex-start;
+
+	.table-col {
+		writing-mode: vertical-rl;
+
+		p {
+			font-size: 40px;
+			line-height: 52px;
+			letter-spacing: 0.01em;
+		}
+	}
+}
+
+.table-row-group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.timetable-body,
+.timetable-article {
+	display: none;
+}
+
+.timetable-body.active,
+.timetable-article.active {
+	display: block;
 }

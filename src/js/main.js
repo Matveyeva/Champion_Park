@@ -24,13 +24,10 @@ $(document).ready(function () {
 	showMapModal.addEventListener('click', function () {
 		educComplex.classList.remove('active');
 		modalInMap.classList.add('active');
-
 	});
 	// вторая карта с табами
 	showAllObjects.addEventListener('click', function () {
 		mapAllObjects.classList.add('active');
-		console.log('555');
-
 	});
 
 	// закрыть вторую карту с табами
@@ -48,7 +45,6 @@ $(document).ready(function () {
 
 	for (let item of modalCloseBtn) {
 		item.addEventListener('click', function () {
-			console.log('555');
 			this.closest('section').classList.remove('active')
 		});
 	}
@@ -159,21 +155,74 @@ $(document).ready(function () {
 		}
 	}
 
-	// РАСПИСАНИЕ ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
+	// ========== БЛОК РАСПИСАНИЕ ==========
+
+	// ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
 	const timetableToggle = document.querySelector('.age-nav');
+	const timetableContent = document.querySelectorAll('.timetable-body')
+
 	if (timetableToggle) {
 		const timetableBtn = timetableToggle.querySelectorAll('button');
 
 		for (let item of timetableBtn) {
 			item.addEventListener('click', function () {
-				const itemData = this.getAttribute('data-age');
 				for (let item of timetableBtn) {
 					item.classList.remove('active')
 				}
 				this.classList.add('active');
+
+				const itemData = this.getAttribute('data-age');
+				for (let item of timetableContent) {
+					item.classList.remove('active')
+					const contentData = item.getAttribute('data-age');
+					if (contentData == itemData) {
+						item.classList.add('active')
+					}
+				}
 			})
 		}
+
+		// ПОКАЗАТЬ ОПИСАНИЕ ЗАНЯТИЯ 
+		const timetableBlock = document.querySelectorAll('.timetable-grid-item');
+		for (let item of timetableBlock) {
+
+			const lessonItems = item.querySelectorAll('.table-cell');
+			const lessonDescrip = item.querySelectorAll('.timetable-article');
+
+			for (let item of lessonItems) {
+				item.addEventListener('click', function () {
+					for (let item of lessonItems) {
+						item.classList.remove('active');
+					}
+					for (let item of lessonDescrip) {
+						item.classList.remove('active');
+					}
+					this.classList.add('active');
+
+					if (item.hasAttribute('data-index')) {
+						const lessonData = item.getAttribute('data-index');
+
+						for (let item of lessonDescrip) {
+							item.classList.remove('active');
+							const deskData = item.getAttribute('data-index');
+
+							if (deskData == lessonData) {
+								item.classList.add('active');
+							}
+						}
+					}
+
+				})
+
+			}
+		}
+
+
+
+
 	}
+
+
 
 
 
