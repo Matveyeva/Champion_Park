@@ -1,0 +1,45 @@
+.timetable {
+	padding-top: 100px;
+	background-color: #fff;
+}
+
+.timetable-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.age-nav {
+	display: inline-flex;
+	background: #F3F3F3;
+	border-radius: 10px;
+	padding: 4px;
+
+	button {
+		cursor: pointer;
+		background-color: transparent;
+		padding-left: 34px;
+		padding-right: 34px;
+		font-size: 20px;
+		height: 50px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.age-text {
+		display: none;
+	}
+
+	button.active {
+		background-color: @yellow;
+
+		.age-text {
+			display: block;
+			padding-left: 5px;
+		}
+
+	}
+
+}

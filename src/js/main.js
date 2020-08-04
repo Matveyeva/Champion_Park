@@ -159,7 +159,21 @@ $(document).ready(function () {
 		}
 	}
 
+	// РАСПИСАНИЕ ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
+	const timetableToggle = document.querySelector('.age-nav');
+	if (timetableToggle) {
+		const timetableBtn = timetableToggle.querySelectorAll('button');
 
+		for (let item of timetableBtn) {
+			item.addEventListener('click', function () {
+				const itemData = this.getAttribute('data-age');
+				for (let item of timetableBtn) {
+					item.classList.remove('active')
+				}
+				this.classList.add('active');
+			})
+		}
+	}
 
 
 
