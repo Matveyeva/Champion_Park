@@ -29,6 +29,7 @@ $(document).ready(function () {
 	// вторая карта с табами
 	showAllObjects.addEventListener('click', function () {
 		mapAllObjects.classList.add('active');
+		console.log('555');
 
 	});
 
