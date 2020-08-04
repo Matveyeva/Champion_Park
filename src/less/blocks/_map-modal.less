@@ -3,8 +3,6 @@
 	background-color: @yellow;
 	padding-bottom: 75px;
 
-
-
 	.nav-tabs {
 		border-bottom: 0px;
 	}
@@ -131,6 +129,14 @@
 	color: @black;
 	width: 60px;
 	height: 60px;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	top: 50px;
+	right: 50px;
+	border-radius: 70px;
+	cursor: pointer;
+	.tr;
 
 	.btn-icon {
 		width: 60px;
@@ -138,10 +144,44 @@
 		background-color: #fff;
 		border-radius: 50%;
 		display: inline-block;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+
+	}
+
+	.btn-text {
+		width: 0;
+		white-space: nowrap;
+		overflow: hidden;
+
 	}
 }
 
+.btn-back:hover {
+	width: 242px;
+
+	background-color: #fff;
+	padding: 4px 6px;
+	.tr;
+
+	.btn-text {
+		width: 140px;
+		text-transform: uppercase;
+		.tr;
+	}
+
+	.btn-icon {
+		background-color: @back;
+		margin-right: 14px;
+		height: 52px;
+		width: 52px;
+		.tr;
+	}
+}
+
+#mogal-in-map,
 #map-all-objects {
 	position: fixed;
 	top: 0;
@@ -156,6 +196,11 @@
 	animation-duration: .5s;
 }
 
+#mogal-in-map.active,
 #map-all-objects.active {
 	display: block;
+}
+
+#show-all-objects {
+	cursor: pointer;
 }

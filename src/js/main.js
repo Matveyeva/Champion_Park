@@ -5,7 +5,6 @@ $(document).ready(function () {
 	// Показать форму по клику на гамбургер
 	const gamburgerBtn = document.querySelector('#show-educational');
 	const openFormBtn = document.querySelector('#openForm');
-	const modalCloseBtn = document.querySelectorAll('.close-modal');
 	const modalForm = document.querySelector('#feedback');
 	const educComplex = document.querySelector('#educational-complex--modal');
 
@@ -16,20 +15,39 @@ $(document).ready(function () {
 
 	// КЛИК ПО КНОПКЕ "НА КАРТЕ"  НА МОДАЛКЕ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
 	const showMapModal = document.querySelector('#show-map-modal');
-	const mapAllObjects = document.querySelector('#map-all-objects')
+	const showAllObjects = document.querySelector('#show-all-objects');
+	const hideAllObjects = document.querySelector('#hide-all-objects');
+	const mapAllObjects = document.querySelector('#map-all-objects');
+	const modalInMap = document.querySelector('#mogal-in-map');
+
+	// первая карта без табов
 	showMapModal.addEventListener('click', function () {
 		educComplex.classList.remove('active');
+		modalInMap.classList.add('active');
+
+	});
+	// вторая карта с табами
+	showAllObjects.addEventListener('click', function () {
 		mapAllObjects.classList.add('active');
 
+	});
+
+	// закрыть вторую карту с табами
+	hideAllObjects.addEventListener('click', function () {
+		mapAllObjects.classList.remove('active');
+
 	})
-
-
 	// КЛИК НА КНОПКУ ЗАПИСАТЬСЯ В ШАПКЕ
 	openFormBtn.addEventListener('click', function () {
 		modalForm.classList.add('active')
 	});
+
+	// КЛИК ПО КНОПКЕ КРЕСТИК В БОЛЬШИХ МОДАЛКАХ
+	const modalCloseBtn = document.querySelectorAll('.close-modal');
+
 	for (let item of modalCloseBtn) {
 		item.addEventListener('click', function () {
+			console.log('555');
 			this.closest('section').classList.remove('active')
 		});
 	}
@@ -109,9 +127,6 @@ $(document).ready(function () {
 			orderCallFormBlock.classList.remove('active');
 		});
 	}
-	// hideOrderCallFormBlock.addEventListener('click', function () {
-	// 	orderCallFormBlock.classList.remove('active');
-	// })
 
 
 	//   закрыть success окно по клику на крестик
