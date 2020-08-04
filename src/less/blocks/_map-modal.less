@@ -3,6 +3,8 @@
 	background-color: @yellow;
 	padding-bottom: 75px;
 
+
+
 	.nav-tabs {
 		border-bottom: 0px;
 	}
@@ -25,6 +27,17 @@
 
 .map-text {
 	width: 23.25%;
+}
+
+.map-content {
+	position: relative;
+
+	.bg-logo {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		transform: translateX(100%);
+	}
 }
 
 .map-content-title {
@@ -107,5 +120,24 @@
 		animation-name: showSlow;
 		-webkit-animation-duration: .5s;
 		animation-duration: .5s;
+	}
+}
+
+.btn-back {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: @black;
+	width: 60px;
+	height: 60px;
+
+	.btn-icon {
+		width: 60px;
+		height: 60px;
+		background-color: #fff;
+		border-radius: 50%;
+		display: inline-block;
+		text-align: center;
 	}
 }
