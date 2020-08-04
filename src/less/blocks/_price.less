@@ -1,7 +1,7 @@
 //============ Карточка Стоимость обучения ============
 .price {
   padding: 100px 75px 160px 45px;
-  background-color:transparent;
+  background-color: @white;
 
   .heading-price {
     display: flex;
@@ -15,9 +15,13 @@
   .heading-price__info {
     display: flex;
 
-    span {font-size: 20;}
+    span {
+      font-size: 20;
+    }
 
-    p {margin-left: 40px;}
+    p {
+      margin-left: 40px;
+    }
   }
 
   .card-price {
@@ -43,11 +47,11 @@
 
     .text-head {
       margin-bottom: 43px;
-	}
-	
-	.text-body{
-		width: inherit;
-	}
+    }
+
+    .big-text {
+      white-space: nowrap;
+    }
 
     .text-28 {
       color: rgba(51, 51, 51, 0.6);
@@ -76,18 +80,6 @@
 
 .heading-info {
   margin-bottom: 40px;
-  overflow-y: scroll;
-//   transform: translate(350px,0);
-  .text-block{
-	margin-bottom: 40px;
-  }
-
-  .text-block:hth-child(5) {
-	background-color: @bcg-grey;
-    border-radius: 10px;
-    // padding: 12px 11px 15px 14px;
-    // margin-left: -18px;
-  }
 
   .text-desription p {
     font-family: @fc;
@@ -101,8 +93,8 @@ span.rub {
 }
 
 .dark-bg {
-	background-color: @black;
-  }
+  background-color: @black;
+}
 
 .logo-block {
   .brand-logo {
@@ -113,5 +105,46 @@ span.rub {
     color: rgba(220, 147, 124, 0.2);
     font-family: @fr;
     z-index: -1;
+  }
+}
+
+.wrapper {
+  .text-block {
+    margin-bottom: 40px;
+
+    .text-20 {
+      margin-bottom: 6px;
+    }
+  }
+
+  .text-block__border {
+    position: relative;
+    &:after {
+      content: "";
+      width: 6px;
+      border-radius: 3px;
+      background-color: @azure;
+      position: absolute;
+      left: -30px;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .text-block--white {
+    background-color: @bcg-grey;
+    border-radius: 10px;
+    padding: 12px 11px 15px 14px;
+    margin-left: -18px;
+  }
+}
+
+.text-desription {
+	p{
+		margin-bottom: 6px;
+	}
+  span {
+    
+    font-size: 14px;
   }
 }
