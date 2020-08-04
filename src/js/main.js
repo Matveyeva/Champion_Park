@@ -197,11 +197,10 @@ $(document).ready(function () {
 					for (let item of lessonDescrip) {
 						item.classList.remove('active');
 					}
-					this.classList.add('active');
 
 					if (item.hasAttribute('data-index')) {
 						const lessonData = item.getAttribute('data-index');
-
+						this.classList.add('active');
 						for (let item of lessonDescrip) {
 							item.classList.remove('active');
 							const deskData = item.getAttribute('data-index');

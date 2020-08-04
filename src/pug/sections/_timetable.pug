@@ -9,18 +9,18 @@ section.timetable
 				button(data-age="2")
 					span.age-value 5 &mdash; 6
 					span.age-text лет
-				//- button(data-age="3")
-				//- 	span.age-value 4 &mdash; 5
-				//- 	span.age-text лет
-				//- button(data-age="4")
-				//- 	span.age-value 3 &mdash; 4
-				//- 	span.age-text лет
-				//- button(data-age="5")
-				//- 	span.age-value 2 &mdash; 3
-				//- 	span.age-text лет
-				//- button(data-age="6")
-				//- 	span.age-value 1 &mdash; 2
-				//- 	span.age-text лет
+				button(data-age="3")
+					span.age-value 4 &mdash; 5
+					span.age-text лет
+				button(data-age="4")
+					span.age-value 3 &mdash; 4
+					span.age-text лет
+				button(data-age="5")
+					span.age-value 2 &mdash; 3
+					span.age-text лет
+				button(data-age="6")
+					span.age-value 1 &mdash; 2
+					span.age-text лет
 		.timetable-wrapper
 			.timetable-header
 				.table-row-group.table-row-group--day
@@ -34,71 +34,193 @@ section.timetable
 						span ЧТ
 					.table-cell
 						span ПТ
-			//КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ
+			//============ КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ ============
 			.timetable-body.active(data-age="1")
-				.timetable-block
+				//============ ЖЕЛТЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
+				.timetable-block.timetable-block--yellow
+					.timetable-grid
+						// первый ряд ячеек
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									span Физическая культура
+								.table-cell(data-index="dance_1")
+									span Хореография
+									span.cell-img
+										img(src="img/emoji/ballet.svg", alt="img")
+									span.info-icon
+										+info
+								.table-cell
+									span Физическая культура
+								.table-cell
+									span Дзюдо
+								.table-cell(data-index="dance_2")
+									span Хореография
+									span.info-icon
+										+info
+							// вырадающее описание для первого ряда
+							.table-row-description
+								.timetable-article(data-index="dance_1")
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+								.timetable-article(data-index="dance_2")
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+							
+						// второй ряд 
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									span Музыка
+									span.cell-img
+										img(src="img/emoji/piano.svg", alt="img")
+									span.info-icon
+										+info
+								.table-cell
+									span Подготовка к школе
+								.table-cell
+									span Английский язык
+								.table-cell
+									span Подготовка к школе
+								.table-cell
+									span Музыка
+									span.info-icon
+										+info
+						// третий ряд
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									span Английский язык
+								.table-cell
+									span Развивающее занятие с логопедом
+								.table-cell
+									span Математический<br> интенсив
+									span.cell-img
+										img(src="img/emoji/calc.svg", alt="img")
+									span.info-icon
+										+info
+								.table-cell
+									span Ораторское<br>мастерство
+									span.cell-img
+										img(src="img/emoji/mic.svg", alt="img")
+									span.info-icon
+										+info
+								.table-cell
+									span Английский язык
+						// четвертый ряд
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
+									
+								.table-cell
+									
+								.table-cell
+									
+								.table-cell
+									
+								.table-cell
+									span Оздоровительная гимнастика
+					.table-col
+						p 8:00 &mdash; 13:00
+				
+				//============ РОЗОВЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
+				.timetable-block.timetable-block--sleep
 					.timetable-grid
 						.timetable-grid-item
 							.table-row-group
-								.table-cell(data-index="sport")
+								.cell-img
+									img(src="img/emoji/sleep.svg", alt="img")
+								.table-cell
+									span 13:00 &mdash; 15:00
+								.table-cell
+									span Тихий час
+					
+				
+				//============ ЗЕЛЕНЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ===========
+				.timetable-block.timetable-block--green
+					.timetable-grid
+						.timetable-grid-item
+							.table-row-group
+								.table-cell
 									span Физическая культура
-								.table-cell(data-index="dance")
+								.table-cell(data-index="dance_1")
 									span Хореография
+									span.cell-img
+										img(src="img/emoji/ballet.svg", alt="img")
+									span.info-icon
+										+info
 								.table-cell
-									span Хореография
+									span Физическая культура
 								.table-cell
+									span Дзюдо
+								.table-cell(data-index="dance_2")
 									span Хореография
-								.table-cell
-									span Хореография
+									span.info-icon
+										+info
 							.table-row-description
-								.timetable-article(data-index="dance")
+								.timetable-article(data-index="dance_1")
 									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
-									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
-									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
-									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
-								.timetable-article(data-index="sport")
-									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
-									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.
+									
+								.timetable-article(data-index="dance_2")
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.									
 							
 						.timetable-grid-item
 							.table-row-group
 								.table-cell
-									span Физическая культура
+									span Музыка
+									span.cell-img
+										img(src="img/emoji/piano.svg", alt="img")
+									span.info-icon
+										+info
 								.table-cell
-									span Хореография
+									span Подготовка к школе
 								.table-cell
-									span Хореография
+									span Английский язык
 								.table-cell
-									span Хореография
+									span Подготовка к школе
 								.table-cell
-									span Хореография
+									span Музыка
+									span.info-icon
+										+info
 						.timetable-grid-item
 							.table-row-group
 								.table-cell
-									span Физическая культура
+									span Английский язык
 								.table-cell
-									span Хореография
+									span Развивающее занятие с логопедом
 								.table-cell
-									span Хореография
+									span Математический<br> интенсив
+									span.cell-img
+										img(src="img/emoji/calc.svg", alt="img")
+									span.info-icon
+										+info
 								.table-cell
-									span Хореография
+									span Ораторское<br>мастерство
+									span.cell-img
+										img(src="img/emoji/mic.svg", alt="img")
+									span.info-icon
+										+info
 								.table-cell
-									span Хореография
+									span Английский язык
 						.timetable-grid-item
 							.table-row-group
 								.table-cell
-									span Физическая культура
+									
 								.table-cell
-									span Хореография
+									
 								.table-cell
-									span Хореография
+									
 								.table-cell
-									span Хореография
+									
 								.table-cell
-									span Хореография
+									span Оздоровительная гимнастика
 					.table-col
-						p 8:00 &mdash; 13:00
-			//КОНТЕНТ РАСПИСАНИЯ 5-6 ЛЕТ
+						p 15:00 &mdash; 20:00
+			
+			
+			//============ КОНТЕНТ РАСПИСАНИЯ 5-6 ЛЕТ ============
 			.timetable-body(data-age="2")
 				.timetable-block
 					.timetable-grid

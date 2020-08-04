@@ -52,7 +52,7 @@
 
 .timetable-grid {
 	max-width: 1180px;
-	width: 100%;
+	width: 91.5%;
 
 	.table-cell span {
 		.text-16;
@@ -68,6 +68,40 @@
 		background-color: #FFF3D1;
 		border-radius: 10px;
 		margin-bottom: 10px;
+		cursor: pointer;
+		border: 1px solid transparent;
+		position: relative;
+
+		&:hover {
+			border: 1px solid @red;
+
+			.info-icon path {
+				fill: @red;
+			}
+		}
+
+		&.active {
+			background-color: transparent;
+			border-color: @black;
+
+			.info-icon {
+				opacity: 0;
+			}
+		}
+
+		.info-icon {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 1;
+		}
+
+		.cell-img {
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			right: 10px;
+		}
 	}
 }
 
@@ -101,6 +135,39 @@
 			line-height: 52px;
 			letter-spacing: 0.01em;
 		}
+	}
+}
+
+.timetable-block.timetable-block--sleep {
+	margin-bottom: 10px;
+
+	.table-cell {
+		background-color: #FAF3EF;
+		margin-bottom: 0;
+
+		span {
+			.text-28;
+		}
+	}
+
+	.table-row-group {
+		justify-content: flex-start;
+		background-color: #FAF3EF;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+
+		.cell-img {
+			position: absolute;
+			bottom: -12px;
+			right: 80px;
+		}
+	}
+}
+
+.timetable-block.timetable-block--green {
+	.table-cell {
+		background-color: #E4EDE7;
 	}
 }
 
