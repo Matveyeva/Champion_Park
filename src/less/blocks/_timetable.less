@@ -196,3 +196,109 @@
 .timetable-article.active {
 	display: block;
 }
+
+.timetable-article {
+	overflow: hidden;
+
+	.close-desk {
+		position: absolute;
+		top: 30px;
+		right: 40px;
+	}
+
+	background: #F9F5E6;
+	border-radius: 20px;
+	position: relative;
+	padding: 30px 40px;
+
+	.title-3 {
+		margin-bottom: 30px;
+	}
+
+	.round-img {
+		border-radius: 50%;
+		width: 140px;
+		height: 140px;
+		overflow: hidden;
+	}
+
+	.photo-block {
+		.title-4 {
+			margin-top: 20px;
+			margin-bottom: 5px;
+		}
+
+		p {
+			color: rgba(51, 51, 51, .6);
+		}
+	}
+
+	.text-block {
+		.bold-text {
+			margin-bottom: 20px;
+		}
+
+		.text-20 {
+			font-family: @fc;
+			font-weight: 400;
+
+			p+p {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.desk-result {
+	padding-top: 30px;
+
+	ul {
+		padding-top: 10px;
+	}
+
+	li {
+		font-size: 20px;
+		line-height: 1.7;
+		font-family: @fc;
+		font-weight: 400;
+	}
+}
+
+.timetable-article {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		background-color: #fff;
+
+		top: 0;
+		transform: translateY(-50%) rotate(45deg);
+		left: 320px;
+
+	}
+
+	.additional-text {
+		position: relative;
+
+		.lesson-icon {
+			position: absolute;
+			top: 0;
+			transform: translateY(-100%);
+			left: 50px;
+
+		}
+	}
+
+}
+
+.timetable-article.timetable-article--dance {
+	&:after {
+
+		left: 320px;
+
+	}
+}
