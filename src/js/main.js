@@ -3,16 +3,28 @@ $(document).ready(function () {
 	$('.lazy').lazy();
 
 	// Показать форму по клику на гамбургер
-	const gamburgerBtn = document.querySelector('.btn-bars');
+	const gamburgerBtn = document.querySelector('#show-educational');
 	const openFormBtn = document.querySelector('#openForm');
 	const modalCloseBtn = document.querySelectorAll('.close-modal');
 	const modalForm = document.querySelector('#feedback');
-	const educComplex = document.querySelector('.educational-complex');
+	const educComplex = document.querySelector('#educational-complex--modal');
 
+	// КЛИК ПО ГАМБУРГЕРУ ПОКАЗАТЬ МОДЛКУ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
 	gamburgerBtn.addEventListener('click', function () {
 		educComplex.classList.add('active')
 	});
 
+	// КЛИК ПО КНОПКЕ "НА КАРТЕ"  НА МОДАЛКЕ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
+	const showMapModal = document.querySelector('#show-map-modal');
+	const mapAllObjects = document.querySelector('#map-all-objects')
+	showMapModal.addEventListener('click', function () {
+		educComplex.classList.remove('active');
+		mapAllObjects.classList.add('active');
+
+	})
+
+
+	// КЛИК НА КНОПКУ ЗАПИСАТЬСЯ В ШАПКЕ
 	openFormBtn.addEventListener('click', function () {
 		modalForm.classList.add('active')
 	});
@@ -80,24 +92,37 @@ $(document).ready(function () {
 		})
 	}
 	// ПОКАЗАТЬ ФОРМУ ЗАКАЗАТЬ ЗВОНОК
-	const orderCallFormBlock = document.querySelector('.orderCall-form--block');
-	const showOrderCallFormBlock = document.querySelector('#showOrderCallForm');
-	const hideOrderCallFormBlock = document.querySelector('#hideOrderCallForm');
-	showOrderCallFormBlock.addEventListener('click', function () {
-		orderCallFormBlock.classList.add('active');
-	});
-	hideOrderCallFormBlock.addEventListener('click', function () {
-		orderCallFormBlock.classList.remove('active');
-	})
+
+	const showOrderCallFormBlock = document.querySelectorAll('.showOrderCallForm');
+	const hideOrderCallFormBlock = document.querySelectorAll('.hideOrderCallForm');
+	for (let btn of showOrderCallFormBlock) {
+		const orderCallFormBlock = btn.closest('.form-wrapper').querySelector('.orderCall-form--block');
+		btn.addEventListener('click', function () {
+
+			orderCallFormBlock.classList.add('active');
+		});
+	}
+
+	for (let btn of hideOrderCallFormBlock) {
+		const orderCallFormBlock = btn.closest('.form-wrapper').querySelector('.orderCall-form--block');
+		btn.addEventListener('click', function () {
+			orderCallFormBlock.classList.remove('active');
+		});
+	}
+	// hideOrderCallFormBlock.addEventListener('click', function () {
+	// 	orderCallFormBlock.classList.remove('active');
+	// })
 
 
 	//   закрыть success окно по клику на крестик
 	const closeSuccessWindow = document.querySelector('.close-success');
 	const successWindow = document.querySelector('.success-window');
+	if (closeSuccessWindow) {
+		closeSuccessWindow.addEventListener('click', function () {
+			successWindow.classList.add('hide');
+		});
+	}
 
-	closeSuccessWindow.addEventListener('click', function () {
-		successWindow.classList.add('hide');
-	});
 
 	// КАРТА ОБЪЕКТОВ ДОБАВИТЬ КЛАСС ЭКТИВ ЭЛЕМЕНТАМ МЕНЮ ПО КЛИКУ
 	const objectItems = document.querySelectorAll('.objects-menu');
