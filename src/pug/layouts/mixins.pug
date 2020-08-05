@@ -221,7 +221,7 @@ mixin info
 	</svg>
 
 	mixin timeTableDesk(dayNum, ind, title )
-		.timetable-article( class=" .timetable-article_"+ dayNum  data-index=""+ ind)
+		.timetable-article( class=" timetable-article_"+ dayNum  data-index=""+ ind)
 			.close-desk.button-light Свернуть
 			h3.title-3 !{title}
 			.desk-content
@@ -262,3 +262,18 @@ mixin info
 							.lesson-icon
 								img(src="img/emoji/ballet2.png", alt="img")
 							p В программу уроков в обязательном порядке входит растяжка. Дети учатся делать шпагат и тянуть носок, развивают гибкость спины
+mixin timeTableBody(ageIndex, title)
+	.timetable-body(data-age=""+ ageIndex)
+		.timetable-block
+			.timetable-grid
+				.table-row-group
+					.table-cell
+						span #{title}
+					.table-cell
+						span #{title}
+					.table-cell
+						span #{title}
+					.table-cell
+						span #{title}
+					.table-cell
+						span #{title}

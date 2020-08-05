@@ -224,17 +224,12 @@ section.timetable
 			
 			
 			//============ КОНТЕНТ РАСПИСАНИЯ 5-6 ЛЕТ ============
-			.timetable-body(data-age="2")
-				.timetable-block
-					.timetable-grid
-						.table-row-group
-							.table-cell
-								span Физическая культура2
-							.table-cell(data-index="dance")
-								span Хореография2
-							.table-cell
-								span Хореография2
-							.table-cell
-								span Хореография2
-							.table-cell
-								span Хореография2	
+			+timeTableBody(2, 'Хореография')
+			//============ КОНТЕНТ РАСПИСАНИЯ 4-5 ЛЕТ ============
+			+timeTableBody(3, 'Музыка')
+			//============ КОНТЕНТ РАСПИСАНИЯ 3-4 ЛЕТ ============
+			+timeTableBody(4, 'Дзюдо')
+			//============ КОНТЕНТ РАСПИСАНИЯ 2-3 ЛЕТ ============
+			+timeTableBody(5, 'Музыка')
+			//============ КОНТЕНТ РАСПИСАНИЯ 1-2 ЛЕТ ============
+			+timeTableBody(6, 'Шахматы')
