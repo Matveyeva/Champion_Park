@@ -40,10 +40,6 @@
   }
 }
 
-.dark-bg {
-  background-color: @black;
-}
-
 .card-icon {
   position: absolute;
   display: flex;
@@ -87,8 +83,6 @@
 .quote-block {
   display: flex;
   position: relative;
-  width: 1280px;
-  height: 492px;
   font-size: 10px;
   padding: 80px 80px 90px 70px;
   background: @bcg-block;
@@ -102,12 +96,12 @@
       font-size: 20px;
       line-height: 1.2;
     }
-    span:last-child{
-			font-size: 14px;
-			line-height: 16px;
-			opacity: .6;
-			margin-top: 6px;
-		}
+    span:last-child {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.6;
+      margin-top: 6px;
+    }
   }
 }
 
@@ -136,5 +130,48 @@
     top: -20px;
     left: -8px;
     transform: translateY(-100%);
+  }
+}
+
+//Карточка Сотрудника
+.team-description {
+  background: @bcg-grey;
+  border-radius: 20px;
+  padding: 30px 50px 60px 40px;
+
+  .title-group__position{
+    margin-bottom: 30px;
+  }
+
+  .text-22{
+    font-family: @fc;
+    font-weight: 700;
+  }
+
+  .title-group {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .text-block{
+    font-family: @fc;
+    margin-top: 20px;
+    .title-4{
+      font-weight: 700;
+    }
+  }
+
+  .team-description__img {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 205px;
+    width: 205px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .team-description__doc {
+    // margin-bottom: 22px;
   }
 }

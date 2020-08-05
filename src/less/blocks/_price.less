@@ -1,0 +1,171 @@
+//============ Карточка Стоимость обучения ============
+.price {
+  padding: 100px 75px 160px 45px;
+  background-color: @white;
+
+  .heading-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 19px;
+    margin-bottom: 58px;
+  }
+
+  .heading-price__info {
+    display: flex;
+
+    span {
+      font-size: 20px;
+    }
+
+    p {
+      margin-left: 40px;
+    }
+  }
+
+.card-price__wrapper{
+	margin-bottom: 100px;
+}
+
+  .card-price {
+    width: 410px;
+    height: 350px;
+    background: @bcg;
+    box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.35);
+    border-radius: 15px;
+    padding: 20px 75px 50px 30px;
+    // margin-bottom: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid transparent;
+    // margin-right: 30px;
+    // box-sizing: border-box;
+    &:hover {
+      border: 2px solid @green;
+    }
+
+    .card-label {
+      left: 16px;
+    }
+
+    .text-head {
+      margin-bottom: 43px;
+    }
+
+    .big-text {
+      white-space: nowrap;
+    }
+
+    .text-28 {
+      color: rgba(51, 51, 51, 0.6);
+    }
+  }
+
+  .btn {
+    font-family: @fc;
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    background-color: @yellow;
+    box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
+    border-radius: 10px;
+    padding-right: 82px;
+    padding-left: 82px;
+    margin-top: 10px;
+  }
+  .btn--light {
+    background-color: transparent;
+    color: @black;
+    border: 2px solid #333333;
+  }
+}
+
+.heading-info {
+  margin-bottom: 40px;
+
+  .text-desription p {
+    font-family: @fc;
+    font-size: 16px;
+  }
+}
+
+span.rub {
+  font-family: @fc;
+  margin-left: 14px;
+}
+
+
+
+.logo-block {
+  .brand-logo {
+    position: absolute;
+    bottom: -20px;
+    right: 60px;
+    font-size: 150px;
+    color: rgba(220, 147, 124, 0.2);
+    font-family: @fr;
+    z-index: -1;
+  }
+}
+
+.wrapper {
+  .text-block {
+    position: relative;
+    margin-bottom: 40px;
+
+    .text-block__icon {
+      position: absolute;
+      top: -78px;
+    }
+
+    .text-20 {
+      margin-bottom: 6px;
+    }
+  }
+
+  .text-block__border {
+    position: relative;
+    &:after {
+      content: "";
+      width: 6px;
+      border-radius: 3px;
+      background-color: @azure;
+      position: absolute;
+      left: -30px;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .text-block--white {
+    background-color: @bcg-grey;
+    border-radius: 10px;
+    padding: 12px 11px 15px 14px;
+    margin-left: -18px;
+  }
+}
+
+.text-desription {
+  p {
+    font-family: @fc;
+    margin-bottom: 6px;
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+.logo-block {
+	position: absolute;
+  .brand-logo span {
+	position: absolute;
+	bottom: -20px;
+	right: 60px;
+	font-size: 150px;
+	color: rgba(220, 147, 124, 0.2);
+	font-family: @fr;
+	z-index: -1;
+  }
+}
