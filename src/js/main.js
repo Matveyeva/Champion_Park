@@ -216,12 +216,20 @@ $(document).ready(function () {
 			}
 		}
 
-
-
-
 	}
 
-
+	// ЗАКРЫТИЕ СТРАНИЦ  С ОПИСАНИЯМИ
+	const deskPageClose = document.querySelectorAll('.close-desk');
+	if (deskPageClose) {
+		for (let item of deskPageClose) {
+			const itemParent = item.closest('.timetable-article');
+			const itemParentParent = itemParent.closest('.timetable-grid-item');
+			item.addEventListener('click', function () {
+				itemParent.classList.remove('active');
+				itemParentParent.querySelector('.table-cell.active').classList.remove('active');
+			})
+		}
+	}
 
 
 

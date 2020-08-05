@@ -210,6 +210,7 @@
 	border-radius: 20px;
 	position: relative;
 	padding: 30px 40px;
+	padding-bottom: 60px;
 
 	.title-3 {
 		margin-bottom: 30px;
@@ -249,8 +250,11 @@
 	}
 }
 
+.desk-content+.desk-content {
+	margin-top: 30px;
+}
+
 .desk-result {
-	padding-top: 30px;
 
 	ul {
 		padding-top: 10px;
@@ -299,10 +303,35 @@
 
 }
 
-.timetable-article.timetable-article--dance {
-	&:after {
+.close-desk {
+	border: 1px solid @black;
+	color: @black;
+	background-color: transparent;
+	cursor: pointer;
+	.tr;
 
-		left: 320px;
-
+	&:hover {
+		color: @blackOp;
+		border-color: @blackOp;
 	}
+}
+
+.timetable-article.timetable-article_1:after {
+	left: 90px;
+}
+
+.timetable-article.timetable-article_2:after {
+	left: 340px;
+}
+
+.timetable-article.timetable-article_3:after {
+	left: 570px;
+}
+
+.timetable-article.timetable-article_4:after {
+	left: 820px;
+}
+
+.timetable-article.timetable-article_5:after {
+	left: 1050px;
 }
