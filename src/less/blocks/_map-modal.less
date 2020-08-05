@@ -1,0 +1,210 @@
+.map-modal {
+	padding-top: 50px;
+	background-color: @yellow;
+	padding-bottom: 75px;
+
+	.nav-tabs {
+		border-bottom: 0px;
+	}
+}
+
+.map-content__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.map-wrapper {
+	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
+	border-radius: 20px;
+	width: 74.5%;
+	height: 100%;
+	overflow: hidden;
+
+}
+
+.map-text {
+	width: 23.25%;
+}
+
+.map-content {
+	position: relative;
+
+	.bg-logo {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		transform: translateX(100%);
+	}
+}
+
+.map-content-title {
+	margin-bottom: 40px;
+
+	.section-title {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+// TABS
+.objects__tabs {
+	position: relative;
+
+	#schools-nav,
+	#kindergartens-nav {
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: 0.1em;
+		background: transparent;
+		border: none;
+		border-radius: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 30px;
+		color: @black;
+		.tr;
+
+		&.active {
+			color: #fff;
+			background-color: @black;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	#kindergartens-nav {
+		margin-left: 10px;
+	}
+}
+
+#nav-tab {
+	position: absolute;
+	left: 0;
+	top: 15px;
+}
+
+.objects-menu {
+	background-color: #fff;
+	display: inline-flex;
+	align-items: center;
+	border-radius: 10px;
+	padding: 4px;
+	margin-bottom: 30px;
+	margin-left: 260px;
+
+	a {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-radius: 10px;
+		background-color: transparent;
+		font-size: 20px;
+		.tr;
+
+		&:hover {
+			color: @blackOp;
+		}
+	}
+
+	a.active {
+		background-color: @black;
+		color: #fff;
+		-webkit-animation-name: showSlow;
+		animation-name: showSlow;
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+	}
+}
+
+.btn-back {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: @black;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	top: 30px;
+	right: 50px;
+	border-radius: 70px;
+	cursor: pointer;
+	.tr;
+
+	.btn-icon {
+		width: 60px;
+		height: 60px;
+		background-color: #fff;
+		border-radius: 50%;
+		display: inline-block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+
+	}
+
+	.btn-text {
+		width: 0;
+		white-space: nowrap;
+		overflow: hidden;
+
+	}
+}
+
+.btn-back:hover {
+	width: 242px;
+
+	background-color: #fff;
+	padding: 4px 6px;
+	.tr;
+
+	.btn-text {
+		width: 140px;
+		text-transform: uppercase;
+		.tr;
+	}
+
+	.btn-icon {
+		background-color: @back;
+		margin-right: 14px;
+		height: 52px;
+		width: 52px;
+		.tr;
+	}
+}
+
+#mogal-in-map,
+#map-all-objects {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 11;
+	display: none;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+}
+
+#map-all-objects {
+	padding-top: 30px;
+}
+
+#mogal-in-map.active,
+#map-all-objects.active {
+	display: block;
+}
+
+#show-all-objects {
+	cursor: pointer;
+}

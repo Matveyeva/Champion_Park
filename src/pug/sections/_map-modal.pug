@@ -1,0 +1,187 @@
+// ============ НА КАРТЕ  ============
+section.map-modal#mogal-in-map
+	.close-modal
+		+close
+	.container
+		.map-content
+			.bg-logo
+				img(src="img/logo/map-bg.png", alt="logo")
+			.map-content__body
+				article.map-wrapper
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A846edc6d83e2570597233258aadee8edc7ccf538b786245068642a16c4933da9&amp;width=960&amp;height=720&amp;lang=ru_RU&amp;scroll=false")
+				article.map-text
+					.map-content-title
+						.badge Частный детский сад
+						h1.section-title Champion Park
+						p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
+					.sidebar-block
+						.contacts.text-28
+							a(href="tel:84957960504") 8 (495) 796-05-04
+							.form-wrapper
+								button.button-light.showOrderCallForm заказать звонок
+
+								// ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК							
+								.form-block.orderCall-form--block
+									button.button-light.border-none.hideOrderCallForm свернуть
+									.form-body
+										form.contact-form.orderCall-form
+											p.text-16 Оставьте ваш номер и мы перезвоним в ближайшее время
+											.form-group
+												input(type="text", name="userName" placeholder="Ваше имя")
+												.fake-placeholder2 имя
+											.form-group
+												input(type="text", name="userTel" placeholder="Телефон")
+												.fake-placeholder2 тел.
+											.form-button
+												input(type="submit" value="Отправить")
+											.agree-info
+												p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+												p.nospam Не шлем СМС спам
+								// ============ КОНЕЦ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК ============
+
+								// ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============							
+								//- .success-orderCallForm
+								//- 	.icon-box
+								//- 		img(src="img/emoji/happy.svg", alt="emoji")
+								//- 	.text-16
+								//- 		p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
+								//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
+						.text-28
+							p  С понедельника по&nbsp;пятницу
+							p 7:30 &mdash; 22:00
+					.sidebar-block.mt-40
+						.icon-box
+							img(src="img/emoji/baby.svg", alt="baby")
+						.text-28.pt-10
+							p 1 &mdash; 7 лет
+
+// ============ КОНЕЦ НА КАРТЕ ============
+// ============ НА КАРТЕ ВСЕ ОБЪЕКТЫ ============
+section.map-modal.map-modal--all#map-all-objects
+	.btn-back#hide-all-objects
+		span.btn-icon
+			+arrowBack
+		span.btn-text вернуться назад
+	.container
+		.map-content
+			.bg-logo
+				img(src="img/logo/map-bg.png", alt="logo")
+			// ============  ТАБЫ ============
+			.objects__tabs
+				nav
+					#nav-tab.nav.nav-tabs(role="tablist")
+						a#schools-nav.nav-item.nav-link.active(data-toggle="tab" href="#schools" role="tab" aria-controls="schools" aria-selected="true") школы
+						a#kindergartens-nav.nav-item.nav-link(data-toggle="tab" href="#kindergartens" role="tab" aria-controls="kindergartens" aria-selected="false") детские сады
+						
+					#nav-tabContent.tab-content
+						//  ============ ШКОЛЫ ============
+						#schools.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="schools-tab")
+							.map-content__header
+								nav.objects-menu
+									a(href="#!") Champion Park
+									a(href="#!").active Garden Square
+							.map-content__body
+								article.map-wrapper
+									script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A846edc6d83e2570597233258aadee8edc7ccf538b786245068642a16c4933da9&amp;width=960&amp;height=720&amp;lang=ru_RU&amp;scroll=false")
+								article.map-text
+									.map-content-title
+										.badge Частный детский сад
+										h1.section-title Champion Park
+										p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
+									.sidebar-block
+										.contacts.text-28
+											a(href="tel:84957960504") 8 (495) 796-05-04
+											.form-wrapper
+												button.button-light.showOrderCallForm заказать звонок
+
+												// ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК							
+												.form-block.orderCall-form--block
+													button.button-light.border-none.hideOrderCallForm свернуть
+													.form-body
+														form.contact-form.orderCall-form
+															p.text-16 Оставьте ваш номер и мы перезвоним в ближайшее время
+															.form-group
+																input(type="text", name="userName" placeholder="Ваше имя")
+																.fake-placeholder2 имя
+															.form-group
+																input(type="text", name="userTel" placeholder="Телефон")
+																.fake-placeholder2 тел.
+															.form-button
+																input(type="submit" value="Отправить")
+															.agree-info
+																p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+																p.nospam Не шлем СМС спам
+												// ============ КОНЕЦ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК ============
+
+												// ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============							
+												//- .success-orderCallForm
+												//- 	.icon-box
+												//- 		img(src="img/emoji/happy.svg", alt="emoji")
+												//- 	.text-16
+												//- 		p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
+												//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
+										.text-28
+											p  С понедельника по&nbsp;пятницу
+											p 7:30 &mdash; 22:00
+									.sidebar-block.mt-40
+										.icon-box
+											img(src="img/emoji/baby.svg", alt="baby")
+										.text-28.pt-10
+											p 1 &mdash; 7 лет
+						
+						// ============ ДЕТСКИЕ САДЫ ============
+						#kindergartens.tab-pane.fade(role="tabpanel" aria-labelledby="kindergartens-tab")
+							.map-content__header
+								nav.objects-menu
+									a(href="#!").active Champion Park
+									a(href="#!") Garden Square
+									a(href="#!") Marfino
+							.map-content__body
+								article.map-wrapper
+									script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A846edc6d83e2570597233258aadee8edc7ccf538b786245068642a16c4933da9&amp;width=960&amp;height=720&amp;lang=ru_RU&amp;scroll=false")
+								article.map-text
+									.map-content-title
+										.badge Частный детский сад
+										h1.section-title Champion Park
+										p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
+									.sidebar-block
+										.contacts.text-28
+											a(href="tel:84957960504") 8 (495) 796-05-04
+											.form-wrapper
+												button.button-light.showOrderCallForm заказать звонок
+
+												// ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК							
+												.form-block.orderCall-form--block
+													button.button-light.border-none.hideOrderCallForm свернуть
+													.form-body
+														form.contact-form.orderCall-form
+															p.text-16 Оставьте ваш номер и мы перезвоним в ближайшее время
+															.form-group
+																input(type="text", name="userName" placeholder="Ваше имя")
+																.fake-placeholder2 имя
+															.form-group
+																input(type="text", name="userTel" placeholder="Телефон")
+																.fake-placeholder2 тел.
+															.form-button
+																input(type="submit" value="Отправить")
+															.agree-info
+																p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+																p.nospam Не шлем СМС спам
+												// ============ КОНЕЦ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК ============
+
+												// ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============							
+												//- .success-orderCallForm
+												//- 	.icon-box
+												//- 		img(src="img/emoji/happy.svg", alt="emoji")
+												//- 	.text-16
+												//- 		p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
+												//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
+										.text-28
+											p  С понедельника по&nbsp;пятницу
+											p 7:30 &mdash; 22:00
+									.sidebar-block.mt-40
+										.icon-box
+											img(src="img/emoji/baby.svg", alt="baby")
+										.text-28.pt-10
+											p 1 &mdash; 7 лет
+				

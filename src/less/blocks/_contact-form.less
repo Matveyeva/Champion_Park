@@ -131,6 +131,24 @@
 	opacity: 1;
 }
 
+.form-group .fake-placeholder2 {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none;
+	font-size: 14px;
+	color: @blackOp;
+	font-weight: 700;
+	.tr;
+
+	&.active {
+		opacity: 1;
+	}
+}
+
 .form-button {
 	margin-top: 40px;
 
@@ -138,6 +156,7 @@
 		height: 70px;
 		width: 300px;
 		background-color: #fff;
+		background-color: #FFE9C8;
 		// background: #FFE9C8;
 		box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
 		border-radius: 10px;
@@ -148,6 +167,7 @@
 
 		&:hover {
 			background-color: #FFE9C8;
+			opacity: .6;
 		}
 	}
 
@@ -174,9 +194,32 @@
 		border-bottom: 1px solid rgba(255, 255, 255, .8);
 
 		&:hover {
-			color: @yellow;
+			color: @yellow  !important;
 			border-bottom: 1px solid @yellow;
 		}
+	}
+}
+
+.agree-info .nospam {
+	position: relative;
+	padding-top: 0;
+	font-size: 16px;
+	margin-top: 33px !important;
+	font-weight: 700;
+	font-family: @fc;
+	letter-spacing: 1.3px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		right: 3px;
+		top: -3px;
+		width: 14px;
+		height: 18px;
+		background-image: url(../img/icons/nospam.png);
+		background-size: cover;
+		background-position: 0 0;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -217,6 +260,8 @@
 // small-form
 .form-wrapper {
 	position: relative;
+	width: 100%;
+	max-width: 300px;
 }
 
 .form-block {
@@ -228,15 +273,86 @@
 }
 
 .form-body {
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 20px 26px 30px 20px;
 	background-color: rgb(51, 51, 51);
 	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.35);
 	border-radius: 10px;
 }
 
-#hide-form {
+.hideOrderCallForm {
 	position: absolute;
-	right: 0;
-	top: -40px;
+	right: -6px;
+	top: -42px;
+}
+
+.orderCall-form--block {
+	width: 100%;
+	max-width: 300px;
+	display: none;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+
+	&.active {
+		display: block;
+	}
+
+	.form-group {
+		&+.form-group {
+			margin-top: 14px;
+		}
+
+		input {
+			font-size: 16px;
+			height: 46px;
+			border-radius: 5px;
+		}
+	}
+
+	.agree-info p {
+		font-size: 14px;
+		line-height: 17px;
+
+		&:first-child {
+			padding-top: 14px;
+		}
+
+	}
+
+	&:hover {
+		.agree-info p a {
+			color: rgba(255, 255, 255, .8)
+		}
+	}
+}
+
+.orderCall-form .form-button {
+	margin-top: 20px;
+
+	* {
+		width: 100%;
+		height: 50px;
+		border-radius: 5px;
+	}
+}
+
+.orderCall-form .text-16 {
+	color: #fff;
+	margin-bottom: 14px;
+}
+
+.success-orderCallForm {
+	background-color: @black;
+	width: 100%;
+	max-width: 300px;
+	padding: 15px 30px 30px 20px;
+	border-radius: 10px;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transform: translateY(100%);
+
 }

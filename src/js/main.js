@@ -3,19 +3,46 @@ $(document).ready(function () {
 	$('.lazy').lazy();
 
 	// Показать форму по клику на гамбургер
-	const gamburgerBtn = document.querySelector('.btn-bars');
+	const gamburgerBtn = document.querySelector('#show-educational');
 	const openFormBtn = document.querySelector('#openForm');
-	const modalCloseBtn = document.querySelectorAll('.close-modal');
 	const modalForm = document.querySelector('#feedback');
-	const educComplex = document.querySelector('.educational-complex');
+	const educComplex = document.querySelector('#educational-complex--modal');
 
+	// КЛИК ПО ГАМБУРГЕРУ ПОКАЗАТЬ МОДЛКУ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
 	gamburgerBtn.addEventListener('click', function () {
 		educComplex.classList.add('active')
 	});
 
+	// КЛИК ПО КНОПКЕ "НА КАРТЕ"  НА МОДАЛКЕ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
+	const showMapModal = document.querySelector('#show-map-modal');
+	const showAllObjects = document.querySelector('#show-all-objects');
+	const hideAllObjects = document.querySelector('#hide-all-objects');
+	const mapAllObjects = document.querySelector('#map-all-objects');
+	const modalInMap = document.querySelector('#mogal-in-map');
+
+	// первая карта без табов
+	showMapModal.addEventListener('click', function () {
+		educComplex.classList.remove('active');
+		modalInMap.classList.add('active');
+	});
+	// вторая карта с табами
+	showAllObjects.addEventListener('click', function () {
+		mapAllObjects.classList.add('active');
+	});
+
+	// закрыть вторую карту с табами
+	hideAllObjects.addEventListener('click', function () {
+		mapAllObjects.classList.remove('active');
+
+	})
+	// КЛИК НА КНОПКУ ЗАПИСАТЬСЯ В ШАПКЕ
 	openFormBtn.addEventListener('click', function () {
 		modalForm.classList.add('active')
 	});
+
+	// КЛИК ПО КНОПКЕ КРЕСТИК В БОЛЬШИХ МОДАЛКАХ
+	const modalCloseBtn = document.querySelectorAll('.close-modal');
+
 	for (let item of modalCloseBtn) {
 		item.addEventListener('click', function () {
 			this.closest('section').classList.remove('active')
@@ -23,12 +50,12 @@ $(document).ready(function () {
 	}
 
 
-	// валидация полей формы
-	const contactForm = document.querySelector('.contact-form');
-	const formGroups = contactForm.querySelectorAll('.form-group');
+	// БОЛЬШАЯ ФОРМА В ШАПКЕ  валидация полей формы
+	const fedbackForm = document.querySelector('.fedback-form');
+	const formGroups = fedbackForm.querySelectorAll('.form-group');
 
 
-	contactForm.addEventListener('submit', function (e) {
+	fedbackForm.addEventListener('submit', function (e) {
 		e.preventDefault();
 
 		for (let item of formGroups) {
@@ -55,14 +82,154 @@ $(document).ready(function () {
 			badgeElement.classList.remove('hide');
 		});
 	}
+
+
+	//  ФОРМА ЗАКАЗАТЬ ЗВОНОК
+	const orderCallForm = document.querySelector('.orderCall-form');
+	const orderCallFormInput = orderCallForm.querySelectorAll('.form-group ');
+
+	orderCallForm.addEventListener('submit', function (e) {
+		e.preventDefault();
+		for (let item of orderCallFormInput) {
+			const inputElement = item.querySelector('input');
+
+			if (inputElement.value == '') {
+				inputElement.classList.add('error');
+			}
+		}
+
+	});
+	// ФЕЙК ПЛЕЙСХОЛДЕР В ФОРМЕ ОБРАТНЫЙ ЗВОНОК 
+	for (let item of orderCallFormInput) {
+		const itemInput = item.querySelector('input');
+		itemInput.addEventListener('keydown', function () {
+			this.closest('.form-group').querySelector('.fake-placeholder2').classList.add('active');
+		})
+	}
+	// ПОКАЗАТЬ ФОРМУ ЗАКАЗАТЬ ЗВОНОК
+
+	const showOrderCallFormBlock = document.querySelectorAll('.showOrderCallForm');
+	const hideOrderCallFormBlock = document.querySelectorAll('.hideOrderCallForm');
+	for (let btn of showOrderCallFormBlock) {
+		const orderCallFormBlock = btn.closest('.form-wrapper').querySelector('.orderCall-form--block');
+		btn.addEventListener('click', function () {
+
+			orderCallFormBlock.classList.add('active');
+		});
+	}
+
+	for (let btn of hideOrderCallFormBlock) {
+		const orderCallFormBlock = btn.closest('.form-wrapper').querySelector('.orderCall-form--block');
+		btn.addEventListener('click', function () {
+			orderCallFormBlock.classList.remove('active');
+		});
+	}
+
+
 	//   закрыть success окно по клику на крестик
 	const closeSuccessWindow = document.querySelector('.close-success');
 	const successWindow = document.querySelector('.success-window');
+	if (closeSuccessWindow) {
+		closeSuccessWindow.addEventListener('click', function () {
+			successWindow.classList.add('hide');
+		});
+	}
 
-	closeSuccessWindow.addEventListener('click', function () {
-		successWindow.classList.add('hide');
-	})
 
+	// КАРТА ОБЪЕКТОВ ДОБАВИТЬ КЛАСС ЭКТИВ ЭЛЕМЕНТАМ МЕНЮ ПО КЛИКУ
+	const objectItems = document.querySelectorAll('.objects-menu');
+
+	if (objectItems) {
+		for (let item of objectItems) {
+			const objectNav = item.querySelectorAll('a');
+			for (let nav of objectNav) {
+				nav.addEventListener('click', function (e) {
+					e.preventDefault();
+					for (let item of objectNav) {
+						item.classList.remove('active');
+					}
+					this.classList.add('active')
+				})
+			}
+
+		}
+	}
+
+	// ========== БЛОК РАСПИСАНИЕ ==========
+
+	// ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
+	const timetableToggle = document.querySelector('.age-nav');
+	const timetableContent = document.querySelectorAll('.timetable-body')
+
+	if (timetableToggle) {
+		const timetableBtn = timetableToggle.querySelectorAll('button');
+
+		for (let item of timetableBtn) {
+			item.addEventListener('click', function () {
+				for (let item of timetableBtn) {
+					item.classList.remove('active')
+				}
+				this.classList.add('active');
+
+				const itemData = this.getAttribute('data-age');
+				for (let item of timetableContent) {
+					item.classList.remove('active')
+					const contentData = item.getAttribute('data-age');
+					if (contentData == itemData) {
+						item.classList.add('active')
+					}
+				}
+			})
+		}
+
+		// ПОКАЗАТЬ ОПИСАНИЕ ЗАНЯТИЯ 
+		const timetableBlock = document.querySelectorAll('.timetable-grid-item');
+		for (let item of timetableBlock) {
+
+			const lessonItems = item.querySelectorAll('.table-cell');
+			const lessonDescrip = item.querySelectorAll('.timetable-article');
+
+			for (let item of lessonItems) {
+				item.addEventListener('click', function () {
+					for (let item of lessonItems) {
+						item.classList.remove('active');
+					}
+					for (let item of lessonDescrip) {
+						item.classList.remove('active');
+					}
+
+					if (item.hasAttribute('data-index')) {
+						const lessonData = item.getAttribute('data-index');
+						this.classList.add('active');
+						for (let item of lessonDescrip) {
+							item.classList.remove('active');
+							const deskData = item.getAttribute('data-index');
+
+							if (deskData == lessonData) {
+								item.classList.add('active');
+							}
+						}
+					}
+
+				})
+
+			}
+		}
+
+	}
+
+	// ЗАКРЫТИЕ СТРАНИЦ  С ОПИСАНИЯМИ
+	const deskPageClose = document.querySelectorAll('.close-desk');
+	if (deskPageClose) {
+		for (let item of deskPageClose) {
+			const itemParent = item.closest('.timetable-article');
+			const itemParentParent = itemParent.closest('.timetable-grid-item');
+			item.addEventListener('click', function () {
+				itemParent.classList.remove('active');
+				itemParentParent.querySelector('.table-cell.active').classList.remove('active');
+			})
+		}
+	}
 
 
 
