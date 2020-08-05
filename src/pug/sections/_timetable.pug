@@ -21,19 +21,22 @@ section.timetable
 				button(data-age="6")
 					span.age-value 1 &mdash; 2
 					span.age-text лет
-		.timetable-wrapper
-			.timetable-header
-				.table-row-group.table-row-group--day
-					.table-cell
-						span ПН
-					.table-cell
-						span ВТ
-					.table-cell
-						span СР
-					.table-cell
-						span ЧТ
-					.table-cell
-						span ПТ
+	.timetable-header.fix-header
+		.container
+			.table-row-group.table-row-group--day
+				.table-cell
+					span ПН
+				.table-cell
+					span ВТ
+				.table-cell
+					span СР
+				.table-cell
+					span ЧТ
+				.table-cell
+					span ПТ
+		
+	.timetable-wrapper
+		.container
 			//============ КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ ============
 			.timetable-body.active(data-age="1")
 				//============ ЖЕЛТЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
@@ -234,18 +237,18 @@ section.timetable
 			//============ КОНТЕНТ РАСПИСАНИЯ 1-2 ЛЕТ ============
 			+timeTableBody(6, 'Шахматы')
 
-		.timetable-footer.section-quote
-			.decor-img
-				+quoteBig
-			.section-quote__text.text-40
-				p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
-			.section-quote__author
-				.quote__author-img
-					img(src="img/avatar/av1.jpg", alt="photo")
-				.quote__author-info.text-20
-					p Юлия Хащук
-					p
-						span Магистр психологии и педагогики раннего развития,
-						span методист «Champion Park» 
+			.timetable-footer.section-quote
+				.decor-img
+					+quoteBig
+				.section-quote__text.text-40
+					p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
+				.section-quote__author
+					.quote__author-img
+						img(src="img/avatar/av1.jpg", alt="photo")
+					.quote__author-info.text-20
+						p Юлия Хащук
+						p
+							span Магистр психологии и педагогики раннего развития,
+							span методист «Champion Park»
 
 
