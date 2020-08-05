@@ -335,3 +335,65 @@
 .timetable-article_5.timetable-article:after {
 	left: 1050px;
 }
+
+.section-quote {
+	background-color: transparent;
+	position: relative;
+
+	.decor-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	.section-quote__text {
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-quote__text span {
+		color: @blackOp2;
+	}
+
+	.section-quote__author {
+		display: flex;
+		margin-top: 30px;
+
+	}
+
+	.quote__author-img {
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 40px;
+	}
+
+	.quote__author-info {
+
+		p {
+			span {
+				display: block;
+			}
+		}
+
+		p:last-child {
+			color: @blackOp2;
+			margin-top: 10px;
+		}
+	}
+}
+
+.timetable-footer.section-quote {
+	margin-top: 140px;
+
+	.decor-img {
+		width: 310px;
+
+		path {
+			fill: #FFF3D1;
+			;
+		}
+	}
+}
