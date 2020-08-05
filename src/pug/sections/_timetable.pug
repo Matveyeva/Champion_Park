@@ -21,29 +21,27 @@ section.timetable
 				button(data-age="6")
 					span.age-value 1 &mdash; 2
 					span.age-text лет
-	.timetable-header.fix-header
-		.container
-			.table-row-group.table-row-group--day
-				.table-cell
-					span ПН
-				.table-cell
-					span ВТ
-				.table-cell
-					span СР
-				.table-cell
-					span ЧТ
-				.table-cell
-					span ПТ
-		
-	.timetable-wrapper
-		.container
+		.timetable-wrapper
+			.timetable-header
+				.table-row-group.table-row-group--day
+					.table-cell
+						span ПН
+					.table-cell
+						span ВТ
+					.table-cell
+						span СР
+					.table-cell
+						span ЧТ
+					.table-cell
+						span ПТ
+			.timetable-header-2
 			//============ КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ ============
 			.timetable-body.active(data-age="1")
 				//============ ЖЕЛТЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
 				.timetable-block.timetable-block--yellow
 					.timetable-grid
 						// первый ряд ячеек
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.table-cell
 									span Физическая культура
@@ -57,7 +55,7 @@ section.timetable
 									span Физическая культура
 								.table-cell
 									span Дзюдо
-								.table-cell(data-index="dance_2")
+								.table-cell.clicked-item(data-index="dance_2")
 									span Хореография
 									span.info-icon
 										+info
@@ -67,9 +65,9 @@ section.timetable
 								+timeTableDesk(5,'dance_2', 'Хореография-2' )
 								
 						// второй ряд 
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
-								.table-cell(data-index="music-1")
+								.table-cell.clicked-item(data-index="music-1")
 									span Музыка
 									span.cell-img
 										img(src="img/emoji/piano.svg", alt="img")
@@ -81,7 +79,7 @@ section.timetable
 									span Английский язык
 								.table-cell
 									span Подготовка к школе
-								.table-cell(data-index="music-2")
+								.table-cell.clicked-item(data-index="music-2")
 									span Музыка
 									span.info-icon
 										+info
@@ -90,19 +88,19 @@ section.timetable
 								+timeTableDesk(1,'music-1', 'Музыка-1' )
 								+timeTableDesk(1,'music-2', 'Музыка-2' )
 						// третий ряд
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.table-cell
 									span Английский язык
 								.table-cell
 									span Развивающее занятие с логопедом
-								.table-cell(data-index="maths")
+								.table-cell.clicked-item(data-index="maths")
 									span Математический<br> интенсив
 									span.cell-img
 										img(src="img/emoji/calc.svg", alt="img")
 									span.info-icon
 										+info
-								.table-cell(data-index="speaker")
+								.table-cell.clicked-item(data-index="speaker")
 									span Ораторское<br>мастерство
 									span.cell-img
 										img(src="img/emoji/mic.svg", alt="img")
@@ -115,7 +113,7 @@ section.timetable
 								+timeTableDesk(3,'maths', 'Математический<br> интенсив' )
 								+timeTableDesk(4,'speaker', 'Ораторское<br>мастерство' )
 						// четвертый ряд
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.table-cell.disable
 									
@@ -133,7 +131,7 @@ section.timetable
 				//============ РОЗОВЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
 				.timetable-block.timetable-block--sleep
 					.timetable-grid
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.cell-img
 									img(src="img/emoji/sleep.svg", alt="img")
@@ -146,7 +144,7 @@ section.timetable
 				//============ ЗЕЛЕНЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ===========
 				.timetable-block.timetable-block--green
 					.timetable-grid
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.table-cell
 									span Художественное творчество
@@ -160,27 +158,16 @@ section.timetable
 										img(src="img/emoji/book.svg", alt="img")
 									span.info-icon
 										+info
-								.table-cell(data-index="dance_2")
+								.table-cell.clicked-item(data-index="dance_2")
 									span Шахматы
 									.cell-img
 										img(src="img/emoji/chess.svg", alt="img")
 									span.info-icon
 										+info
 							.table-row-description
-								.timetable-article(data-index="dance_1")
-									.close-desk.badge Свернуть
-									h3.title-3 Хореография
-									.desk-content
-										.row
-											.col-xl-8
-												.bold-text.text-22.
-													Хореография — это одновременно танцы, спорт и отличное хобби. Дети учатся чувствовать и понимать классическую музыку, развивают слух, осанку и чувство равновесия. Укрепляют опорно-двигательный аппарат, сердечно-сосудистую, дыхательную и нервную системы.
-
-									
-								.timetable-article(data-index="dance_2")
-									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam itaque officiis suscipit, incidunt impedit velit eveniet magnam blanditiis nemo sapiente tempora a sint. Sed eaque necessitatibus quisquam beatae expedita.									
-							
-						.timetable-grid-item
+								+timeTableDesk(3,'maths', 'Математический<br> интенсив' )
+								+timeTableDesk(4,'speaker', 'Ораторское<br>мастерство' )
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.table-cell
 									span Компьютерная<br>грамотность 
@@ -190,13 +177,13 @@ section.timetable
 										+info
 								.table-cell
 									span Физическая культура
-								.table-cell
+								.table-cell.clicked-item(data-index="finance")
 									span Финансовая<br>грамотность
 									.cell-img
 										img(src="img/emoji/wallet.svg", alt="img")
 									span.info-icon
 										+info
-								.table-cell
+								.table-cell.clicked-item(data-index="english")
 									span Разговорный<br>английский
 									.cell-img
 										img(src="img/emoji/flag.svg", alt="img")
@@ -204,8 +191,12 @@ section.timetable
 										+info
 								.table-cell
 									span Подготовка к школе
+							// выпадающее описание ряда
+							.table-row-description
+								+timeTableDesk(3,'finance', 'Финансовая<br>грамотность' )
+								+timeTableDesk(4,'english', 'Разговорный<br>английский' )
 									
-						.timetable-grid-item
+						.timetable-grid-item.drop-wrapper
 							.table-row-group
 								.table-cell
 									span Подготовка к школе
@@ -237,18 +228,18 @@ section.timetable
 			//============ КОНТЕНТ РАСПИСАНИЯ 1-2 ЛЕТ ============
 			+timeTableBody(6, 'Шахматы')
 
-			.timetable-footer.section-quote
-				.decor-img
-					+quoteBig
-				.section-quote__text.text-40
-					p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
-				.section-quote__author
-					.quote__author-img
-						img(src="img/avatar/av1.jpg", alt="photo")
-					.quote__author-info.text-20
-						p Юлия Хащук
-						p
-							span Магистр психологии и педагогики раннего развития,
-							span методист «Champion Park»
+		.timetable-footer.section-quote
+			.decor-img
+			+quote
+			.section-quote__text.text-40
+				p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
+			.section-quote__author
+				.quote__author-img
+					img(src="img/avatar/av1.jpg", alt="photo")
+				.quote__author-info.text-20
+					p Юлия Хащук
+					p
+						span Магистр психологии и педагогики раннего развития,
+						span методист «Champion Park» 
 
 

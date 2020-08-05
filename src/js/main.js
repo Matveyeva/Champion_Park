@@ -182,26 +182,21 @@ $(document).ready(function () {
 			})
 		}
 
-		// ПОКАЗАТЬ ОПИСАНИЕ ЗАНЯТИЯ 
-		const timetableBlock = document.querySelectorAll('.timetable-grid-item');
-		for (let item of timetableBlock) {
+		function showDeskPage(clickabelItems, innerDeskPages) {
 
-			const lessonItems = item.querySelectorAll('.table-cell');
-			const lessonDescrip = item.querySelectorAll('.timetable-article');
-
-			for (let item of lessonItems) {
+			for (let item of clickabelItems) {
 				item.addEventListener('click', function () {
-					for (let item of lessonItems) {
+					for (let item of clickabelItems) {
 						item.classList.remove('active');
 					}
-					for (let item of lessonDescrip) {
+					for (let item of innerDeskPages) {
 						item.classList.remove('active');
 					}
 
 					if (item.hasAttribute('data-index')) {
 						const lessonData = item.getAttribute('data-index');
 						this.classList.add('active');
-						for (let item of lessonDescrip) {
+						for (let item of innerDeskPages) {
 							item.classList.remove('active');
 							const deskData = item.getAttribute('data-index');
 
@@ -215,18 +210,38 @@ $(document).ready(function () {
 
 			}
 		}
+		// ПОКАЗАТЬ ОПИСАНИЕ ЗАНЯТИЯ 
+		const timetableBlock = document.querySelectorAll('.timetable-grid-item');
 
+		for (let item of timetableBlock) {
+
+			const clickItems = item.querySelectorAll('.table-cell');
+			const showDescrip = item.querySelectorAll('.timetable-article');
+			showDeskPage(clickItems, showDescrip);
+		}
+
+	}
+
+	//  ПОКАЗАТЬ ОПИСАНИЕ ПРЕИМУЩЕСТВ
+	const benefitsGroup = document.querySelectorAll('.benefits-group');
+	for (let item of benefitsGroup) {
+
+		const clickItems = item.querySelectorAll('.card-info');
+		const showDescrip = item.querySelectorAll('article');
+
+		showDeskPage(clickItems, showDescrip);
 	}
 
 	// ЗАКРЫТИЕ СТРАНИЦ  С ОПИСАНИЯМИ
 	const deskPageClose = document.querySelectorAll('.close-desk');
 	if (deskPageClose) {
 		for (let item of deskPageClose) {
-			const itemParent = item.closest('.timetable-article');
-			const itemParentParent = itemParent.closest('.timetable-grid-item');
+			const itemParent = item.closest('article');
+			const itemParentParent = itemParent.closest('.drop-wrapper');
 			item.addEventListener('click', function () {
 				itemParent.classList.remove('active');
-				itemParentParent.querySelector('.table-cell.active').classList.remove('active');
+				itemParentParent.querySelector('.clicked-item.active').classList.remove('active');
+
 			})
 		}
 	}
