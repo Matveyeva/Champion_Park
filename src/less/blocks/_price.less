@@ -110,7 +110,13 @@ span.rub {
 
 .wrapper {
   .text-block {
+    position: relative;
     margin-bottom: 40px;
+
+    .text-block__icon {
+      position: absolute;
+      top: -78px;
+    }
 
     .text-20 {
       margin-bottom: 6px;
@@ -140,11 +146,24 @@ span.rub {
 }
 
 .text-desription {
-	p{
-		margin-bottom: 6px;
-	}
+  p {
+    font-family: @fc;
+    margin-bottom: 6px;
+  }
   span {
-    
     font-size: 14px;
+  }
+}
+
+.logo-block {
+	position: absolute;
+  .brand-logo span {
+	position: absolute;
+	bottom: -20px;
+	right: 60px;
+	font-size: 150px;
+	color: rgba(220, 147, 124, 0.2);
+	font-family: @fr;
+	z-index: -1;
   }
 }
