@@ -1,5 +1,5 @@
 mixin card-info(ind,img,title,text1,text2,label)
-	.card-info(class=" clicked-item" data-index=''+ind)&attributes(attributes)
+	.card-info.clicked-item( data-index=''+ind)&attributes(attributes)
 		.card-info__icon
 			img(src="img/emoji/"+img+".svg" alt='emoji')
 		.card-info__text
@@ -12,7 +12,7 @@ mixin card-info(ind,img,title,text1,text2,label)
 
 
 mixin card-team(ind,img,title,text2,label,icon)
-	.card-team(data-index=''+ind)&attributes(attributes)
+	.card-team.clicked-item(data-index=''+ind)&attributes(attributes)
 		.card-team__img
 			img.lazy(data-src="img/team/" + img + ".jpg" alt='team')
 		.card-info__text
