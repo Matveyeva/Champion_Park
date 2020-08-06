@@ -24,9 +24,9 @@
     }
   }
 
-.card-price__wrapper{
-	margin-bottom: 100px;
-}
+  .card-price__wrapper {
+    margin-bottom: 100px;
+  }
 
   .card-price {
     width: 410px;
@@ -74,11 +74,18 @@
     padding-right: 82px;
     padding-left: 82px;
     margin-top: 10px;
+    &:hover {
+      background-color: #ffdf40;
+    }
   }
   .btn--light {
     background-color: transparent;
     color: @black;
     border: 2px solid #333333;
+    &:hover {
+      background-color: @yellow;
+      border: 2px solid transparent;
+    }
   }
 }
 
@@ -96,24 +103,21 @@ span.rub {
   margin-left: 14px;
 }
 
-
-
-.logo-block {
-  .brand-logo {
-    position: absolute;
-    bottom: -20px;
-    right: 60px;
-    font-size: 150px;
-    color: rgba(220, 147, 124, 0.2);
-    font-family: @fr;
-    z-index: -1;
-  }
-}
-
-.wrapper {
+.card-team__wrapper {
   .text-block {
     position: relative;
     margin-bottom: 40px;
+    border: 1px solid transparent;
+    padding: 11px 14px 16px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #cf3a3a;
+      border-radius: 10px;
+      p:last-child {
+        color: rgba(207, 58, 58, 0.7);
+      }
+    }
 
     .text-block__icon {
       position: absolute;
@@ -134,8 +138,8 @@ span.rub {
       background-color: @azure;
       position: absolute;
       left: -30px;
-      top: 0;
-      bottom: 0;
+      top: 17px;
+      bottom: 17px;
     }
   }
 
@@ -144,28 +148,35 @@ span.rub {
     border-radius: 10px;
     padding: 12px 11px 15px 14px;
     margin-left: -18px;
+    border: 1px solid transparent;
+    padding: 11px 17px 16px 12px;
+    transition: 0.5s;
+    &:hover {
+      border: 1px solid @azure;
+      border-radius: 10px;
+    }
+    &:hover p:last-child {
+      color: rgba(38, 186, 191, 0.7);
+    }
+  }
+
+  .text-desription {
+    p:first-child {
+      font-family: @fc;
+      margin-bottom: 6px;
+    }
+    p:last-child {
+      font-size: 14px;
+    }
   }
 }
 
-.text-desription {
-  p {
-    font-family: @fc;
-    margin-bottom: 6px;
-  }
-  span {
-    font-size: 14px;
-  }
-}
-
-.logo-block {
-	position: absolute;
-  .brand-logo span {
-	position: absolute;
-	bottom: -20px;
-	right: 60px;
-	font-size: 150px;
-	color: rgba(220, 147, 124, 0.2);
-	font-family: @fr;
-	z-index: -1;
-  }
+.symbol_m {
+  position: absolute;
+  right: 14px;
+  top: 37px;
+  font-size: 198px;
+  color: rgba(220, 147, 124, 0.2);
+  font-family: @fr;
+  line-height: 0.8;
 }
