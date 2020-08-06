@@ -181,7 +181,28 @@ $(document).ready(function () {
 				}
 			})
 		}
+		// СТИКИ Расписание
+		let start_pos = $(".timetable-header").offset().top;
+		let prev_pos = start_pos;
 
+		$(window).scroll(function (e) {
+			let curr_pos = $(".timetable-header").offset().top;
+
+			if (prev_pos != curr_pos) {
+				if (!$(".timetable-header-2").hasClass("active")) {
+					$(".timetable-header-2").addClass("active");
+				}
+
+			} else {
+				if ($(".timetable-header-2").hasClass("active")) {
+					$(".timetable-header-2").removeClass("active");
+				}
+			}
+
+			prev_pos = curr_pos;
+		});
+
+		// функция отображения скрытых страниц-описаний
 		function showDeskPage(clickabelItems, innerDeskPages) {
 
 			for (let item of clickabelItems) {
@@ -231,7 +252,15 @@ $(document).ready(function () {
 
 		showDeskPage(clickItems, showDescrip);
 	}
+	//  ПОКАЗАТЬ ОПИСАНИЕ ПРЕПОДАВАТЕЛЕЙ
+	const teamGroup = document.querySelectorAll('.team-group');
+	for (let item of teamGroup) {
 
+		const clickItems = item.querySelectorAll('.card-team');
+		const showDescrip = item.querySelectorAll('article');
+
+		showDeskPage(clickItems, showDescrip);
+	}
 	// ЗАКРЫТИЕ СТРАНИЦ  С ОПИСАНИЯМИ
 	const deskPageClose = document.querySelectorAll('.close-desk');
 	if (deskPageClose) {
@@ -245,9 +274,6 @@ $(document).ready(function () {
 			})
 		}
 	}
-
-
-
 
 
 })

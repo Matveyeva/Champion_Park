@@ -292,6 +292,7 @@ article {
   }
 }
 
+.team-description,
 .benefit-description {
   display: none;
   position: relative;
@@ -307,9 +308,11 @@ article {
     right: 65px;
   }
 
-  &.active {
-    display: block;
-  }
+}
+
+.benefit-description.active,
+.team-description.active {
+  display: block;
 }
 
 .benefit-description.benefit-article_1:after {
