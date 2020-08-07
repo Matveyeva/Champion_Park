@@ -8,7 +8,7 @@ $(document).ready(function () {
 	const modalForm = document.querySelector('#feedback');
 	const educComplex = document.querySelector('#educational-complex--modal');
 
-	// КЛИК ПО ГАМБУРГЕРУ ПОКАЗАТЬ МОДЛКУ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
+	// КЛИК ПО ГАМБУРГЕРУ ПОКАЗАТЬ МОДАЛКУ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
 	gamburgerBtn.addEventListener('click', function () {
 		educComplex.classList.add('active')
 	});
@@ -70,7 +70,7 @@ $(document).ready(function () {
 			}
 		}
 	});
-	//  если инпут в фокусе убирпем предупреждения
+	//  если инпут в фокусе убираем предупреждения
 	for (let item of formGroups) {
 		const inputElement = item.querySelector('input');
 		const badgeElement = item.querySelector('.badge');
@@ -279,7 +279,7 @@ $(document).ready(function () {
 		items: 1,
 		dots: false,
 		autoplay: true,
-		smartSpeed: 1000,
+		smartSpeed: 400,
 		mouseDrag: false,
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
