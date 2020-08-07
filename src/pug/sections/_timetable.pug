@@ -1,245 +1,245 @@
 section.timetable
-	.container
-		.timetable-top
-			h2.titile-2 Расписание
-			nav.age-nav
-				button.active(data-age="1")
-					span.age-value 6 &mdash; 7
-					span.age-text лет
-				button(data-age="2")
-					span.age-value 5 &mdash; 6
-					span.age-text лет
-				button(data-age="3")
-					span.age-value 4 &mdash; 5
-					span.age-text лет
-				button(data-age="4")
-					span.age-value 3 &mdash; 4
-					span.age-text лет
-				button(data-age="5")
-					span.age-value 2 &mdash; 3
-					span.age-text лет
-				button(data-age="6")
-					span.age-value 1 &mdash; 2
-					span.age-text лет
-		.timetable-wrapper
-			.timetable-header
-				.table-row-group.table-row-group--day
-					.table-cell
-						span ПН
-					.table-cell
-						span ВТ
-					.table-cell
-						span СР
-					.table-cell
-						span ЧТ
-					.table-cell
-						span ПТ
-			.timetable-header-2
-			//============ КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ ============
-			.timetable-body.active(data-age="1")
-				//============ ЖЕЛТЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
-				.timetable-block.timetable-block--yellow
-					.timetable-grid
-						// первый ряд ячеек
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell
-									span Физическая культура
-								.table-cell(data-index="dance_1")
-									span Хореография
-									span.cell-img
-										img(src="img/emoji/ballet.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell
-									span Физическая культура
-								.table-cell
-									span Дзюдо
-								.table-cell.clicked-item(data-index="dance_2")
-									span Хореография
-									span.info-icon
-										+info
-							// выпадающее описание для первого ряда
-							.table-row-description
-								+timeTableDesk(2,'dance_1', 'Хореография-1' )
-								+timeTableDesk(5,'dance_2', 'Хореография-2' )
-								
-						// второй ряд 
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell.clicked-item(data-index="music-1")
-									span Музыка
-									span.cell-img
-										img(src="img/emoji/piano.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell
-									span Подготовка к школе
-								.table-cell
-									span Английский язык
-								.table-cell
-									span Подготовка к школе
-								.table-cell.clicked-item(data-index="music-2")
-									span Музыка
-									span.info-icon
-										+info
-							// выпадающее описание для второго ряда
-							.table-row-description
-								+timeTableDesk(1,'music-1', 'Музыка-1' )
-								+timeTableDesk(1,'music-2', 'Музыка-2' )
-						// третий ряд
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell
-									span Английский язык
-								.table-cell
-									span Развивающее занятие с логопедом
-								.table-cell.clicked-item(data-index="maths")
-									span Математический<br> интенсив
-									span.cell-img
-										img(src="img/emoji/calc.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell.clicked-item(data-index="speaker")
-									span Ораторское<br>мастерство
-									span.cell-img
-										img(src="img/emoji/mic.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell
-									span Английский язык
-							// выпадающее описание для второго ряда
-							.table-row-description
-								+timeTableDesk(3,'maths', 'Математический<br> интенсив' )
-								+timeTableDesk(4,'speaker', 'Ораторское<br>мастерство' )
-						// четвертый ряд
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell.disable
-									
-								.table-cell.disable
-									
-								.table-cell.disable
-									
-								.table-cell.disable
-									
-								.table-cell
-									span Оздоровительная гимнастика
-					.table-col
-						p 8:00 &mdash; 13:00
-				
-				//============ РОЗОВЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
-				.timetable-block.timetable-block--sleep
-					.timetable-grid
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.cell-img
-									img(src="img/emoji/sleep.svg", alt="img")
-								.table-cell
-									span 13:00 &mdash; 15:00
-								.table-cell
-									span Тихий час
-					
-				
-				//============ ЗЕЛЕНЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ===========
-				.timetable-block.timetable-block--green
-					.timetable-grid
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell
-									span Художественное творчество
-								.table-cell
-									span Дзюдо
-								.table-cell
-									span Подготовка к школе
-								.table-cell
-									span Литературное<br>чтение
-									.cell-img
-										img(src="img/emoji/book.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell.clicked-item(data-index="dance_2")
-									span Шахматы
-									.cell-img
-										img(src="img/emoji/chess.svg", alt="img")
-									span.info-icon
-										+info
-							.table-row-description
-								+timeTableDesk(3,'maths', 'Математический<br> интенсив' )
-								+timeTableDesk(4,'speaker', 'Ораторское<br>мастерство' )
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell
-									span Компьютерная<br>грамотность 
-									span.cell-img
-										img(src="img/emoji/comp.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell
-									span Физическая культура
-								.table-cell.clicked-item(data-index="finance")
-									span Финансовая<br>грамотность
-									.cell-img
-										img(src="img/emoji/wallet.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell.clicked-item(data-index="english")
-									span Разговорный<br>английский
-									.cell-img
-										img(src="img/emoji/flag.svg", alt="img")
-									span.info-icon
-										+info
-								.table-cell
-									span Подготовка к школе
-							// выпадающее описание ряда
-							.table-row-description
-								+timeTableDesk(3,'finance', 'Финансовая<br>грамотность' )
-								+timeTableDesk(4,'english', 'Разговорный<br>английский' )
-									
-						.timetable-grid-item.drop-wrapper
-							.table-row-group
-								.table-cell
-									span Подготовка к школе
-								.table-cell
-									span Разговорный<br>английский
-									span.info-icon
-										+info
-								.table-cell
-									span Литературное чтение
-									span.info-icon
-										+info
-								.table-cell
-									span Развивающее занятие с психологом
-								.table-cell
-									span Художественное творчество
-						
-					.table-col
-						p 15:00 &mdash; 20:00
-			
-			
-			//============ КОНТЕНТ РАСПИСАНИЯ 5-6 ЛЕТ ============
-			+timeTableBody(2, 'Хореография')
-			//============ КОНТЕНТ РАСПИСАНИЯ 4-5 ЛЕТ ============
-			+timeTableBody(3, 'Музыка')
-			//============ КОНТЕНТ РАСПИСАНИЯ 3-4 ЛЕТ ============
-			+timeTableBody(4, 'Дзюдо')
-			//============ КОНТЕНТ РАСПИСАНИЯ 2-3 ЛЕТ ============
-			+timeTableBody(5, 'Музыка')
-			//============ КОНТЕНТ РАСПИСАНИЯ 1-2 ЛЕТ ============
-			+timeTableBody(6, 'Шахматы')
+    .container
+        .timetable-top
+            h2.titile-2 Расписание
+            nav.age-nav
+                button.active(data-age="1")
+                    span.age-value 6 &mdash; 7
+                    span.age-text лет
+                button(data-age="2")
+                    span.age-value 5 &mdash; 6
+                    span.age-text лет
+                button(data-age="3")
+                    span.age-value 4 &mdash; 5
+                    span.age-text лет
+                button(data-age="4")
+                    span.age-value 3 &mdash; 4
+                    span.age-text лет
+                button(data-age="5")
+                    span.age-value 2 &mdash; 3
+                    span.age-text лет
+                button(data-age="6")
+                    span.age-value 1 &mdash; 2
+                    span.age-text лет
+        .timetable-wrapper
+            .timetable-header
+                .table-row-group.table-row-group--day
+                    .table-cell
+                        span ПН
+                    .table-cell
+                        span ВТ
+                    .table-cell
+                        span СР
+                    .table-cell
+                        span ЧТ
+                    .table-cell
+                        span ПТ
+            .timetable-header-2
+            //============ КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ ============
+            .timetable-body.active(data-age="1")
+                //============ ЖЕЛТЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
+                .timetable-block.timetable-block--yellow
+                    .timetable-grid
+                        // первый ряд ячеек
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell
+                                    span Физическая культура
+                                .table-cell(data-index="dance_1")
+                                    span Хореография
+                                    span.cell-img
+                                        img(src="img/emoji/ballet.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Физическая культура
+                                .table-cell
+                                    span Дзюдо
+                                .table-cell.clicked-item(data-index="dance_2")
+                                    span Хореография
+                                    span.info-icon
+                                        +info
+                            // выпадающее описание для первого ряда
+                            .table-row-description
+                                +timeTableDesk(2,'dance_1', 'Хореография-1' )
+                                +timeTableDesk(5,'dance_2', 'Хореография-2' )
 
-		.timetable-footer.section-quote
-			.decor-img
-			+quote
-			.section-quote__text.text-40
-				p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
-			.section-quote__author
-				.quote__author-img
-					img(src="img/avatar/av1.jpg", alt="photo")
-				.quote__author-info.text-20
-					p Юлия Хащук
-					p
-						span Магистр психологии и педагогики раннего развития,
-						span методист «Champion Park» 
+                        // второй ряд 
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell.clicked-item(data-index="music-1")
+                                    span Музыка
+                                    span.cell-img
+                                        img(src="img/emoji/piano.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Подготовка к школе
+                                .table-cell
+                                    span Английский язык
+                                .table-cell
+                                    span Подготовка к школе
+                                .table-cell.clicked-item(data-index="music-2")
+                                    span Музыка
+                                    span.info-icon
+                                        +info
+                            // выпадающее описание для второго ряда
+                            .table-row-description
+                                +timeTableDesk(1,'music-1', 'Музыка-1' )
+                                +timeTableDesk(1,'music-2', 'Музыка-2' )
+                        // третий ряд
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell
+                                    span Английский язык
+                                .table-cell
+                                    span Развивающее занятие с логопедом
+                                .table-cell.clicked-item(data-index="maths")
+                                    span Математический<br> интенсив
+                                    span.cell-img
+                                        img(src="img/emoji/calc.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell.clicked-item(data-index="speaker")
+                                    span Ораторское<br>мастерство
+                                    span.cell-img
+                                        img(src="img/emoji/mic.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Английский язык
+                            // выпадающее описание для второго ряда
+                            .table-row-description
+                                +timeTableDesk(3,'maths', 'Математический<br> интенсив' )
+                                +timeTableDesk(4,'speaker', 'Ораторское<br>мастерство' )
+                        // четвертый ряд
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell.disable
+
+                                .table-cell.disable
+
+                                .table-cell.disable
+
+                                .table-cell.disable
+
+                                .table-cell
+                                    span Оздоровительная гимнастика
+                    .table-col
+                        p 8:00 &mdash; 13:00
+
+                //============ РОЗОВЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
+                .timetable-block.timetable-block--sleep
+                    .timetable-grid
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .cell-img
+                                    img(src="img/emoji/sleep.png" alt="img")
+                                .table-cell
+                                    span 13:00 &mdash; 15:00
+                                .table-cell
+                                    span Тихий час
+
+
+                //============ ЗЕЛЕНЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ===========
+                .timetable-block.timetable-block--green
+                    .timetable-grid
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell
+                                    span Художественное творчество
+                                .table-cell
+                                    span Дзюдо
+                                .table-cell
+                                    span Подготовка к школе
+                                .table-cell
+                                    span Литературное<br>чтение
+                                    .cell-img
+                                        img(src="img/emoji/book.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell.clicked-item(data-index="dance_2")
+                                    span Шахматы
+                                    .cell-img
+                                        img(src="img/emoji/chess.png" alt="img")
+                                    span.info-icon
+                                        +info
+                            .table-row-description
+                                +timeTableDesk(3,'maths', 'Математический<br> интенсив' )
+                                +timeTableDesk(4,'speaker', 'Ораторское<br>мастерство' )
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell
+                                    span Компьютерная<br>грамотность 
+                                    span.cell-img
+                                        img(src="img/emoji/comp.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Физическая культура
+                                .table-cell.clicked-item(data-index="finance")
+                                    span Финансовая<br>грамотность
+                                    .cell-img
+                                        img(src="img/emoji/wallet.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell.clicked-item(data-index="english")
+                                    span Разговорный<br>английский
+                                    .cell-img
+                                        img(src="img/emoji/flag.png" alt="img")
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Подготовка к школе
+                            // выпадающее описание ряда
+                            .table-row-description
+                                +timeTableDesk(3,'finance', 'Финансовая<br>грамотность' )
+                                +timeTableDesk(4,'english', 'Разговорный<br>английский' )
+
+                        .timetable-grid-item.drop-wrapper
+                            .table-row-group
+                                .table-cell
+                                    span Подготовка к школе
+                                .table-cell
+                                    span Разговорный<br>английский
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Литературное чтение
+                                    span.info-icon
+                                        +info
+                                .table-cell
+                                    span Развивающее занятие с психологом
+                                .table-cell
+                                    span Художественное творчество
+
+                    .table-col
+                        p 15:00 &mdash; 20:00
+
+
+            //============ КОНТЕНТ РАСПИСАНИЯ 5-6 ЛЕТ ============
+            +timeTableBody(2, 'Хореография')
+            //============ КОНТЕНТ РАСПИСАНИЯ 4-5 ЛЕТ ============
+            +timeTableBody(3, 'Музыка')
+            //============ КОНТЕНТ РАСПИСАНИЯ 3-4 ЛЕТ ============
+            +timeTableBody(4, 'Дзюдо')
+            //============ КОНТЕНТ РАСПИСАНИЯ 2-3 ЛЕТ ============
+            +timeTableBody(5, 'Музыка')
+            //============ КОНТЕНТ РАСПИСАНИЯ 1-2 ЛЕТ ============
+            +timeTableBody(6, 'Шахматы')
+
+        .timetable-footer.section-quote
+            .decor-img
+            +quote
+            .section-quote__text.text-40
+                p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
+            .section-quote__author
+                .quote__author-img
+                    img(src="img/avatar/av1.jpg" alt="photo")
+                .quote__author-info.text-20
+                    p Юлия Хащук
+                    p
+                        span Магистр психологии и педагогики раннего развития,
+                        span методист «Champion Park» 
 
 
