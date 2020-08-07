@@ -74,6 +74,7 @@ ul {
 h1,
 h2,
 h3,
+h4,
 p {
 	padding: 0;
 	margin: 0;
@@ -117,6 +118,11 @@ button {
 	max-width: 1310px;
 }
 
+button {
+	font-family: 'rotondac-bold';
+	font-weight: 700;
+}
+
 .button {
 	font-size: 20px;
 	line-height: 24px;
@@ -130,6 +136,7 @@ button {
 	padding-left: 2em;
 	padding-right: 2em;
 	display: inline-block;
+
 	.tr;
 
 	&:hover {
@@ -150,6 +157,31 @@ button {
 .button.h-70 {
 	height: 70px;
 	line-height: 70px;
+
+}
+
+.button.h-50 {
+	height: 50px;
+	line-height: 48px;
+	font-weight: 700;
+	border-radius: 10px;
+	font-family: @fc;
+	margin-top: 10px;
+	font-size: 20px;
+	border: 2px solid @black;
+
+}
+
+.button.button-color {
+	background-color: @yellow;
+	// border: 2px solid @black;
+
+	&:hover {
+		background-color: #FFDF40;
+		// border: 2px solid #FFDF40;
+		color: @black;
+
+	}
 }
 
 .button-light {
@@ -305,9 +337,17 @@ h4 {
 	}
 }
 
+
 .text-30 {
 	font-size: 30px;
 	line-height: 1.24;
+}
+
+.main-text {
+	font-size: 30px;
+	line-height: 1.2333;
+	font-family: @fc;
+	font-weight: 700;
 }
 
 .text-white {
@@ -335,7 +375,7 @@ h4 {
 	font-family: @fc;
 	font-weight: 700;
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 30px;
 	border-radius: 5px;
 	background-color: #333;
 	letter-spacing: 0.1em;
@@ -343,6 +383,7 @@ h4 {
 	color: @white;
 	padding-left: 15px;
 	padding-right: 15px;
+	display: inline-block;
 	// padding-top: 5px;
 	// box-shadow: 0px 10px 10px rgba(80, 197, 201, 0.3);
 }
@@ -466,6 +507,30 @@ h4 {
 	padding-top: 10px;
 }
 
+.mt-30 {
+	margin-top: 30px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
 .mt-40 {
 	margin-top: 40px;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.comb-text {
+	font-weight: 400;
+
+	p:first-child {
+		font-weight: 700;
+	}
+
+	p+p {
+		margin-top: 0 !important;
+	}
 }
