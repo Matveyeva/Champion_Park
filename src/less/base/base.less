@@ -346,8 +346,26 @@ h4 {
 .main-text {
 	font-size: 30px;
 	line-height: 1.2333;
+	font-family: @fcb;
+	// font-weight: 700;
+}
+
+.inner-text .main-text p{
+	font-size: 22px;
+}
+
+.inner-text .text-20 p{
 	font-family: @fc;
-	font-weight: 700;
+	&+p{
+		margin-top: 20px;
+	}
+}
+
+.inner-text .comb-text{
+	margin-top: 40px;
+	&+.comb-text{
+		margin-top: 30px;
+	}
 }
 
 .text-white {
@@ -507,6 +525,10 @@ h4 {
 	padding-top: 10px;
 }
 
+.mb-20{
+	margin-bottom: 20px;	
+}
+
 .mt-30 {
 	margin-top: 30px;
 }
@@ -525,9 +547,10 @@ h4 {
 
 .comb-text {
 	font-weight: 400;
-
+	font-family: @fc;
 	p:first-child {
 		font-weight: 700;
+		font-family:@fr;
 	}
 
 	p+p {
@@ -549,3 +572,4 @@ h4 {
 		margin-top: 6px;
 	}
 }
+
