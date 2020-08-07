@@ -274,6 +274,15 @@ $(document).ready(function () {
 			})
 		}
 	}
-
+	// slider
+	$('.mini-slider').owlCarousel({
+		items: 1,
+		dots: false,
+		autoplay: true,
+		smartSpeed: 1000,
+		mouseDrag: false,
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+	})
 
 })
