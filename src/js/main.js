@@ -27,11 +27,13 @@ $(document).ready(function () {
 	showMapModal.addEventListener('click', function () {
 		educComplex.classList.remove('active');
 		modalInMap.classList.add('active');
+		bodyEl.classList.add('noscroll');
 	});
 	// вторая карта с табами
 	for (let item of showAllObjects) {
 		item.addEventListener('click', function () {
 			mapAllObjects.classList.add('active');
+			bodyEl.classList.add('noscroll');
 		});
 
 	}
@@ -39,11 +41,13 @@ $(document).ready(function () {
 	// закрыть вторую карту с табами
 	hideAllObjects.addEventListener('click', function () {
 		mapAllObjects.classList.remove('active');
+		bodyEl.classList.remove('noscroll');
 
 	})
 	// КЛИК НА КНОПКУ ЗАПИСАТЬСЯ В ШАПКЕ
 	openFormBtn.addEventListener('click', function () {
 		modalForm.classList.add('active')
+		bodyEl.classList.add('noscroll');
 	});
 
 	// КЛИК ПО КНОПКЕ КРЕСТИК В БОЛЬШИХ МОДАЛКАХ
