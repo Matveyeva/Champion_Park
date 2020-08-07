@@ -56,6 +56,10 @@ body {
 
 }
 
+.noscroll {
+	overflow: hidden;
+}
+
 a,
 a:hover {
 	text-decoration: none;
@@ -95,6 +99,7 @@ button {
 	cursor: pointer;
 	background-color: transparent;
 	border: 0px;
+	padding-top: 0;
 }
 
 .container--large,
@@ -350,20 +355,22 @@ h4 {
 	// font-weight: 700;
 }
 
-.inner-text .main-text p{
+.inner-text .main-text p {
 	font-size: 22px;
 }
 
-.inner-text .text-20 p{
+.inner-text .text-20 p {
 	font-family: @fc;
-	&+p{
+
+	&+p {
 		margin-top: 20px;
 	}
 }
 
-.inner-text .comb-text{
+.inner-text .comb-text {
 	margin-top: 40px;
-	&+.comb-text{
+
+	&+.comb-text {
 		margin-top: 30px;
 	}
 }
@@ -402,7 +409,7 @@ h4 {
 	padding-left: 15px;
 	padding-right: 15px;
 	display: inline-block;
-	// padding-top: 5px;
+	padding-top: 0px;
 	// box-shadow: 0px 10px 10px rgba(80, 197, 201, 0.3);
 }
 
@@ -525,8 +532,8 @@ h4 {
 	padding-top: 10px;
 }
 
-.mb-20{
-	margin-bottom: 20px;	
+.mb-20 {
+	margin-bottom: 20px;
 }
 
 .mt-30 {
@@ -548,9 +555,10 @@ h4 {
 .comb-text {
 	font-weight: 400;
 	font-family: @fc;
+
 	p:first-child {
 		font-weight: 700;
-		font-family:@fr;
+		font-family: @fr;
 	}
 
 	p+p {
@@ -573,13 +581,13 @@ h4 {
 	}
 }
 
-.inner-column{
+.inner-column {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	justify-content: space-between;
 
-	@media(min-width: 1440px){
+	@media(min-width: 1440px) {
 		padding-left: 30px;
 	}
 }

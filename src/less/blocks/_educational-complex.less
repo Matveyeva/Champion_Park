@@ -48,6 +48,43 @@
 	display: block;
 	height: 100vh;
 	overflow: auto;
+
+	&::-webkit-scrollbar {
+		/* 1 - скроллбар */
+		width: 6px;
+		height: 6px;
+		background-color: #FFFFFF;
+	}
+
+	&::-webkit-scrollbar-button {
+		/* 2 - кнопка */
+	}
+
+	&::-webkit-scrollbar-track {
+		/* 3 - трек */
+		background-color: #dedede;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		/* 4 - видимая часть трека */
+	}
+
+	&::-webkit-scrollbar-thumb {
+		/* 5 - ползунок */
+		border-radius: 2px;
+		background-color: @yellow;
+	}
+
+	&::-webkit-scrollbar-corner {
+		/* 6 - уголок */
+	}
+
+	&::-webkit-resizer {
+		/* 7 - изменение размеров */
+	}
+
+
+
 }
 
 .educational-menu {
