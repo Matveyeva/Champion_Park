@@ -3,19 +3,22 @@ $(document).ready(function () {
 	$('.lazy').lazy();
 
 	// Показать форму по клику на гамбургер
+	const bodyEl = document.body;
 	const gamburgerBtn = document.querySelector('#show-educational');
 	const openFormBtn = document.querySelector('#openForm');
 	const modalForm = document.querySelector('#feedback');
 	const educComplex = document.querySelector('#educational-complex--modal');
 
 	// КЛИК ПО ГАМБУРГЕРУ ПОКАЗАТЬ МОДЛКУ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
-	gamburgerBtn.addEventListener('click', function () {
-		educComplex.classList.add('active')
+	gamburgerBtn.addEventListener('click', function (e) {
+		e.preventDefault();
+		educComplex.classList.add('active');
+		bodyEl.classList.add('noscroll');
 	});
 
 	// КЛИК ПО КНОПКЕ "НА КАРТЕ"  НА МОДАЛКЕ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
 	const showMapModal = document.querySelector('#show-map-modal');
-	const showAllObjects = document.querySelector('#show-all-objects');
+	const showAllObjects = document.querySelectorAll('.show-all-objects');
 	const hideAllObjects = document.querySelector('#hide-all-objects');
 	const mapAllObjects = document.querySelector('#map-all-objects');
 	const modalInMap = document.querySelector('#mogal-in-map');
@@ -26,9 +29,12 @@ $(document).ready(function () {
 		modalInMap.classList.add('active');
 	});
 	// вторая карта с табами
-	showAllObjects.addEventListener('click', function () {
-		mapAllObjects.classList.add('active');
-	});
+	for (let item of showAllObjects) {
+		item.addEventListener('click', function () {
+			mapAllObjects.classList.add('active');
+		});
+
+	}
 
 	// закрыть вторую карту с табами
 	hideAllObjects.addEventListener('click', function () {
@@ -45,7 +51,8 @@ $(document).ready(function () {
 
 	for (let item of modalCloseBtn) {
 		item.addEventListener('click', function () {
-			this.closest('section').classList.remove('active')
+			this.closest('section').classList.remove('active');
+			bodyEl.classList.remove('noscroll');
 		});
 	}
 
