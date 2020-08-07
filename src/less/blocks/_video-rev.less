@@ -4,20 +4,24 @@
   padding-top: 80px;
   padding-bottom: 250px;
   font-size: 16px;
+
   .title-2 {
     max-width: 400px;
     margin-bottom: 1.15em;
   }
+
   .video-review__wrapper {
     margin-top: -140px;
   }
+
   .video-review__item {
     display: flex;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     -webkit-align-items: flex-end;
     align-items: flex-end;
-    & + .video-review__item {
+
+    &+.video-review__item {
       margin-top: 50px;
     }
   }
@@ -26,34 +30,29 @@
     width: 38%;
     max-width: 470px;
     padding-bottom: 30px;
+
     @media (max-width: 1359px) {
       padding-bottom: 0;
     }
   }
+
   .text-paragraf {
     p {
       font-size: 1.75em;
       font-weight: 700;
       line-height: 1.14;
-      & + p {
+
+      &+p {
         margin-top: 14px;
       }
     }
   }
+
   .quote-author {
     margin-top: 20px;
-    span {
-      display: block;
-      font-size: 20px;
-      line-height: 1.2;
-    }
-    span:last-child {
-      font-size: 14px;
-      line-height: 16px;
-      opacity: 0.6;
-      margin-top: 6px;
-    }
+
   }
+
   .video-review__frame {
     width: 60%;
     max-width: 770px;
@@ -62,10 +61,12 @@
     overflow: hidden;
     position: relative;
   }
+
   .video-review__item:nth-child(2n) {
     flex-direction: row-reverse;
   }
 }
+
 .play-button {
   position: absolute;
   bottom: 40px;
@@ -85,10 +86,12 @@
     transform: translate(-50%, -50%);
     font-weight: 700;
   }
+
   &--big {
     span {
       font-size: 28px;
     }
   }
 }
+
 // ============Секция Родители говорят============
