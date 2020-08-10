@@ -12,11 +12,12 @@ section.map-modal#mogal-in-map
                 article.map-text
                     .map-content-title
                         .badge Частный детский сад
-                        h1.section-title Champion Park
-                        p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
+                        h1.section-title(itemprop="name") Champion Park
+                        span(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                        p.text-20(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
                     .sidebar-block
                         .contacts.text-28
-                            a(href="tel:84957960504") 8 (495) 796-05-04
+                            a(href="tel:84957960504" itemprop="telephone") 8 (495) 796-05-04
                             .form-wrapper
                                 button.button-light.showOrderCallForm заказать звонок
 
@@ -86,11 +87,12 @@ section.map-modal.map-modal--all#map-all-objects
                                 article.map-text
                                     .map-content-title
                                         .badge Частный детский сад
-                                        h1.section-title Champion Park
-                                        p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
+                                        div(itemscope itemtype="http://schema.org/Organization")
+                                        h1.section-title(itemprop="name") Champion Park
+                                        p.text-20(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
                                     .sidebar-block
                                         .contacts.text-28
-                                            a(href="tel:84957960504") 8 (495) 796-05-04
+                                            a(href="tel:84957960504" itemprop="telephone") 8 (495) 796-05-04
                                             .form-wrapper
                                                 button.button-light.showOrderCallForm заказать звонок
 
@@ -142,6 +144,7 @@ section.map-modal.map-modal--all#map-all-objects
                                 article.map-text
                                     .map-content-title
                                         .badge Частный детский сад
+                                        div(itemscope itemtype="http://schema.org/Organization")
                                         h1.section-title Champion Park
                                         p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
                                     .sidebar-block

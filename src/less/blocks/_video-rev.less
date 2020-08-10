@@ -2,8 +2,19 @@
 .video-review {
   background: #f9f5e6;
   padding-top: 80px;
-  padding-bottom: 250px;
+  padding-bottom: 160px;
   font-size: 16px;
+
+  .rev-img {
+    position: absolute;
+    right: -70px;
+    bottom: -15%;
+
+    @media(max-width:1439px) {
+      right: 0;
+    }
+
+  }
 
   .title-2 {
     max-width: 400px;
@@ -12,6 +23,8 @@
 
   .video-review__wrapper {
     margin-top: -140px;
+    position: relative;
+
   }
 
   .video-review__item {
@@ -75,6 +88,7 @@
       right: 0;
       z-index: 1;
       .tr;
+      pointer-events: none;
     }
 
     &:hover:after {
@@ -82,7 +96,7 @@
     }
   }
 
-  .video-review__item:nth-child(2n) {
+  .video-review__item:nth-of-type(2n) {
     flex-direction: row-reverse;
   }
 }

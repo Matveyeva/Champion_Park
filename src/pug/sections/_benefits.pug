@@ -1,5 +1,6 @@
 //============ Секция Почему родители нас выбирают ============
-section.benefits
+section.benefits.section-retreat
+	include _video-presentation.pug
 	.container
 		h2.title-2 Почему родители нас выбирают
 		.wrapper
@@ -36,6 +37,18 @@ section.benefits
 				.benefits-card-pages
 					+benefitDesk_1(5)(class=" benefit-article_1")
 					+benefitDesk_2(7)(class=" benefit-article_3")
+		.benefits-footer.section-quote
+			.decor-img
+				+quoteBig
+			.section-quote__text.text-40
+				p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
+			.section-quote__author
+				.quote__author-img
+					img(src="img/avatar/ava_doc.jpg" alt="photo")
+				.quote__author-info.text-20
+					p Ирина Григорьевна Чепенко
+					p
+						span Врач-педиатр «Champion Park», 29 лет опыта работы 
 
 //============ Конец Секции Почему родители нас выбирают ============
 
