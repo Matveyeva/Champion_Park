@@ -182,6 +182,13 @@ $(document).ready(function () {
 	const btnShowRev = document.querySelector('#btnShowRev');
 	const otherRevCards = document.querySelector('#otherRevCards');
 	showHideCards(btnShowRev, otherRevCards);
+
+	const btnShowServ = document.querySelector('#btnShowServ');
+	const otherServCards = document.querySelector('#otherServiceCards');
+	showHideCards(btnShowServ, otherServCards);
+
+
+
 	// ========== БЛОК РАСПИСАНИЕ ==========
 
 	// ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
