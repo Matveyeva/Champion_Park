@@ -10,6 +10,8 @@ section.price.section-retreat
 			.row
 				.col-xl-4
 					.card-price.dark-bg
+						.success-label
+							span &#10004;
 						.card-label Рекомендуем
 						h4.text-40 Пробная неделя
 						.text-head
@@ -18,9 +20,11 @@ section.price.section-retreat
 						.text-body
 							.big-text 18 000
 								span.rub &#8381;
-							button.button.h-50.button-color Записаться
+							button.button.button-tariff.h-50.button-color Записаться
 				.col-xl-4
 					.card-price
+						.success-label
+							span &#10004;
 						h4.text-40 Короткий день
 						.text-head
 							.text-20 8:00 &mdash; 13:00 или 15:00 &mdash; 20:00
@@ -29,9 +33,11 @@ section.price.section-retreat
 							.big-text 45 000
 								span.rub &#8381;
 								span.text-28 /месяц
-							button.button.h-50 Записаться
+							button.button.button-tariff.h-50 Записаться
 				.col-xl-4
-					.card-price
+					.card-price.selected 
+						.success-label
+							span &#10004;
 						h4.text-40 Полный день
 						.text-head
 							.text-20 7:30 &mdash; 22:00
@@ -40,8 +46,23 @@ section.price.section-retreat
 							.big-text 65 000
 								span.rub &#8381;
 								span.text-28 /месяц
-							button.button.h-50 Записаться
+							button.button.button-tariff.h-50 Записаться
 
+			// ============= ОКНО ОБ УСПЕШНОЙ ОТПРАВКЕ =============
+			.success-window.success-select-tariff
+				.close-success
+					+close
+				.success-img
+					img(src="img/emoji/happy.png" alt="emoji")
+					img(src="img/emoji/happy.png" alt="emoji")
+					img(src="img/emoji/happy.png" alt="emoji")
+				h4.title-20 Рады, что вы решили посетить «Champion Park»
+				.success-text
+					p Ваша заявка на бесплатный пробный день получена. Свяжемся с вами в ближайшее время. Обычно в течение 30 — 45 минут.
+					p Во время беседы подберем удобную дату посещения, попросим рассказат о вашем ребенке и его предпочтениях, поинтересуемся вашими ожиданиями и требованими к воспитательному процессу и ответим на вопросы
+			// ============= КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВКЕ =============
+		
+		// ============= РАЗДЕЛ -В СТОИМОСТЬ ВХОДЯТ - =============		
 		.heading-info
 			h2.title-3 В стоимость входят
 		.card-team__wrapper

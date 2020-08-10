@@ -39,16 +39,16 @@ section.educational-complex#educational-complex--modal
                         .educational-card__body
                             nav
                                 a(href="#!").active
-                                    h4.title-4.badge-inner Champion Park
+                                    h4.title-4.badge-inner(itemprop="name") Champion Park
                                         .badge.badge--small.badge-red вы здесь
-                                    .text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+                                    .text-16(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
 
                                 a(href="#!")
-                                    h4.title-4 Garden Square
-                                    .text-16  ул. Ефремова 10, корп. 1
+                                    h4.title-4(itemprop="name") Garden Square
+                                    .text-16(itemprop="streetAddress")  ул. Ефремова 10, корп. 1
                                 a(href="#!")
-                                    h4.title-4 Marfino
-                                    .text-16  ул. Большая Марфинская 1, корп. 2
+                                    h4.title-4(itemprop="name") Marfino
+                                    .text-16(itemprop="streetAddress")  ул. Большая Марфинская 1, корп. 2
 
                     // ============ ВТОРАЯ КАРТОЧКА ============
                     .educational-card
@@ -61,13 +61,13 @@ section.educational-complex#educational-complex--modal
                         .educational-card__body
                             nav
                                 a(href="#!")
-                                    h4.title-4 Champion Park
-                                    .text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+                                    h4.title-4(itemprop="name") Champion Park
+                                    .text-16(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
 
                                 a(href="#!")
-                                    h4.title-4.badge-inner Garden Square
+                                    h4.title-4.badge-inner(itemprop="name") Garden Square
                                         .badge.badge--small.badge-azure скоро открытие
-                                    .text-16  ул. Усачева, 11
+                                    .text-16(itemprop="streetAddress")  ул. Усачева, 11
                             .sochial.sochial--abs
                                 a(href="#!").icon-fb
                                     +facebook
@@ -76,7 +76,7 @@ section.educational-complex#educational-complex--modal
 
                 .educational-column.sidebar-block
                     .contacts.text-28
-                        a(href="tel:84957960504") 8 (495) 796-05-04
+                        a(itemprop="telephone" href="tel:84957960504") 8 (495) 796-05-04
                         .form-wrapper
                             button.button-light.showOrderCallForm заказать звонок
                             // ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК
