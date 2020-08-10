@@ -165,7 +165,19 @@ $(document).ready(function () {
 
 		}
 	}
-
+	// ПОКАЗАТЬ СКРЫТЫЕ КАРТОЧКИ
+	function showHideCards(btnName, blockName) {
+		btnName.addEventListener('click', function (e) {
+			e.preventDefault();
+			console.log('555');
+			blockName.classList.add('show-item');
+			this.classList.add('hide-item');
+		})
+	}
+	// Показать всех сотрудников
+	const btnShowTeam = document.querySelector('#btnShowTeam');
+	const otherTeamCards = document.querySelector('#otherTeamCards');
+	showHideCards(btnShowTeam, otherTeamCards)
 	// ========== БЛОК РАСПИСАНИЕ ==========
 
 	// ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
