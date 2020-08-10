@@ -165,11 +165,10 @@ $(document).ready(function () {
 
 		}
 	}
-	// ПОКАЗАТЬ СКРЫТЫЕ КАРТОЧКИ
+	// ФУНКЦИЯ ПОКАЗАТЬ СКРЫТЫЕ КАРТОЧКИ
 	function showHideCards(btnName, blockName) {
 		btnName.addEventListener('click', function (e) {
 			e.preventDefault();
-			console.log('555');
 			blockName.classList.add('show-item');
 			this.classList.add('hide-item');
 		})
@@ -177,7 +176,12 @@ $(document).ready(function () {
 	// Показать всех сотрудников
 	const btnShowTeam = document.querySelector('#btnShowTeam');
 	const otherTeamCards = document.querySelector('#otherTeamCards');
-	showHideCards(btnShowTeam, otherTeamCards)
+	showHideCards(btnShowTeam, otherTeamCards);
+
+	// Показать всех сотрудников
+	const btnShowRev = document.querySelector('#btnShowRev');
+	const otherRevCards = document.querySelector('#otherRevCards');
+	showHideCards(btnShowRev, otherRevCards);
 	// ========== БЛОК РАСПИСАНИЕ ==========
 
 	// ПЕРЕКЛЮЧЕНИЕ ТАБОВ С ВОЗРАСТОМ
