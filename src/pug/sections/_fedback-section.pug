@@ -1,26 +1,40 @@
 section.feedback-form.feedback
-	.child-img
-		img(src="img/header/child2.png", alt="image")
-	.container
-		.feedback-content
-			.brand-logo
-				img(src="img/logo/brand.png", alt="logo")
-			h1.title-3 Запись на бесплатный пробный день
-			.feedback-info
-				p Посещения пробного дня не обязывает к платному обучению
-				p Мы хотим, чтобы перед поступлением в сад, вы были уверены, <br> что «Champion Park» станет надежным вторым дом для вашего ребенка 
-			.feedback-form
-				form.contact-form.fedback-form(action="#")
-					.form-group
-						input(type="text", name="userName" )
-						.badge ваше имя
-						.fake-placeholder Ваше имя
-					.form-group
-						input.phone(type="text", name="tel")
-						.badge телефон
-						.fake-placeholder Телефон
-					.form-button
-						input(type="submit" value="Отправить")
-					.agree-info
-						p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
-						p Не шлем спам и надежно храним персональные данные
+	//- .child-img
+	//- 	img(src="img/header/child2.png", alt="image")
+	//- .container
+	//- 	.feedback-content
+	//- 		.brand-logo
+	//- 			img(src="img/logo/brand.png", alt="logo")
+	//- 		h1.title-3 Запись на бесплатный пробный день
+	//- 		.feedback-info
+	//- 			p Посещения пробного дня не обязывает к платному обучению
+	//- 			p Мы хотим, чтобы перед поступлением в сад, вы были уверены, <br> что «Champion Park» станет надежным вторым дом для вашего ребенка 
+	//- 		.feedback-form
+	//- 			form.contact-form.fedback-form(action="#")
+	//- 				.form-group
+	//- 					input(type="text", name="userName" )
+	//- 					.badge ваше имя
+	//- 					.fake-placeholder Ваше имя
+	//- 				.form-group
+	//- 					input.phone(type="text", name="tel")
+	//- 					.badge телефон
+	//- 					.fake-placeholder Телефон
+	//- 				.form-button
+	//- 					input(type="submit" value="Отправить")
+	//- 				.agree-info
+	//- 					p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+	//- 					p Не шлем спам и надежно храним персональные данные
+	//============ СООБЩЕНИЕ ОБ УСПЕШНОЙ ОТПРАВКЕ ФОРМЫ ============
+	.success-window
+		.success-bg
+			+fullRoundLogo
+		.success-img
+			img(src="img/emoji/happy.png" alt="emoji")
+			img(src="img/emoji/happy.png" alt="emoji")
+			img(src="img/emoji/happy.png" alt="emoji")
+
+		h3.title-3  Спасибо, что выбрали «Champion Park»
+		.success-text.text-20
+			p Ваша заявка на бесплатный пробный день получена. Свяжемся с вами в ближайшее время. Обычно в течение 30 — 45 минут.
+			p Во время беседы подберем удобную дату посещения, попросим рассказат о вашем ребенке и его предпочтениях, поинтересуемся вашими ожиданиями и требованими к воспитательному процессу и ответим на вопросы
+	//============ КОНЕЦ СООБЩЕНИЕ ОБ УСПЕШНОЙ ОТПРАВКЕ ФОРМЫ ============

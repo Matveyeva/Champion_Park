@@ -305,10 +305,10 @@ $(document).ready(function () {
 	$('.mini-slider').owlCarousel({
 		items: 1,
 		dots: false,
-		// autoplay: true,
+		autoplay: true,
 		smartSpeed: 400,
 		margin: 20,
-		// mouseDrag: false,
+		mouseDrag: false,
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
 	})
