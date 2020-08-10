@@ -11,7 +11,7 @@
     font-size: 20px;
     line-height: 1.2;
 
-    & + p {
+    &+p {
       margin-top: 30px;
     }
   }
@@ -33,6 +33,10 @@
   .comb-text {
     margin-top: 30px;
   }
+
+  .button {
+    margin-top: 16px;
+  }
 }
 
 .mini-slider-wrapper {
@@ -41,22 +45,27 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  top: -80px;
-  box-shadow: 0px 0px 30px rgba(82, 82, 82, 0.15);
+  top: -110px;
+  // box-shadow: 0px 0px 30px rgba(82, 82, 82, 0.15);
   border-radius: 15px;
 }
 
 .mini-slider {
+
   // padding-top: 20px;
   // padding-bottom: 20px;
+  .slide-wrapper {
+    padding-top: 30px;
+  }
 
   .mini-slider-item {
     width: 300px;
     height: 410px;
-    // box-shadow: 0px 0px 30px rgba(82, 82, 82, 0.15);
+
     border-radius: 15px;
     cursor: pointer;
     border: 1px solid transparent;
+    position: relative;
 
     .tr;
 
@@ -64,21 +73,53 @@
       border: 1px solid @red;
       background-color: #f9f5e6;
 
+      .mini-slider__link a,
       .mini-slider__desk span {
         color: @red;
       }
     }
+
+    .decor-img {
+      width: 58px;
+      position: absolute;
+      top: -30px;
+      right: 30px;
+      border-radius: 15px 15px 0 0;
+
+      path {
+        fill: #8FA356;
+      }
+    }
   }
 
-  .mini-slider__img {
+  .badge {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    background-color: rgba(51, 51, 51, .9);
   }
 
   .mini-slider__body {
     padding: 20px;
+    background: #FAF3EF;
+    border-radius: 0 0 15px 15px;
   }
 
   .mini-slider-item_1 {
     background-color: #fff;
+    overflow: hidden;
+  }
+
+  .mini-slider-item_2 {
+    background: #FAF3EF;
+
+
+    &:hover {
+      .mini-slider__link {
+        color: @red;
+      }
+    }
+
   }
 
   .text-group--small {
@@ -100,5 +141,26 @@
       color: @blackOp;
       .tr;
     }
+  }
+
+  .mini-slider-item_2 {
+    padding: 20px;
+  }
+
+  .mini-slider__bloquote {
+    min-height: 207px;
+    max-height: 207px;
+    overflow: hidden;
+    line-height: 1.15;
+    padding-right: 10px;
+  }
+
+  .mini-slider__link {
+    font-size: 14px;
+    color: @blackOp2;
+    padding-top: 16px;
+    .tr;
+    margin-bottom: 60px;
+
   }
 }

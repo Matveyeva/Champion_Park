@@ -307,6 +307,7 @@ $(document).ready(function () {
 		dots: false,
 		autoplay: true,
 		smartSpeed: 400,
+		margin: 20,
 		mouseDrag: false,
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
