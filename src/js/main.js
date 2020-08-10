@@ -17,18 +17,21 @@ $(document).ready(function () {
 	});
 
 	// КЛИК ПО КНОПКЕ "НА КАРТЕ"  НА МОДАЛКЕ ОБРАЗОВАТЕЛЬНЫЙ КОМПЛЕКС
-	const showMapModal = document.querySelector('#show-map-modal');
+	const showMapModal = document.querySelectorAll('.show-map-modal');
 	const showAllObjects = document.querySelectorAll('.show-all-objects');
 	const hideAllObjects = document.querySelector('#hide-all-objects');
 	const mapAllObjects = document.querySelector('#map-all-objects');
 	const modalInMap = document.querySelector('#mogal-in-map');
 
-	// первая карта без табов
-	showMapModal.addEventListener('click', function () {
-		educComplex.classList.remove('active');
-		modalInMap.classList.add('active');
-		bodyEl.classList.add('noscroll');
-	});
+	// КЛИК По КНОПКАМ "НА КАРТЕ"
+	for (let item of showMapModal) {
+		item.addEventListener('click', function () {
+			educComplex.classList.remove('active');
+			modalInMap.classList.add('active');
+			bodyEl.classList.add('noscroll');
+		});
+	}
+
 	// вторая карта с табами
 	for (let item of showAllObjects) {
 		item.addEventListener('click', function () {
