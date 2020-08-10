@@ -74,7 +74,7 @@ header.header
 
 
 			.contacts.text-28
-				a(href="tel:+74957960504") 8 (495) 796-05-04
+				a(itemprop="telephone" href="tel:+74957960504") 8 (495) 796-05-04
 
 			.header-buttons
 				+eye
@@ -91,7 +91,10 @@ header.header
 				span 1 &mdash; 7 лет
 				span 07:30 &mdash; 22:00
 			.description-row
-				p Москва, Мичуринский проспект, ул. Олимпийская Деревня 1, корп.
+				div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+				p 
+					span(itemprop="addressLocality") Москва,
+					span(itemprop="streetAddress") Мичуринский проспект, ул. Олимпийская Деревня 1, корп.
 				a(href="#!").button-light.show-map-modal на карте
 
 	//============ СООБЩЕНИЕ ОБ УСПЕШНОЙ ОТПРАВКЕ ФОРМЫ ============
