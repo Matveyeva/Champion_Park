@@ -26,6 +26,22 @@
 
   .card-price__wrapper {
     margin-bottom: 100px;
+    position: relative;
+
+    .success-select-tariff {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(75%);
+      right: 0;
+    }
+
+    .success-img {
+      display: flex;
+
+      img+img {
+        margin-left: 10px;
+      }
+    }
   }
 
   .card-price {
@@ -39,6 +55,7 @@
     cursor: pointer;
     transition: 0.5s;
     border: 2px solid transparent;
+    position: relative;
 
     // margin-right: 30px;
     // box-sizing: border-box;
@@ -63,11 +80,48 @@
     .text-28 {
       color: rgba(51, 51, 51, 0.6);
     }
+
+    .success-label {
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      z-index: 2;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: @yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: @black;
+      display: none;
+    }
+  }
+
+  .card-price.selected {
+    .success-label {
+      display: flex;
+    }
+
+    background-color: #4FA64D;
+    color: #fff !important;
+
+    .text-28 {
+      color: #fff !important;
+    }
+
+    .button {
+      background-color: rgba(79, 166, 77, 0.15);
+      color: #fff;
+      border-color: transparent;
+    }
   }
 
   .button.h-50 {
     min-width: 260px;
-    &:hover{
+
+    &:hover {
       background-color: @yellow;
       color: @black;
       border: 2px solid transparent;

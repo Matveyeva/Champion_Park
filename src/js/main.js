@@ -65,37 +65,46 @@ $(document).ready(function () {
 
 
 	// БОЛЬШАЯ ФОРМА В ШАПКЕ  валидация полей формы
-	const fedbackForm = document.querySelector('.fedback-form');
-	const formGroups = fedbackForm.querySelectorAll('.form-group');
+	const fedbackForm = document.querySelectorAll('.fedback-form');
+	// const formGroups = fedbackForm.querySelectorAll('.form-group');
 
+	for (let item of fedbackForm) {
+		item.addEventListener('submit', function (e) {
+			e.preventDefault();
 
-	fedbackForm.addEventListener('submit', function (e) {
-		e.preventDefault();
+			const formGroups = item.querySelectorAll('.form-group');
+			for (let item of formGroups) {
+				const inputElement = item.querySelector('input');
+				const badgeElement = item.querySelector('.badge');
+				const placeholderElement = item.querySelector('.fake-placeholder');
 
-		for (let item of formGroups) {
-			const inputElement = item.querySelector('input');
-			const badgeElement = item.querySelector('.badge');
-			const placeholderElement = item.querySelector('.fake-placeholder');
-
-			if (inputElement.value == '') {
-				inputElement.classList.add('error');
-				placeholderElement.classList.add('active');
-				badgeElement.classList.add('hide');
+				if (inputElement.value == '') {
+					inputElement.classList.add('error');
+					placeholderElement.classList.add('active');
+					badgeElement.classList.add('hide');
+				}
 			}
-		}
-	});
-	//  если инпут в фокусе убираем предупреждения
-	for (let item of formGroups) {
-		const inputElement = item.querySelector('input');
-		const badgeElement = item.querySelector('.badge');
-		const placeholderElement = item.querySelector('.fake-placeholder');
 
-		inputElement.addEventListener('focus', function () {
-			inputElement.classList.remove('error');
-			placeholderElement.classList.remove('active');
-			badgeElement.classList.remove('hide');
+			//если инпут в фокусе убираем предупреждения
+			for (let item of formGroups) {
+				const inputElement = item.querySelector('input');
+				const badgeElement = item.querySelector('.badge');
+				const placeholderElement = item.querySelector('.fake-placeholder');
+
+				inputElement.addEventListener('focus', function () {
+					inputElement.classList.remove('error');
+					placeholderElement.classList.remove('active');
+					badgeElement.classList.remove('hide');
+				});
+			}
+
 		});
+
+
+
 	}
+
+
 
 
 	//  ФОРМА ЗАКАЗАТЬ ЗВОНОК
@@ -321,6 +330,24 @@ $(document).ready(function () {
 		mouseDrag: false,
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
-	})
+	});
+
+	// ОТМЕТИТЬ КАРТОЧКУ С ВЫБРАННЫМ ТАРИФОМ 
+	const selectedTariff = document.querySelector('.card-price.selected');
+	if (selectedTariff) {
+		console.log(selectedTariff);
+		const thisBtn = selectedTariff.querySelector('button.button');
+		console.log(thisBtn.textContent);
+		thisBtn.textContent = 'Вы записаны';
+	}
+
+	// МОДАЛЬНАЯ ФОРМА ВЫБРАТЬ ТАРИФ
+	const selectTariffBtn = document.querySelectorAll('.button-tariff');
+	const formSelectTariff = document.querySelector('#selectTariff');
+	for (let item of selectTariffBtn) {
+		item.addEventListener('click', function () {
+			formSelectTariff.classList.add('active');
+		})
+	}
 
 })
