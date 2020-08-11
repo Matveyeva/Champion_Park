@@ -14,9 +14,7 @@ mixin card-info(ind,img,title,text1,text2,label)
 mixin card-team(ind,img,title,text2,label,icon)
     .card-team.clicked-item(data-index=''+ind)&attributes(attributes)
         .card-team__img
-            picture
-                source(type="image/webp" srcset="img/team/" + img + "@2x.webp 2x" )
-                img.lazy(data-src="img/team/" + img + ".jpg" alt='team')
+            img.lazy(data-src="img/team/" + img + ".jpg" alt='team')
         .card-info__text
             h4.title-4 #{title}
             p !{text2}
@@ -25,8 +23,6 @@ mixin card-team(ind,img,title,text2,label,icon)
             .card-label #{label}
         if icon
             .card-icon
-             picture
-                source(type="image/webp" srcset="img/team/" + icon + "@2x.webp 2x" )
                 img(src="img/team/" + icon + ".png" alt='icon')
 
 mixin btn-visual
@@ -340,7 +336,7 @@ mixin benefitDesk_1(ind)
                             p Составленное нашими работниками меню полностью гипоалергенно. В рационе отсутствуют конфеты, пакетированные соки, творожки, полуфабрикаты, мы отдаём предпочтение здоровым и полезным десертам. Все полдники готовятся нашими поварами из цельнозерновой муки: печенья, пироги, булочки, блины, оладьи.
                     .col-xl-4
                         .text-block.pl-50
-                            img(src='img/emoji/pie.png' height='200px' width='201px' alt='pie')
+                            img(src='img/emoji/pie.png' height='200' width='201' alt='pie')
                             p Ко дню рождения каждого ребенка<br>готовим фруктовый пирог<br>с малым содержанием сахара
                     .col-xl-8
                         .text-block.text-block--white
@@ -394,7 +390,7 @@ mixin benefitDesk_2(ind)
                             p Составленное нашими работниками меню полностью гипоалергенно. В рационе отсутствуют конфеты, пакетированные соки, творожки, полуфабрикаты, мы отдаём предпочтение здоровым и полезным десертам.
                     .col-xl-4
                         .text-block.pl-50
-                            img(src="img/emoji/tear.png" height='75px' width='45px' alt="emoji")
+                            img(src="img/emoji/tear.png" height='75' width='45' alt="emoji")
                             p В обязательном порядке соблюдается<br>питьевой режим, как во время основных<br>приёмов пищи, так и в течение дня
                     .col-xl-8
                         .text-block
@@ -414,7 +410,7 @@ mixin benefitDesk_2(ind)
                             p Составленное нашими работниками меню полностью гипоалергенно. В рационе отсутствуют конфеты, пакетированные соки, творожки, полуфабрикаты, мы отдаём предпочтение здоровым и полезным десертам.
                     .col-xl-4
                         .text-block.pl-50
-                            img(src="img/emoji/sleep.png" height='70px' width='70px' alt="emoji")
+                            img(src="img/emoji/sleep.png" height='70' width='70' alt="emoji")
                             p Дети засыпают под чтение сказок<br>воспитателем или слушая классическую<br>музыку, например, Моцарта
                     .col-xl-8
                         .text-block
