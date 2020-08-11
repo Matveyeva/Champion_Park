@@ -15,7 +15,7 @@ mixin card-team(ind,img,title,text2,label,icon)
     .card-team.clicked-item(data-index=''+ind)&attributes(attributes)
         .card-team__img
             picture
-                source(type="image/webp" srcset="img/team/" + img + ".webp" )
+                source(type="image/webp" srcset="img/team/" + img + "@2x.webp 2x" )
                 img.lazy(data-src="img/team/" + img + ".jpg" alt='team')
         .card-info__text
             h4.title-4 #{title}
@@ -25,6 +25,8 @@ mixin card-team(ind,img,title,text2,label,icon)
             .card-label #{label}
         if icon
             .card-icon
+             picture
+                source(type="image/webp" srcset="img/team/" + icon + "@2x.webp 2x" )
                 img(src="img/team/" + icon + ".png" alt='icon')
 
 mixin btn-visual
