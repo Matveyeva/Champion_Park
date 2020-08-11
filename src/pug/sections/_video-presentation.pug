@@ -1,15 +1,13 @@
 section.video-presentasion
 	.container
 		.video-presentasion__frame
-			.video(itemprop="url" href="#")
+			.video(itemprop="url" href="#" )
 				span.d-none(itemprop="name" content="Название видео")
 				span.d-none(itemprop="description" content="Описание видео")
-				picture
-					source(type="image/webp" srcset="img/video/1.webp" )
-					img(src="img/video/video1.jpg" alt="img")
+				img.lazy(data-src="img/video/video1.jpg", alt="video")
 				//- iframe(width="100%" height="100%" src="https://www.youtube.com/embed/PBcouzgj70k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 			button.play-button.play-button--big
-				img(src="img/video/play.png", alt="icon")
+				img.lazy(data-src="img/video/play.png", alt="icon")
 				span 1:07
 					meta(itemprop="duration")
 			.badge Видеопрезентация
