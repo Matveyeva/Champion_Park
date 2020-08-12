@@ -1,7 +1,8 @@
 mixin card-info(ind,img,title,text1,text2,label)
     .card-info.clicked-item( data-index=''+ind)&attributes(attributes)
         .card-info__icon
-            img.lazy(data-src="img/emoji/"+img+".png" data-srcset="img/emoji/"+img+"@2x.png 2x" srcset="img/emoji/"+img+"@2x.png 2x" alt='emoji')
+            picture
+                img(src="img/emoji/"+img+".png" srcset="img/emoji/"+img+"@2x.png 2x" alt='emoji')
         .card-info__text
             h4.title-4 #{title}
             p !{text1}
@@ -14,7 +15,8 @@ mixin card-info(ind,img,title,text1,text2,label)
 mixin card-team(ind,img,title,text2,label,icon)
     .card-team.clicked-item(data-index=''+ind)&attributes(attributes)
         .card-team__img
-            img.lazy(data-src="img/team/" + img + ".jpg" data-srcset="img/team/" + img + "@2x.jpg 2x" srcset="img/team/" + img + "@2x.jpg 2x" alt='team')
+            picture
+                img(src="img/team/" + img + ".jpg" srcset="img/team/" + img + "@2x.jpg 2x" alt='team')
         .card-info__text
             h4.title-4 #{title}
             p !{text2}
