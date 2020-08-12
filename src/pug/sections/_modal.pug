@@ -3,7 +3,8 @@ section.feedback#feedback
 	.close-modal
 		+close
 	.child-img
-		img.lazy(data-src="img/header/child2.png", data-srcset="img/header/child2@2x.png 2x" srcset="img/header/child2@2x.png 2x" alt="image")
+		picture
+			img(src="img/header/child2.png", srcset="img/header/child2@2x.png 2x" alt="image")
 	.container
 		.feedback-content
 			.brand-logo
@@ -33,7 +34,8 @@ section.feedback.feedback-tariff#selectTariff
 	.close-modal
 		+close
 	.child-img
-		img.lazy(data-src="img/header/child2.png" data-srcset="img/header/child2@2x.png 2x" srcset="img/header/child2@2x.png 2x", alt="image")
+		picture
+			img(src="img/header/child2.png", srcset="img/header/child2@2x.png 2x", alt="image")
 	.container
 		.feedback-content
 			.brand-logo
