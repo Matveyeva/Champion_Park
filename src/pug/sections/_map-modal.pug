@@ -5,7 +5,8 @@ section.map-modal#mogal-in-map
 	.container
 		.map-content
 			.bg-logo
-				img.lazy(data-src="img/logo/map-bg.png" alt="logo")
+				+brand-logoBig
+				//- img.lazy(data-src="img/logo/map-bg.png" alt="logo")
 			.map-content__body
 				article.map-wrapper
 					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A846edc6d83e2570597233258aadee8edc7ccf538b786245068642a16c4933da9&amp;width=960&amp;height=720&amp;lang=ru_RU&amp;scroll=false")
@@ -52,7 +53,7 @@ section.map-modal#mogal-in-map
 							p 7:30 &mdash; 22:00
 					.sidebar-block.mt-40
 						.icon-box
-							img.lazy(data-src="img/emoji/baby.png" alt="baby")
+							img.lazy(data-src="img/emoji/baby.png" data-srcыуе="img/emoji/baby@2x.png 2x" srcset="img/emoji/baby@2x.png 2x.png" alt="baby")
 						.text-28.pt-10
 							p 1 &mdash; 7 лет
 
@@ -66,7 +67,7 @@ section.map-modal.map-modal--all#map-all-objects
 	.container
 		.map-content
 			.bg-logo
-				img.lazy(data-src="img/logo/map-bg.png" alt="logo")
+				img.lazy(data-src="img/logo/map-bg.png" data-srcset="img/logo/map-bg@2x.png 2x" srcset="img/logo/map-bg@2x.png 2x" alt="logo")
 			// ============  ТАБЫ ============
 			.objects__tabs
 				nav
@@ -118,7 +119,7 @@ section.map-modal.map-modal--all#map-all-objects
 												// ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============							
 												.success-orderCallForm
 													.icon-box
-														img(src="img/emoji/happy.png" alt="emoji")
+														img.lazy(data-src="img/emoji/happy.png" data-srcset="img/emoji/happy@2x.png 2x" srcset="img/emoji/happy@2x.png 2x" alt="emoji")
 													.text-16
 														p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
 												//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
@@ -127,7 +128,7 @@ section.map-modal.map-modal--all#map-all-objects
 											p 7:30 &mdash; 22:00
 									.sidebar-block.mt-40
 										.icon-box
-											img.lazy(data-src="img/emoji/baby.png" alt="baby")
+											img.lazy(data-src="img/emoji/baby.png" data-srcset="img/emoji/baby@2x.png 2x" srcset="img/emoji/baby@2x.png 2x" alt="baby")
 										.text-28.pt-10
 											p 1 &mdash; 7 лет
 
@@ -175,7 +176,7 @@ section.map-modal.map-modal--all#map-all-objects
 												// ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============							
 												.success-orderCallForm
 													.icon-box
-														img.lazy(data-src="img/emoji/happy.png" alt="emoji")
+														img.lazy(data-src="img/emoji/happy.png" data-srcset="img/emoji/happy@2x.png 2x" srcset="img/emoji/happy@2x.png 2x" alt="emoji")
 													.text-16
 														p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
 												//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
@@ -184,6 +185,6 @@ section.map-modal.map-modal--all#map-all-objects
 											p 7:30 &mdash; 22:00
 									.sidebar-block.mt-40
 										.icon-box
-											img.lazy(data-src="img/emoji/baby.png" alt="baby")
+											img.lazy(data-src="img/emoji/baby.png" data-srcset="img/emoji/baby@2x.png 2x" srcset="img/emoji/baby@2x.png 2x" alt="baby")
 										.text-28.pt-10
 											p 1 &mdash; 7 лет

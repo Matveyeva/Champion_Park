@@ -3,11 +3,11 @@ section.feedback#feedback
 	.close-modal
 		+close
 	.child-img
-		img.lazy(data-src="img/header/child2.png", alt="image")
+		img.lazy(data-src="img/header/child2.png", data-srcset="img/header/child2@2x.png 2x" srcset="img/header/child2@2x.png 2x" alt="image")
 	.container
 		.feedback-content
 			.brand-logo
-				img.lazy(data-src="img/logo/brand.png", alt="logo")
+				+brand-logoBig
 			h3.title-3 Запись на бесплатный пробный день
 			.feedback-info
 				p Посещения пробного дня не обязывает к платному обучению
@@ -33,11 +33,11 @@ section.feedback.feedback-tariff#selectTariff
 	.close-modal
 		+close
 	.child-img
-		img.lazy(data-src="img/header/child2.png", alt="image")
+		img.lazy(data-src="img/header/child2.png" data-srcset="img/header/child2@2x.png 2x" srcset="img/header/child2@2x.png 2x", alt="image")
 	.container
 		.feedback-content
 			.brand-logo
-				img.lazy(data-src="img/logo/brand.png", alt="logo")
+				
 			.feedback-content__body
 				h3.title-3 Запись на полный день обучения в «Champion Park»
 				.feedback-info.text-20
