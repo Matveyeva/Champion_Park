@@ -100,35 +100,32 @@ $(document).ready(function () {
 
 		});
 
-
-
 	}
-
-
-
-
 	//  ФОРМА ЗАКАЗАТЬ ЗВОНОК
-	const orderCallForm = document.querySelector('.orderCall-form');
-	const orderCallFormInput = orderCallForm.querySelectorAll('.form-group ');
+	const orderCallForm = document.querySelectorAll('.orderCall-form');
 
-	orderCallForm.addEventListener('submit', function (e) {
-		e.preventDefault();
-		for (let item of orderCallFormInput) {
-			const inputElement = item.querySelector('input');
+	for (let item of orderCallForm) {
+		const orderCallFormInput = item.querySelectorAll('.form-group ');
+		item.addEventListener('submit', function (e) {
+			e.preventDefault();
+			for (let item of orderCallFormInput) {
+				const inputElement = item.querySelector('input');
 
-			if (inputElement.value == '') {
-				inputElement.classList.add('error');
+				if (inputElement.value == '') {
+					inputElement.classList.add('error');
+				}
 			}
-		}
 
-	});
-	// ФЕЙК ПЛЕЙСХОЛДЕР В ФОРМЕ ОБРАТНЫЙ ЗВОНОК 
-	for (let item of orderCallFormInput) {
-		const itemInput = item.querySelector('input');
-		itemInput.addEventListener('keydown', function () {
-			this.closest('.form-group').querySelector('.fake-placeholder2').classList.add('active');
-		})
+		});
+		// ФЕЙК ПЛЕЙСХОЛДЕР В ФОРМЕ ОБРАТНЫЙ ЗВОНОК 
+		for (let item of orderCallFormInput) {
+			const itemInput = item.querySelector('input');
+			itemInput.addEventListener('keydown', function () {
+				this.closest('.form-group').querySelector('.fake-placeholder2').classList.add('active');
+			})
+		}
 	}
+
 	// ПОКАЗАТЬ ФОРМУ ЗАКАЗАТЬ ЗВОНОК
 
 	const showOrderCallFormBlock = document.querySelectorAll('.showOrderCallForm');
@@ -335,9 +332,7 @@ $(document).ready(function () {
 	// ОТМЕТИТЬ КАРТОЧКУ С ВЫБРАННЫМ ТАРИФОМ 
 	const selectedTariff = document.querySelector('.card-price.selected');
 	if (selectedTariff) {
-		console.log(selectedTariff);
 		const thisBtn = selectedTariff.querySelector('button.button');
-		console.log(thisBtn.textContent);
 		thisBtn.textContent = 'Вы записаны';
 	}
 
