@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//Load Lazy
-	$('.lazy').lazy();
+	// $('.lazy').lazy();
 
 	// Показать форму по клику на гамбургер
 	const bodyEl = document.body;
