@@ -16,7 +16,7 @@ mixin card-team(ind,img,title,text2,label,icon)
     .card-team.clicked-item(data-index=''+ind)&attributes(attributes)
         .card-team__img
             picture
-                img(src="img/team/" + img + ".jpg" srcset="img/team/" + img + "@2x.jpg 2x" alt='team')
+                img(src="img/team/" + img + ".jpg" srcset="img/team/" + img + "@2x.jpg 2x" alt='team' width ='260')
         .card-info__text
             h4.title-4 #{title}
             p !{text2}
