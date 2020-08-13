@@ -11,8 +11,7 @@
 @font-face {
   font-family: "Calibri Bold";
   src: url("../fonts/Calibri/Calibri-Bold.eot");
-  src: url("../fonts/Calibri/Calibri-Bold.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../fonts/Calibri/Calibri-Bold.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Calibri/Calibri-Bold.woff") format("woff"),
     url("../fonts/Calibri/Calibri-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -186,7 +185,7 @@ button {
 .button.h-70 {
   height: 70px;
   line-height: 70px;
-  width: 440px ;
+  width: 440px;
 }
 
 .button.h-50 {
@@ -344,6 +343,10 @@ h4 {
   }
 }
 
+.feedback-content .brand-logo {
+  pointer-events: none;
+}
+
 .text-22 p,
 .text-22 {
   font-size: 22px;
@@ -379,7 +382,7 @@ h4 {
 .inner-text .text-20 p {
   font-family: @fc;
 
-  & + p {
+  &+p {
     margin-top: 20px;
   }
 }
@@ -387,7 +390,7 @@ h4 {
 .inner-text .comb-text {
   margin-top: 40px;
 
-  & + .comb-text {
+  &+.comb-text {
     margin-top: 30px;
   }
 }
@@ -470,7 +473,7 @@ h4 {
 }
 
 .dark-bg {
-  background-color: @black !important;
+  background-color: @black  !important;
   color: @white;
 }
 
@@ -494,7 +497,7 @@ h4 {
       box-shadow: 0 0 10px rgba(51, 51, 51, 0.5);
     }
 
-    & + a {
+    &+a {
       margin-left: 14px;
     }
 
@@ -526,7 +529,7 @@ h4 {
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
     .tr;
 
-    & + a {
+    &+a {
       margin-left: 40px;
     }
 
@@ -575,7 +578,7 @@ h4 {
     font-family: @fr;
   }
 
-  p + p {
+  p+p {
     margin-top: 0 !important;
   }
 }
