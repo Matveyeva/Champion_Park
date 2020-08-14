@@ -33,6 +33,10 @@
   margin-left: auto;
   margin-right: auto;
 
+  @media(max-width:1349px) {
+    min-height: 315px;
+  }
+
   .card-info__icon {
     min-height: 75px;
     max-height: 75px;
@@ -236,7 +240,7 @@
     box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
     border-radius: 10px;
     padding: 16px 30px 30px 20px;
-    // margin-left: -18px;
+    margin-left: -18px;
   }
 
   .logo-block {
@@ -300,7 +304,7 @@ article {
 .benefit-description {
   display: none;
   position: relative;
-  overflow: hidden;
+
 
   .text-block--title.pl-50 {
     position: relative;
@@ -329,6 +333,11 @@ article {
     right: 0px;
   }
 
+}
+
+.team-description .close-desk {
+  top: 40px;
+  right: 40px;
 }
 
 .benefits-card-pages {

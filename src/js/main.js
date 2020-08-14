@@ -147,12 +147,15 @@ $(document).ready(function () {
 
 
 	//   закрыть success окно по клику на крестик
-	const closeSuccessWindow = document.querySelector('.close-success');
+	const closeSuccessWindow = document.querySelectorAll('.close-success');
 	const successWindow = document.querySelector('.success-window');
 	if (closeSuccessWindow) {
-		closeSuccessWindow.addEventListener('click', function () {
-			successWindow.classList.add('hide');
-		});
+		for (let item of closeSuccessWindow) {
+			item.addEventListener('click', function () {
+				const successWindow = this.closest('.success-window');
+				successWindow.classList.add('hide');
+			});
+		}
 	}
 
 

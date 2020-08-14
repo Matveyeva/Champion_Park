@@ -11,6 +11,11 @@
 	border-radius: 15px;
 	padding: 20px 30px 34px 20px;
 	cursor: pointer;
+	height: 372px;
+
+	@media(max-width:1349px) {
+		height: 424px;
+	}
 
 	.rev-card_quote {
 		p {
@@ -33,8 +38,14 @@
 		margin-top: 30px;
 		position: relative;
 		font-family: @fc;
+		height: 160px;
+		overflow: hidden;
 
-		p+p{
+		@media(max-width:1349px) {
+			height: 180px;
+		}
+
+		p+p {
 			line-height: 1.6;
 		}
 
@@ -45,7 +56,7 @@
 			left: 0;
 			width: 100%;
 			margin: 0;
-			height: 3.0em;
+			height: 5.0em;
 			background-color: rgba(255, 255, 255, 0);
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), to(#fefefe));
 			background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, #fefefe 100%);
@@ -77,6 +88,6 @@
 	}
 }
 
-.video-review .video-review__text .quote-decor{
+.video-review .video-review__text .quote-decor {
 	width: 65px;
 }
