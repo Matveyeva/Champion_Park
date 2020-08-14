@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//Load Lazy
-	// $('.lazy').lazy();
+	$('.lazy').lazy();
 
 	// Показать форму по клику на гамбургер
 	const bodyEl = document.body;
@@ -344,7 +344,12 @@ $(document).ready(function () {
 	const formSelectTariff = document.querySelector('#selectTariff');
 	for (let item of selectTariffBtn) {
 		item.addEventListener('click', function () {
-			formSelectTariff.classList.add('active');
+			if (item.textContent != 'Вы записаны') {
+				formSelectTariff.classList.add('active');
+			} else {
+				item.classList.toggle('notify-animation')
+			}
+
 		})
 	}
 
