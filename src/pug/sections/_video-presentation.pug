@@ -1,17 +1,27 @@
 section.video-presentasion
 	.container
+		.description-block-mobile
+			.text-40
+				p 1 &mdash; 7 #[span.text-30 лет]
+				p 07:30 &mdash; 22:00
+			.description-row
+				div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+				p.text-18 
+					span(itemprop="addressLocality") Москва,
+					span(itemprop="streetAddress") Мичуринский проспект, ул. Олимпийская Деревня 1, корп.1
+			a(href="#!").button-light.show-map-modal на карте
 		.video-presentasion__frame
-			.video(itemprop="url" href="#" )
+			.video(style="background-image: url(img/video/video1.jpg)")(itemprop="url" href="#" )
 				span.d-none(itemprop="name" content="Название видео")
 				span.d-none(itemprop="description" content="Описание видео")
-				picture
-					img(src="img/video/video1.jpg" alt="" srcset="img/video/video1@2x.jpg 2x" width='1290')
+				//- picture
+				//- 	img(src="img/video/video1.jpg" alt="" srcset="img/video/video1@2x.jpg 2x" width='1290')
 				//- iframe(width="100%" height="100%" src="https://www.youtube.com/embed/PBcouzgj70k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-			button.play-button.play-button--big
-				picture
-					img.lazy(data-src="img/video/play.png" data-srcset="img/video/play@2x.png 2x" alt="icon")
-				span 1:07
-					meta(itemprop="duration")
+				button.play-button.play-button--big
+					picture
+						img.lazy(data-src="img/video/play.png" data-srcset="img/video/play@2x.png 2x" alt="icon")
+					span 1:07
+						meta(itemprop="duration")
 			.badge Видеопрезентация
 			.video-presentasion__text.text-40
 				p Антонина Захарова, заместитель управляющего, рассказывает и показывает детский сад «Champion Park»

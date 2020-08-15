@@ -10,11 +10,21 @@
 		min-height: 768px;
 	}
 
+	@media(max-width:767px) {
+		height: auto;
+		max-height: 990px;
+
+	}
+
 	.logo {
 		margin-right: 12.5%;
 
 		@media(max-width:1439px) {
 			margin-right: unset;
+		}
+
+		@media(max-width:767px) {
+			width: 96px;
 		}
 	}
 }
@@ -32,6 +42,16 @@
 		right: 0%;
 		width: 70%;
 	}
+
+	@media(max-width:767px) {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		left: -47%;
+
+		width: 540px;
+		margin-top: 40px;
+	}
 }
 
 .header-nav {
@@ -43,6 +63,9 @@
 		justify-content: space-between;
 	}
 
+	@media(max-width:767px) {
+		flex-wrap: wrap;
+	}
 
 
 }
@@ -50,11 +73,31 @@
 // HEADER MENU
 .header-menu {
 	margin-right: 4%;
+
+	@media(max-width:767px) {
+		margin-right: 0%;
+		order: 5;
+		width: 100%;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+
+
+		// -webkit-overflow-scrolling: touch;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
 }
 
 .header-menu ul {
 	display: flex;
 	align-items: center;
+
+	@media(max-width:767px) {
+		justify-content: center;
+		width: 502px;
+	}
 
 	li+li {
 		margin-left: 8px;
@@ -132,6 +175,7 @@
 		display: inline-block;
 		padding: 6px 10px;
 		text-transform: uppercase;
+		white-space: nowrap;
 	}
 
 }
@@ -230,8 +274,15 @@
 }
 
 // end header menu
+
 .contacts a {
 	white-space: nowrap;
+}
+
+.header .contacts {
+	@media(max-width:767px) {
+		display: none;
+	}
 }
 
 .contacts:hover a {
@@ -245,6 +296,10 @@
 
 	@media(max-width:1439px) {
 		margin-left: unset;
+	}
+
+	@media(max-width:767px) {
+		order: 2;
 	}
 
 	a {
@@ -290,6 +345,11 @@
 	width: 70%;
 	max-width: 600px;
 
+	@media(max-width:767px) {
+		width: 100%;
+		margin-top: 50px;
+	}
+
 
 	.badge,
 	.title-1 {
@@ -314,6 +374,10 @@
 	@media(max-width:1439px) {
 		margin-top: 10vh;
 		padding-left: 0;
+	}
+
+	@media(max-width:767px) {
+		display: none;
 	}
 
 	span {
@@ -362,6 +426,12 @@
 	color: #fff;
 	z-index: 8;
 
+	@media(max-width:767px) {
+		width: 100%;
+		right: 0;
+		padding: 40px;
+	}
+
 
 	.success-text {
 		padding-top: 5px;
@@ -401,5 +471,40 @@
 				fill: rgba(255, 255, 255, .9);
 			}
 		}
+	}
+}
+
+.description-block-mobile {
+	display: none;
+	padding: 15px 20px 30px;
+	background: #333333;
+	box-shadow: 0px 10px 10px rgba(82, 82, 82, 0.1);
+	border-radius: 15px;
+	color: #fff;
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -25px;
+	width: 335px;
+
+	.text-40 {
+		p+p {
+			margin-top: 4px;
+		}
+	}
+
+	.description-row {
+		margin-top: 14px;
+		margin-bottom: 14px;
+	}
+
+	.button-light {
+		color: #fff;
+		border-color: #fff;
+	}
+
+	@media(max-width:767px) {
+		display: block;
 	}
 }

@@ -1,8 +1,5 @@
 //- HEADER
 header.header
-	.child-img
-		picture
-			img(src="img/header/child.webp" srcset="img/header/child@2x.png 2x" alt="image" )
 	.container--large
 		.header-nav
 			+logo
@@ -88,7 +85,11 @@ header.header
 			.text-22
 				p Укрепляем здоровье и психологический комфорт детей, развиваем интеллект и социальные навыки.
 				p  Собственная кухня, врач-педиатр, логопед и психолог
-			button.button#openForm Записаться на бесплатный пробный день
+			button.button#openForm Записаться на #[span.hide-mobile бесплатный] пробный день
+		.child-img
+			picture
+				img(src="img/header/child.webp" srcset="img/header/child@2x.png 2x" alt="image" )
+		
 		.description-block
 			.text-40
 				span 1 &mdash; 7 #[span.text-30 лет]
