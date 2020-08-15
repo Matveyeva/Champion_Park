@@ -1,0 +1,129 @@
+//============ Секция Родители говорят ============
+.video-review
+	.container
+		h2.title-2 Родители говорят
+		.video-review__wrapper
+			span.rev-img
+				+smileIcon
+			//============видео-отзыв============
+			.video-review__item
+				.video-review__text
+					.quote-decor
+						+quote
+					.text-paragraf
+						p У дочки легко прошла адаптация, через месяц перешли на полный<br>день. Ей очень нравится,<br> очень приятная атмосфера, <br>домой не хочет уходить
+					.quote-author.text-group--small
+						span  Вера Рахимова
+						span  18 марта 2020
+				.video-review__frame(itemprop="url" href="#")
+					span.d-none(itemprop="name" content="Название видео")
+					span.d-none(itemprop="description" content="Описание видео")
+					picture
+						img.lazy(data-src="img/video/video2.jpg" data-srcset="img/video/video2@2x.jpg 2x" alt="video-poster" height='460' width='770')
+					//- iframe(width="100%" height="100%" src="https://www.youtube.com/embed/Moc9y0orz1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					button.play-button
+						picture
+							img.lazy(data-src="img/video/play.png" data-srcset="img/video/play@2x.png 2x" alt="icon")
+						span 1:07
+							meta(itemprop="duration")
+
+			//============видео-отзыв============
+			.video-review__item
+				.video-review__text
+					.quote-decor
+						+quote
+					.text-paragraf
+						p Уже несколько лет я отдаю своих&nbsp;детей в надежные руки коллектива «MySadik».
+						p Детей учат творчеству, их вывозят за пределы детского сада и&nbsp;показывают им мир, который&nbsp;существует вокруг
+					.quote-author.text-group--small
+						span  Ксения Тихомирова
+						span  6 Февраля 2020
+				.video-review__frame(itemprop="url" href="#")
+					span.d-none(itemprop="name" content="Название видео")
+					span.d-none(itemprop="description" content="Описание видео")
+					picture
+						img.lazy(data-src="img/video/video3.jpg" data-srcset="img/video/video3@2x.jpg 2x" alt="video-poster" height='460' width='770')
+					//- iframe(width="100%" height="100%" src="https://www.youtube.com/embed/Wmo1fQ_ExcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					button.play-button
+						picture
+							img.lazy(data-src="img/video/play.png" data-srcset="img/video/play@2x.png 2x" alt="icon")
+						span 1:37
+							meta(itemprop="duration")
+
+		.review-cards
+			.row
+				.col-xl-4
+					.rev-card
+						.rev-card_quote
+							p «Всегда можно пообщаться с&nbsp;воспитателем или посоветоваться с&nbsp;доктором Галиной Вячеславной»
+							span  Мария и Дмитрий Некифоровы
+							span 13 Декабря 2019
+						.rev-card_text
+							p Дочка ходит в этот садик 3 год, и она и мы, родители, очень довольны. До этого около года проходили в муниципальный сад, разница огромная.
+							p Группы небольшие, у нас 10 человек в группе, каждый день проходят интересные занятия, один или 2 раза в две недели прогулка
+							.hide-block
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi vitae autem inventore officia quasi ipsum ipsa neque qui accusamus? Earum voluptate corrupti adipisci modi quibusdam ratione quae, repudiandae hic.
+				.col-xl-4
+					.rev-card
+						.rev-card_quote
+							p «Дочка с удовольствием бежит каждый день в этот садик и&nbsp;не&nbsp;хочет&nbsp;уходить оттуда!»
+							span  Екатерина Смирнова
+							span 10 Октября 2019
+						.rev-card_text
+							p Видно, что воспитатели любят детей и большие профессионалы своего дела. Организация всего идеальна!
+							p Готовят очень вкусно! Спасибо отдельное поварам! Дочка полюбила ваши компоты, хотя раньше отказывалась их пить категорически (дайте рецепты). А супы так по 2 порции съедает.
+							.hide-block
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi vitae autem inventore officia quasi ipsum ipsa neque qui accusamus? Earum voluptate corrupti adipisci modi quibusdam ratione quae, repudiandae hic.
+
+				.col-xl-4
+					.rev-card
+						.rev-card_quote
+							p «Счастье мамы — когда получаешь фотографии с прогулки ребенка в&nbsp;парке и видишь, что он смеется»
+							span  Мария Иванова-Смоленская
+							span 20 Июня 2019
+						.rev-card_text
+							p Мой сын очень любит воспитательницу Светлану, говорит — мама, я хочу пригласить Свету в гости, на свой День рождения.
+							p Всегда ли все так гладко и безоблачно? Нет, не всегда, иногда у него нет настроения идти в сад, он устает. И вот такие моменты для меня главные для проверки профессионализма на прочность.
+							.hide-block
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi vitae autem inventore officia quasi ipsum ipsa neque qui accusamus? Earum voluptate corrupti adipisci modi quibusdam ratione quae, repudiandae hic.
+		.review-cards.wrapper-hide#otherRevCards
+			.row
+				.col-xl-4
+					.rev-card
+						.rev-card_quote
+							p «Счастье мамы — когда получаешь фотографии с прогулки ребенка в парке и видишь, что он смеется»
+							span Мария Иванова-Смоленская
+							span 20 Июня 2019
+						.rev-card_text
+							p Мой сын очень любит воспитательницу Светлану, говорит — мама, я хочу пригласить Свету в гости, на свой День рождения.
+							p Всегда ли все так гладко и безоблачно? Нет, не всегда, иногда у него нет настроения идти в сад, он устает. И вот такие моменты для меня главные для проверки профессионализма на прочность.
+							.hide-block
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi vitae autem inventore officia quasi ipsum ipsa neque qui accusamus? Earum voluptate corrupti adipisci modi quibusdam ratione quae, repudiandae hic.
+				.col-xl-4
+					.rev-card
+						.rev-card_quote
+							p «Всегда можно пообщаться с воспитателем или посоветоваться с доктором Галиной Вячеславной»
+							span  Мария и Дмитрий Некифоровы
+							span 13 Декабря 2019
+						.rev-card_text
+							p Дочка ходит в этот садик 3 год, и она и мы, родители, очень довольны. До этого около года проходили в муниципальный сад, разница огромная.
+							p Группы небольшие, у нас 10 человек в группе, каждый день проходят интересные занятия, один или 2 раза в две недели прогулка
+							.hide-block
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi vitae autem inventore officia quasi ipsum ipsa neque qui accusamus? Earum voluptate corrupti adipisci modi quibusdam ratione quae, repudiandae hic.
+
+				.col-xl-4
+					.rev-card
+						.rev-card_quote
+							p «Всегда можно пообщаться с воспитателем или посоветоваться с доктором Галиной Вячеславной»
+							span  Мария и Дмитрий Некифоровы
+							span 13 Декабря 2019
+						.rev-card_text
+							p Дочка ходит в этот садик 3 год, и она и мы, родители, очень довольны. До этого около года проходили в муниципальный сад, разница огромная.
+							p Группы небольшие, у нас 10 человек в группе, каждый день проходят интересные занятия, один или 2 раза в две недели прогулка
+							.hide-block
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi vitae autem inventore officia quasi ipsum ipsa neque qui accusamus? Earum voluptate corrupti adipisci modi quibusdam ratione quae, repudiandae hic.
+
+		.section-button
+			a(href="#!").button.button-brown.h-70#btnShowRev Посмотреть все отзывы
+
+//============ Конец Секция Родители говорят ============

@@ -1,0 +1,293 @@
+.scroll-wrapper {
+	padding-top: 40px;
+
+}
+
+.educ-img {
+	position: absolute;
+	top: -5%;
+	right: 45px;
+
+}
+
+.educational-complex {
+	background: #F9F5E6;
+	padding-top: 60px;
+	position: relative;
+	padding-bottom: 54px;
+
+
+
+
+	.title-group {
+		margin-bottom: 13px;
+	}
+
+	.button--visual {
+		margin-top: 60px;
+	}
+}
+
+#educational-complex--modal {
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: none;
+	-webkit-animation-name: showSlow;
+	animation-name: showSlow;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+}
+
+#educational-complex--modal.active {
+	display: block;
+	height: 100vh;
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		/* 1 - скроллбар */
+		width: 6px;
+		height: 6px;
+		background-color: #FFFFFF;
+	}
+
+	&::-webkit-scrollbar-button {
+		/* 2 - кнопка */
+	}
+
+	&::-webkit-scrollbar-track {
+		/* 3 - трек */
+		background-color: #dedede;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		/* 4 - видимая часть трека */
+	}
+
+	&::-webkit-scrollbar-thumb {
+		/* 5 - ползунок */
+		border-radius: 2px;
+		background-color: @yellow;
+	}
+
+	&::-webkit-scrollbar-corner {
+		/* 6 - уголок */
+	}
+
+	&::-webkit-resizer {
+		/* 7 - изменение размеров */
+	}
+
+
+
+}
+
+.educational-menu {
+	margin-bottom: 20px;
+
+	a:hover {
+		color: @red;
+	}
+
+	a {
+		display: inline-block;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		.tr;
+
+		&+a {
+			margin-left: 30px;
+		}
+
+	}
+
+
+}
+
+.educational-block {
+	position: relative;
+	// z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	&+.educational-block {
+		margin-top: 30px;
+	}
+}
+
+.educational-banner,
+.educational-cards {
+	display: flex;
+	justify-content: space-between;
+	max-width: 960px;
+	width: 74.4%;
+}
+
+.educational-column {
+	max-width: 300px;
+	width: 23.25%;
+	padding-bottom: 55px;
+}
+
+.sidebar-block {
+	.contacts {
+		&:hover a {
+			opacity: 1;
+		}
+
+		a:hover {
+			opacity: .6;
+		}
+
+		button {
+			margin-top: 12px;
+		}
+	}
+
+	.text-28+.text-28 {
+		margin-top: 42px;
+	}
+
+	.text-28 {
+		p+p {
+			margin-top: 16px;
+		}
+	}
+}
+
+.educational-card {
+	position: relative;
+	background: #FFFFFF;
+	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
+	border-radius: 20px;
+	max-width: 465px;
+	width: 48.5%;
+	min-height: 460px;
+	padding: 28px 30px 35px;
+
+	@media(max-width:1359px) {}
+
+	.drop-img--logo {
+		width: 160px;
+		height: 160px;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	a {
+		margin-bottom: 8px;
+	}
+
+	.title-4 {
+		width: fit-content;
+		text-transform: none;
+		letter-spacing: 0px;
+		margin-bottom: 5px;
+	}
+
+	.text-16 {
+		text-transform: none;
+		font-family: @fc;
+		letter-spacing: 0px;
+	}
+}
+
+.educational-card__head {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 31px;
+
+	.sochial {
+		margin-top: -15px;
+	}
+}
+
+.educational-card {
+	a {
+		color: @black;
+		display: block;
+	}
+
+	a.active {
+		color: rgba(51, 51, 51, .5);
+
+		.text-16 {
+			color: @black;
+		}
+
+		&:hover {
+			color: rgba(51, 51, 51, .5);
+		}
+	}
+
+	a:hover {
+		color: @red;
+
+		.text-16 {
+			color: @black;
+		}
+	}
+
+}
+
+.educational-card__body {
+	nav a {
+		&+a {
+			margin-top: 30px;
+		}
+	}
+}
+
+.sochial.sochial--abs {
+	position: absolute;
+	bottom: 40px;
+	left: 30px;
+}
+
+.educational-banner {
+	border-radius: 20px;
+	overflow: hidden;
+
+	.img-layout {
+		position: absolute;
+		left: 16px;
+		bottom: 20px;
+		width: 430px;
+		height: 222px;
+		padding: 10px 15px;
+		background-color: rgba(51, 51, 51, .5);
+		backdrop-filter: blur(3px);
+		z-index: 3;
+		color: #fff;
+		border-radius: 10px;
+
+		p {
+			font-family: @fc;
+			padding-top: 4px;
+			padding-bottom: 16px;
+		}
+
+		.button-light {
+			border-color: #fff;
+			color: #fff;
+		}
+
+	}
+
+}
+
+.educational-column__text {
+	margin-top: 20px;
+
+	.text-16 {
+		color: rgba(51, 51, 51, .6);
+		margin-top: 10px;
+		margin-bottom: 30px;
+
+	}
+}

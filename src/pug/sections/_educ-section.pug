@@ -1,0 +1,132 @@
+section.educ-complex
+    .educ-img
+        +fullRoundLogo
+    .container
+        .title-group
+            h1.section-title Образовательный комплекс
+            button.button-light.show-all-objects на карте
+        .educational-menu
+            nav.text-20
+                a(href="#") Концепция
+                a(href="#") Галерея
+                a(href="#") Отзывы
+                a(href="#") Интервью с выпускниками
+                a(href="#") Статьи
+                a(href="#") События
+                a(href="#") Награды
+                a(href="#") Партнеры
+
+    .scroll-wrapper
+        .container
+            //============ БЛОК С КАРТОЧКАМИ ВЕРХНИЙ ============
+            .educational-block
+                .educational-cards
+                    //============ ПЕРВАЯ КАРТОЧКА ============
+                    .educational-card
+                        .educational-card__head
+                            .card__head-logo
+                                picture
+                                    img.lazy(data-src="img/logo/card-educ1.png" data-srcset="img/logo/card-educ1@2x.png 2x" alt="logo")
+                            .sochial
+                                a(href="#!").icon-fb
+                                    +facebook
+                                a(href="#!").icon-inst
+                                    +inst
+                        h2.text-40.title-label Детские сады
+                            span 1 &mdash; 7 лет
+                        .educational-card__body
+                            nav
+                                a(href="#!").active
+                                    h4.title-4.badge-inner Champion Park
+                                        span.badge.badge--small.badge-red вы здесь
+                                    .text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+
+                                a(href="#!")
+                                    h4.title-4 Garden Square
+                                    .text-16  ул. Ефремова 10, корп. 1
+                                a(href="#!")
+                                    h4.title-4 Marfino
+                                    .text-16  ул. Большая Марфинская 1, корп. 2
+
+                    // ============ ВТОРАЯ КАРТОЧКА ============
+                    .educational-card
+                        .educational-card__head
+                            .card__head-logo
+                                picture
+                                    img.lazy(data-src="img/logo/card-educ2.png" data-srcset="img/logo/card-educ2@2x.png 2x" alt="logo")
+
+                        h2.text-40.title-label Школы
+                            span 7 &mdash; 11 лет
+                        .educational-card__body
+                            nav
+                                a(href="#!")
+                                    h4.title-4 Champion Park
+                                    .text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+
+                                a(href="#!")
+                                    h4.title-4.badge-inner Garden Square
+                                        span.badge.badge--small.badge-azure скоро открытие
+                                    .text-16  ул. Усачева, 11
+                            .sochial.sochial--abs
+                                a(href="#!").icon-fb
+                                    +facebook
+                                a(href="#!").icon-inst
+                                    +inst
+
+                .educational-column.sidebar-block
+                    .contacts.text-28
+                        a(href="tel:84957960504") 8 (495) 796-05-04
+                        .form-wrapper
+                            button.button-light.showOrderCallForm заказать звонок
+                            // ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК
+                            .form-block.orderCall-form--block
+                                button.button-light.border-none.hideOrderCallForm свернуть
+                                .form-body
+                                    form.contact-form.orderCall-form
+                                        p.text-16 Оставьте ваш номер и мы перезвоним в ближайшее время
+                                        .form-group
+                                            input(type="text" name="userName" placeholder="Ваше имя")
+                                            .fake-placeholder2 имя
+                                        .form-group
+                                            input(type="text" name="userTel" placeholder="Телефон")
+                                            .fake-placeholder2 тел.
+                                        .form-button
+                                            input(type="submit" value="Отправить")
+                                        .agree-info
+                                            p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+                                            p.nospam Не шлем СМС спам
+                            // ============ КОНЕЦ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК ============
+
+                            // ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
+                            .success-orderCallForm
+                                .icon-box
+                                    picture
+                                        img.lazy(data-src="img/emoji/happy.png" data-srcset="img/emoji/happy@2x.png 2x" alt="emoji")
+                                .text-16
+                                    p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
+                            //  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
+                    .text-28
+                        p  С понедельника по&nbsp;пятницу
+                        p 7:30 &mdash; 22:00
+
+            //============ БЛОК С БАННЕРОМ НИЖНИЙ ============
+            .educational-block
+                .educational-banner
+                    picture
+                        img.lazy(data-src="img/banners/educ-banner.jpg" data-srcset="img/banners/educ-banner@2x.jpg 2x" height='460' width='960' alt="banner")
+                    .img-layout
+                        h3.title-3 Летняя программа
+                        p Игры, квесты, продуктивная и&nbsp;познавательно&#8209;исследовательская деятельность, чтение художественной литературы, сюжетно-ролевые игры и многое другое
+                        button.button-light Узнать больше 
+
+                .educational-column.sidebar-block
+                    .badge.badge-red Набор на 2020 закрыт
+                    .educational-column__text
+                        p.text-28  1 июня — 31 августа
+                        p.text-16 ПН — ПТ, 7:30 — 22:00
+                        p.text-28 Для детей от&nbsp;1&nbsp;года&nbsp;до&nbsp;11&nbsp;лет
+            +btn-visual
+            .footer-content
+                a(href="#!") Сведения об общеобразовательной организации
+                a(href="#!") Политика конфиденциальности
+                p &copy; 2012 — 2020 Общеобразовательный комплекс «Дари Детям Добро» 

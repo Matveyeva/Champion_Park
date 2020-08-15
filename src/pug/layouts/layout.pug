@@ -1,25 +1,35 @@
+include mixins.pug
+
 block variables
 
 
 doctype html
 html(lang='ru')
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-		title #{title}
-		meta(name="keywords" content="" )
-		meta(name="description" content="" )
-		link( rel="stylesheet" href="libs/bootstrap/bootstrap.min.css")
-		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
-		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet")
-		link(rel="shortcut icon" href="img/favicon.png"  type="image/x-icon" )
-		link(rel="stylesheet", href="css/main.css")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title #{title}
+        meta(name="keywords" content="" )
+        meta(name="description" content="" )
+        //- meta(name="yandex-verification" content="b1b55a9d5b1beba1")
+        link( rel="stylesheet" href="libs/bootstrap/bootstrap.min.css")
+        link(rel="stylesheet", href="libs/owlCarousel/owl.carousel.min.css")
+        link( rel="stylesheet" href="libs/animate.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet")
+        link(rel="shortcut icon" href="img/favicon.png"  type="image/x-icon" )
+        link(rel="stylesheet", href="css/main.css")
 
-	body
+    body
+       
 
 
-		block content
+        block content
 
-		script(src="libs/jquery/jquery-3.0.0.min.js")
-		script(src="libs/bootstrap/bootstrap.min.js")
-		script(src='js/main.js')
+        script( src="libs/jquery/jquery-3.0.0.min.js")
+        script( src="libs/bootstrap/bootstrap.min.js")
+        script( src="libs/owlCarousel/owl.carousel.min.js")
+        script( src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js")
+        script( src="libs/jquery.lazy-master/jquery.lazy.min.js")
+        script( src="libs/jquery.lazy-master/jquery.lazy.plugins.min.js")
+        script( src='js/main.js')

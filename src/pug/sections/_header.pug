@@ -1,1 +1,114 @@
-h1 Hello
+//- HEADER
+header.header
+	.child-img
+		picture
+			img(src="img/header/child.png" srcset="img/header/child@2x.png 2x" alt="image" )
+	.container--large
+		.header-nav
+			+logo
+			//============ МЕНЮ В ШАПКЕ ============
+			.header-menu.text-14
+				ul
+					li.header-menu__item
+						a(href="#") Школы
+
+						//============ выпадающее меню школы============
+						.drop-menu
+							.drop-menu__body
+								.drop-img
+									picture
+										img(src="img/emoji/teacher.png" srcset="img/emoji/teacher@2x.png 2x" alt="emoji")
+								nav
+									a(href="#!")
+										h4.title-4(itemprop="name") Champion Park
+										.text-16(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+
+									a(href="#!")
+										h4.title-4.badge-inner(itemprop="name") Garden Square
+											span.badge.badge--small.badge-azure скоро открытие
+										.text-16(itemprop="streetAddress")  ул. Усачева, 11
+						//============ конец  выпадающее меню школы ============
+
+
+					li.header-menu__item.active
+						a(href="#") Детские сады
+						//============ выпадающее меню дет сады ============
+						.drop-menu
+							.drop-menu__body
+								.drop-img.b-20
+									picture
+										img(src="img/emoji/bear.png" srcset="img/emoji/bear@2x.png 2x" alt="emoji")
+								nav
+									a(href="#!").active
+										h4.title-4.badge-inner(itemprop="name") Champion Park
+											span.badge.badge--small.badge-red вы здесь
+										.text-16(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+
+									a(href="#!")
+										h4.title-4(itemprop="name") Garden Square
+										.text-16(itemprop="streetAddress") ул. Ефремова 10, корп. 1
+									a(href="#!")
+										h4.title-4(itemprop="name") Marfino
+										.text-16(itemprop="streetAddress") ул. Большая Марфинская 1, корп. 2
+					//============ конец  выпадающее меню дет сады ============
+
+					li.header-menu__item
+						a(href="#") Образовательный комплекс
+						//============ выпадающее меню образоват комплекс ============
+						.drop-menu
+							.drop-img.drop-img--logo
+								+brand-logo
+							.drop-menu__body
+								.flex-block
+									nav
+										a(href="#") Концепция
+										a(href="#") Галерея
+										a(href="#") Отзывы
+										a(href="#") Интервью с выпускниками
+									nav
+										a(href="#") События
+										a(href="#") Статьи
+										a(href="#") Награды
+										a(href="#") Партнеры
+								.drop-menu__bottom
+									a(href="#!").badge-inner Летняя программа
+										.badge.badge--small.badge-red Набор на 2020 закрыт
+						//============ конец  выпадающее меню образоват комплекс ============
+
+
+			.contacts.text-28
+				a(itemprop="telephone" href="tel:+74957960504") 8 (495) 796-05-04
+
+			.header-buttons
+				+eye
+				+gamburger
+		.header-text
+			h2.badge Частный детский сад
+			h1.title-1 Champion Park
+			.text-22
+				p Укрепляем здоровье и психологический комфорт детей, развиваем интеллект и социальные навыки.
+				p  Собственная кухня, врач-педиатр, логопед и психолог
+			button.button#openForm Записаться на бесплатный пробный день
+		.description-block
+			.text-40
+				span 1 &mdash; 7 #[span.text-30 лет]
+				span 07:30 &mdash; 22:00
+			.description-row
+				div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+				p 
+					span(itemprop="addressLocality") Москва,
+					span(itemprop="streetAddress") Мичуринский проспект, ул. Олимпийская Деревня 1, корп.1
+				a(href="#!").button-light.show-map-modal на карте
+
+	//============ СООБЩЕНИЕ ОБ УСПЕШНОЙ ОТПРАВКЕ ФОРМЫ ============
+	.success-window
+		.close-success
+			+close
+		.success-img
+			picture
+				img(src="img/emoji/happy.png" srcset="img/emoji/happy@2x.png 2x" alt="emoji")
+		h4.title-20 Рады, что вы решили посетить «Champion Park»
+		.success-text
+			p Ваша заявка на бесплатный пробный день получена. Свяжемся с вами в ближайшее время. Обычно в течение 30 — 45 минут.
+			p Во время беседы подберем удобную дату посещения, попросим рассказат о вашем ребенке и его предпочтениях, поинтересуемся вашими ожиданиями и требованими к воспитательному процессу и ответим на вопросы
+	//============ КОНЕЦ СООБЩЕНИЕ ОБ УСПЕШНОЙ ОТПРАВКЕ ФОРМЫ ============

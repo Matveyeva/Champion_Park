@@ -1,0 +1,56 @@
+//============ Секция Видеопрезентация ============
+.video-presentasion {
+  // padding-top: 100px;
+  padding-bottom: 128px;
+}
+
+picture {
+  object-fit: cover;
+  object-position: center;
+}
+
+.video-presentasion__frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: 0.5s;
+
+  .play-button {
+    position: absolute;
+    width: 198px;
+    left: 38px;
+    bottom: 40px;
+    z-index: 2;
+
+    @media(max-width: 1439px) {
+      width: 140px;
+    }
+  }
+
+
+  .badge {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    z-index: 2;
+  }
+
+  &:hover {
+    border: 2px solid #cf3a3a;
+  }
+}
+
+.video-presentasion__text {
+  position: absolute;
+  right: 55px;
+  bottom: 60px;
+  z-index: 2;
+  width: 50%;
+  max-width: 570px;
+  color: #fff;
+}
+
+// .video,.video-review__frame {position:relative;padding-bottom:56.25%;}
+
+// .video iframe,.video-review__frame iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
