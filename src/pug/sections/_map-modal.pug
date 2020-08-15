@@ -6,14 +6,13 @@ section.map-modal#mogal-in-map
 		.map-content
 			.bg-logo
 				+brand-logoBig
-				//- img.lazy(data-src="img/logo/map-bg.png" alt="logo")
 			.map-content__body
 				article.map-wrapper
 					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A846edc6d83e2570597233258aadee8edc7ccf538b786245068642a16c4933da9&amp;width=960&amp;height=720&amp;lang=ru_RU&amp;scroll=false")
 				article.map-text
 					.map-content-title
 						.badge Частный детский сад
-						h1.section-title(itemprop="name") Champion Park
+						h2.section-title(itemprop="name") Champion Park
 						span(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
 						p.text-20(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
 					.sidebar-block
@@ -45,7 +44,7 @@ section.map-modal#mogal-in-map
 								.success-orderCallForm
 									.icon-box
 										picture
-											img(src="img/emoji/happy.png" srcset="img/emoji/happy@2x.png 2x" alt="happy")
+											img.lazy(data-src="img/emoji/happy.png" data-srcset="img/emoji/happy@2x.png 2x" alt="happy")
 									.text-16
 										p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
 								//  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
@@ -55,7 +54,7 @@ section.map-modal#mogal-in-map
 					.sidebar-block.mt-40
 						.icon-box
 							picture
-								img(src="img/emoji/baby.png" srcset="img/emoji/baby@2x.png 2x" alt="baby")
+								img.lazy(data-src="img/emoji/baby.png" data-srcset="img/emoji/baby@2x.png 2x" alt="baby")
 						.text-28.pt-10
 							p 1 &mdash; 7 лет
 
@@ -70,7 +69,7 @@ section.map-modal.map-modal--all#map-all-objects
 		.map-content
 			.bg-logo
 				picture
-					img(src="img/logo/map-bg.png" srcset="img/logo/map-bg@2x.png 2x" alt="logo")
+					img.lazy(data-src="img/logo/map-bg.png" data-srcset="img/logo/map-bg@2x.png 2x" alt="logo")
 			// ============  ТАБЫ ============
 			.objects__tabs
 				nav
@@ -151,7 +150,7 @@ section.map-modal.map-modal--all#map-all-objects
 									.map-content-title
 										.badge Частный детский сад
 										div(itemscope itemtype="http://schema.org/Organization")
-										h1.section-title Champion Park
+										h2.section-title Champion Park
 										p.text-20 Мичуринский пр-т, ул. Олимпийская деревня 1, корп. 2
 									.sidebar-block
 										.contacts.text-28

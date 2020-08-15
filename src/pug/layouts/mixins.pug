@@ -2,7 +2,7 @@ mixin card-info(ind,img,title,text1,text2,label)
     .card-info.clicked-item( data-index=''+ind)&attributes(attributes)
         .card-info__icon
             picture
-                img(src="img/emoji/"+img+".png" srcset="img/emoji/"+img+"@2x.png 2x" alt='emoji')
+                img.lazy(data-src="img/emoji/"+img+".png" data-srcset="img/emoji/"+img+"@2x.png 2x" alt='emoji')
         .card-info__text
             h4.title-4 #{title}
             p !{text1}
@@ -16,7 +16,7 @@ mixin card-team(ind,img,title,text2,label,icon)
     .card-team.clicked-item(data-index=''+ind)&attributes(attributes)
         .card-team__img
             picture
-                img(src="img/team/" + img + ".jpg" srcset="img/team/" + img + "@2x.jpg 2x" alt='team' width ='260')
+                img.lazy(data-src="img/team/" + img + ".jpg" data-srcset="img/team/" + img + "@2x.jpg 2x" alt='team' width ='260')
         .card-info__text
             h4.title-4 #{title}
             p !{text2}
@@ -26,7 +26,7 @@ mixin card-team(ind,img,title,text2,label,icon)
         if icon
             .card-icon
                 picture
-                    img(src="img/team/" + icon + ".png" srcset="img/team/"+icon+"@2x.png 2x" alt='icon')
+                    img.lazy(data-src="img/team/" + icon + ".png" data-srcset="img/team/"+icon+"@2x.png 2x" alt='icon')
 
 mixin btn-visual
     button.button.button--visual
@@ -256,7 +256,7 @@ mixin timeTableDesk(dayNum, ind, title )
                     .photo-block
                         .round-img
                             picture
-                                img(src="img/avatar/dance-teacher.png" srcset="img/avatar/dance-teacher@2x.png 2x" alt="photo")
+                                img.lazy(data-src="img/avatar/dance-teacher.png" data-srcset="img/avatar/dance-teacher@2x.png 2x" alt="photo")
                         h4.title-4 Диана Кудзоева
                         p  Педагог-хореограф «Champion Park»
 
@@ -279,7 +279,7 @@ mixin timeTableDesk(dayNum, ind, title )
                     .additional-text.text-20
                         .lesson-icon
                             picture
-                                img(src="img/emoji/ballet2.png" srcset="img/emoji/ballet2@2x.png 2x" alt="img")
+                                img.lazy(data-src="img/emoji/ballet2.png" data-srcset="img/emoji/ballet2@2x.png 2x" alt="img")
                         p В программу уроков в обязательном порядке входит растяжка. Дети учатся делать шпагат и тянуть носок, развивают гибкость спины
 mixin timeTableBody(ageIndex, title)
     .timetable-body(data-age=""+ ageIndex)
@@ -342,7 +342,7 @@ mixin benefitDesk_1(ind)
                     .col-xl-4
                         .text-block.pl-50
                             picture
-                                img(src='img/emoji/pie.png' srcset="img/emoji/pie@2x.png 2x" height='200' width='201' alt='pie')
+                                img.lazy(data-src='img/emoji/pie.png' data-srcset="img/emoji/pie@2x.png 2x" height='200' width='201' alt='pie')
                             p Ко дню рождения каждого ребенка<br>готовим фруктовый пирог<br>с малым содержанием сахара
                     .col-xl-8
                         .text-block.text-block--white
@@ -397,7 +397,7 @@ mixin benefitDesk_2(ind)
                     .col-xl-4
                         .text-block.pl-50
                             picture
-                                img(src="img/emoji/tear.png" srcset="img/emoji/tear@2x.png 2x" height='75' width='45' alt="emoji")
+                                img.lazy(data-src="img/emoji/tear.png" data-srcset="img/emoji/tear@2x.png 2x" height='75' width='45' alt="emoji")
                             p В обязательном порядке соблюдается<br>питьевой режим, как во время основных<br>приёмов пищи, так и в течение дня
                     .col-xl-8
                         .text-block
@@ -418,7 +418,7 @@ mixin benefitDesk_2(ind)
                     .col-xl-4
                         .text-block.pl-50
                             picture
-                                img(src="img/emoji/sleep.png" srcset="img/emoji/sleep@2x.png 2x" height='70' width='70' alt="emoji")
+                                img.lazy(data-src="img/emoji/sleep.png" data-srcset="img/emoji/sleep@2x.png 2x" height='70' width='70' alt="emoji")
                             p Дети засыпают под чтение сказок<br>воспитателем или слушая классическую<br>музыку, например, Моцарта
                     .col-xl-8
                         .text-block
