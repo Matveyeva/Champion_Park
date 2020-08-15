@@ -45,6 +45,11 @@
     padding-right: 15px;
   }
 
+  @media(max-width:767px) {
+    min-height: 260px;
+
+  }
+
   .card-info__icon {
     min-height: 75px;
     max-height: 75px;
@@ -98,19 +103,8 @@
 
 .card-info.dark-bg,
 .card-team.dark-bg {
-
-  p,
-  h4 {
-    @media (max-width: 767px) {
-      margin-bottom: 75px;
-    }
-  }
-
-  p,
-  h4 {
-    @media (max-width: 767px) {
-      margin-bottom: 75px;
-    }
+  @media (max-width: 767px) {
+    margin-bottom: 75px;
   }
 }
 
@@ -118,6 +112,11 @@
   img {
     position: relative;
     top: -50px;
+
+    @media(max-width:767px) {
+      top: -35px;
+
+    }
   }
 }
 

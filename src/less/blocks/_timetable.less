@@ -436,45 +436,17 @@
 		color: @blackOp2;
 	}
 
-	// .section-quote__author {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	margin-top: 30px;
-
-
-	// }
-
-	// .quote__author-img {
-	// 	width: 90px;
-	// 	height: 90px;
-	// 	border-radius: 50%;
-	// 	overflow: hidden;
-	// 	margin-right: 40px;
-	// }
-
-	// .quote__author-info {
-
-	// 	p {
-	// 		&:first-child {
-	// 			.text-28;
-	// 		}
-
-	// 		span {
-	// 			display: block;
-	// 		}
-	// 	}
-
-	// 	p:last-child {
-	// 		color: @blackOp2;
-	// 		margin-top: 10px;
-	// 	}
-	// }
 }
 
 .section-quote__author {
 	display: flex;
 	align-items: center;
 	margin-top: 30px;
+
+	@media(max-width: 767px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
 
 }
@@ -492,6 +464,12 @@
 	p {
 		&:first-child {
 			.text-28;
+
+			@media(max-width:767px) {
+				font-size: 20px;
+				line-height: 1.2;
+			}
+
 		}
 
 		span {
@@ -502,6 +480,15 @@
 	p:last-child {
 		color: @blackOp2;
 		margin-top: 10px;
+
+		@media(max-width: 767px) {
+			font-size: 16px;
+			max-width: 60%;
+		}
+	}
+
+	@media(max-width:767px) {
+		margin-top: 14px;
 	}
 }
 
