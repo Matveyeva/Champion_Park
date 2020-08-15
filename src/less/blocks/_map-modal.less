@@ -136,6 +136,7 @@
 	right: 50px;
 	border-radius: 70px;
 	cursor: pointer;
+	z-index: 10;
 	.tr;
 
 	.btn-icon {
@@ -147,8 +148,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-
 	}
 
 	.btn-text {
@@ -207,4 +206,49 @@
 
 #show-all-objects {
 	cursor: pointer;
+}
+
+.feedback-tariff {
+	.feedback-content {
+		@media(min-width:1365px) {
+			width: 850px;
+		}
+
+
+
+
+		.feedback-content__body {
+			max-width: 550px;
+
+
+			.feedback-info {
+				margin-top: 16px;
+				display: flex;
+				align-items: center;
+				max-width: 550px;
+
+				p+p {
+					margin-left: 30px;
+				}
+
+				p:last-child {
+					margin-top: 0;
+					font-family: @fr;
+				}
+			}
+
+			.badge {
+				height: 38px;
+				margin-right: 30px;
+				line-height: 38px;
+
+			}
+
+			.form-group .badge {
+				margin-right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
 }

@@ -1,5 +1,6 @@
 //============ Секция Почему родители нас выбирают ============
-section.benefits
+section.benefits.section-offset
+	include _video-presentation.pug
 	.container
 		h2.title-2 Почему родители нас выбирают
 		.wrapper
@@ -12,14 +13,14 @@ section.benefits
 						.col-md-6.col-xl-3
 							+card-info(2,'eating','Шестиразовое питание','Собственная профессиональная кухня. Индивидуальное меню. Без глютена и с минимумом сахара','О здоровом питании','Без полуфабрикатов')
 						.col-md-6.col-xl-3
-							+card-info(3,'doc','Свой врач-педиатр','Проводит оздоровительные мероприятия, следит за здоровьем детей и консультирует родителей','О медицинском обсуживании')
+							+card-info(3,'doc','Свой врач-педиатр','Проводит оздоровительные мероприятия, следит за здоровьем детей и консультирует родителей','О медицинском обслуживании')
 						.col-md-6.col-xl-3
 							+card-info(4,'star','Уникальное обучение','Чередуем физическую и умственную активность в играх и групповой деятельности','О системе обучения')(class='big-icon')
 				//============ Страницы с описанием карточек ============
 				.benefits-card-pages
 					+benefitDesk_1(2)(class=" benefit-article_2")
 					+benefitDesk_2(4)(class=" benefit-article_4")
-			
+
 			//============ Второй ряд карточек карточек ============
 			.benefits-group.drop-wrapper
 				.benefits-cards
@@ -36,6 +37,19 @@ section.benefits
 				.benefits-card-pages
 					+benefitDesk_1(5)(class=" benefit-article_1")
 					+benefitDesk_2(7)(class=" benefit-article_3")
+		.benefits-footer.section-quote
+			.decor-img
+				+quoteBig
+			.section-quote__text.text-40
+				p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
+			.section-quote__author
+				.quote__author-img
+					picture
+						img.lazy(data-src="img/avatar/ava_doc.jpg" data-srcset="img/avatar/ava_doc@2x.jpg 2x" alt="photo")
+				.quote__author-info.text-20
+					p Ирина Григорьевна Чепенко
+					p
+						span Врач-педиатр «Champion Park», 29 лет опыта работы 
 
 //============ Конец Секции Почему родители нас выбирают ============
 

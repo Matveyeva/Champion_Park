@@ -1,8 +1,10 @@
 //Блок Почему мы — карточки
 .benefits {
-	.title-2 {
-		margin-bottom: 60px;
-	}
+  overflow: hidden;
+
+  .title-2 {
+    margin-bottom: 60px;
+  }
 }
 
 .wrapper {
@@ -17,34 +19,44 @@
 
 //Карточка блока Почему мы
 .card-info {
-	position: relative;
-	max-width: 300px;
-	min-height: 250px;
-	border: 2px solid transparent;
-	padding: 15px 30px 30px 20px;
-	background-color: #ffffff;
-	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 0.5s;
-	margin-bottom: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	.card-info__icon {
-		min-height: 75px;
-		max-height: 75px;
-		margin-bottom: 10px;
-	}
-	p:first-child {
-		min-height: 60px;
-		max-height: 60px;
-		overflow: hidden;
-	}
-	p:last-child {
-		margin-top: 10px;
-		transition: 0.5s;
-		opacity: 0.5;
-	}
+  position: relative;
+  max-width: 300px;
+  min-height: 250px;
+  border: 2px solid transparent;
+  padding: 15px 30px 30px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media(max-width:1349px) {
+    min-height: 290px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card-info__icon {
+    min-height: 75px;
+    max-height: 75px;
+    margin-bottom: 10px;
+  }
+
+  p:first-child {
+    min-height: 60px;
+    max-height: 60px;
+    overflow: hidden;
+  }
+
+  p:last-child {
+    margin-top: 10px;
+    transition: 0.5s;
+    opacity: 0.5;
+  }
+
   position: relative;
   max-width: 300px;
   min-height: 250px;
@@ -80,12 +92,13 @@
 
 .card-info.dark-bg,
 .card-team.dark-bg {
-	p,
-	h4 {
-		@media (max-width: 767px) {
-			margin-bottom: 75px;
-		}
-	}
+
+  p,
+  h4 {
+    @media (max-width: 767px) {
+      margin-bottom: 75px;
+    }
+  }
 
   p,
   h4 {
@@ -95,28 +108,14 @@
   }
 }
 
-// .card-info.big-icon {
-// 	img {
-// 		position: relative;
-// 		top: -50px;
-// 	}
-// }
-
-.card-info.green-card {
-	background-color: @green;
-	p,
-	h4 {
-		color: @white;
-	}
+.card-info.big-icon {
+  img {
+    position: relative;
+    top: -50px;
+  }
 }
 
-.card-info:hover {
-	border: 2px solid #cf3a3a;
-	p:last-child {
-		color: @red;
-		font-weight: 700;
-		opacity: 1;
-	}
+.card-info.green-card {
   background-color: @green;
 
   p,
@@ -133,44 +132,62 @@
     font-weight: 700;
     opacity: 1;
   }
+
+  // background-color: @green;
+
+
+}
+
+.card-info:hover {
+  border: 2px solid #cf3a3a;
+
+  p:last-child {
+    color: @red;
+    font-weight: 700;
+    opacity: 1;
+  }
 }
 
 .card-info.green-card:hover {
-	p:last-child {
-		color: @yellow;
-	}
+  p:last-child {
+    color: @yellow;
+  }
 }
 
 .card-label {
-	position: absolute;
-	left: 0;
-	top: -45px;
-	padding-right: 10px;
-	padding-left: 10px;
-	height: 30px;
-	background: @azure;
-	opacity: 0.8;
-	box-shadow: 0px 10px 10px rgba(80, 197, 201, 0.3);
-	border-radius: 5px;
-	font-family: @fc;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 30px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: @white;
+  position: absolute;
+  left: 0;
+  top: -45px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 30px;
+  background: @azure;
+  opacity: 0.8;
+  box-shadow: 0px 10px 10px rgba(80, 197, 201, 0.3);
+  border-radius: 5px;
+  font-family: @fc;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: @white;
 }
 
 .card-info__text {
-	p {
-		font-family: @fc;
-	}
+  p {
+    font-family: @fc;
+  }
 }
 
 //Карточка блока Почему мы — Питание
 .benefit-description {
-  background-color: rgba(255, 207, 64, 0.2);
-  padding: 60px 75px 90px 75px;
+  // background-color: rgba(255, 207, 64, 0.2);
+  padding: 40px 0px 90px 0px;
+
+  .desk-name {
+    margin-bottom: 10px;
+  }
 
   .title-group {
     width: 100%;
@@ -218,13 +235,6 @@
       left: 232px;
     }
 
-    // .brand-logo {
-    //   border:1px solid red;
-    //   position: absolute;
-    //   right: 40px;
-    //   bottom: 50px;
-    //   z-index: 2;
-    // }
   }
 
   .text-block--white {
@@ -244,9 +254,9 @@
 
     .brand-logo {
       position: absolute;
-      bottom: -20px;
-      right: 60px;
-      font-size: 150px;
+      bottom: 83px;
+      right: 40px;
+      font-size: 200px;
       color: rgba(220, 147, 124, 0.2);
       font-family: @fr;
       z-index: -1;
@@ -255,27 +265,27 @@
 }
 
 .pl-50 {
-	padding-left: 50px;
+  padding-left: 30px;
 }
 
 .symbol_a {
-	position: absolute;
-	top:-31px;
-	right: 33px;
-	font-size: 198px;
-	color: rgba(220, 147, 124, 0.2);
-	font-family: @fr;
-	z-index: -1;
+  position: absolute;
+  top: -31px;
+  right: 33px;
+  font-size: 198px;
+  color: rgba(220, 147, 124, 0.2);
+  font-family: @fr;
+  z-index: -1;
 }
 
-.symbol_p{
-	position: absolute;
-	top:-56px;
-	right: 75px;
-	font-size: 198px;
-	color: rgba(220, 147, 124, 0.2);
-	font-family: @fr;
-	z-index: -1;
+.symbol_p {
+  position: absolute;
+  top: -56px;
+  right: 75px;
+  font-size: 198px;
+  color: rgba(220, 147, 124, 0.2);
+  font-family: @fr;
+  z-index: -1;
 }
 
 article {
@@ -296,23 +306,64 @@ article {
 .benefit-description {
   display: none;
   position: relative;
-  overflow: hidden;
 
+
+  .text-block--title.pl-50 {
+    position: relative;
+    top: -10px;
+  }
+
+  .text-block.pl-50 {
+    position: relative;
+    top: -10px;
+  }
+
+  .text-block.pl-30 {
+    padding-left: 30px;
+  }
+
+  .text-block picture+p {
+    margin-top: 10px;
+  }
 
   .title-3 {
     margin-bottom: 30px;
   }
 
   .close-desk {
-    top: 65px;
-    right: 65px;
+    top: 50px;
+    right: 0px;
   }
 
+}
+
+.team-description .close-desk {
+  top: 40px;
+  right: 40px;
+}
+
+.benefits-card-pages {
+  position: relative;
 }
 
 .benefit-description.active,
 .team-description.active {
   display: block;
+  position: relative;
+  z-index: 1;
+
+}
+
+.benefits-card-pages:after {
+  position: absolute;
+  content: '';
+  width: 200%;
+  left: -50%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 207, 64, 0.2);
+  z-index: 0;
+
 }
 
 .benefit-description.benefit-article_1:after {
@@ -331,3 +382,14 @@ article {
   left: 88%;
 }
 
+.benefits-footer {
+  margin-top: 120px;
+
+  .decor-img {
+    width: 130px;
+
+    path {
+      fill: rgba(25, 70, 0, .1);
+    }
+  }
+}

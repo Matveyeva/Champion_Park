@@ -21,15 +21,23 @@
 
 .child-img {
 	position: absolute;
+	// right: 14%;
 	right: 0;
 	bottom: 0;
 	z-index: 5;
-	width: 1000px;
+	width: 70%;
+	max-width: 1000px;
+	pointer-events: none;
 
 	@media(max-width:1439px) {
-		max-width: 900px;
-		width: 65%;
+		right: 0%;
+		width: 70%;
 	}
+
+	// @media(max-width:1365px) {
+
+	// 	width: 70%;
+	// }
 }
 
 .header-nav {
@@ -176,6 +184,7 @@
 
 .badge-inner {
 	position: relative;
+	display: block;
 
 	.badge {
 		margin-left: 5px;
@@ -277,6 +286,7 @@
 .btn-bars {
 	width: 60px;
 	height: 60px;
+
 }
 
 // header title
@@ -308,15 +318,18 @@
 	padding-left: 10px;
 
 	@media(max-width:1439px) {
-		margin-top: 15vh;
+		margin-top: 10vh;
 		padding-left: 0;
 	}
 
 	span {
 		display: inline-block;
+		letter-spacing: -0.3px;
 
 		&+span {
-			margin-left: 0.5em;
+			margin-left: 0.4em;
+
+
 		}
 	}
 
@@ -326,7 +339,14 @@
 		margin-top: 10px;
 
 		p {
-			margin-right: 8px;
+			margin-right: 15px;
+
+
+		}
+
+		.show-map-modal {
+			position: relative;
+			top: -2px;
 		}
 	}
 }

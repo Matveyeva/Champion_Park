@@ -1,17 +1,18 @@
-//МОДАЛЬНАЯ ФОРМА ОБРАТНОЙ СВЯЗИ
+//========= МОДАЛЬНАЯ ФОРМА ОБРАТНОЙ СВЯЗИ =========
 section.feedback#feedback
 	.close-modal
 		+close
 	.child-img
-		img(src="img/header/child2.png", alt="image")
+		picture
+			img.lazy(data-src="img/header/child2.png", data-srcset="img/header/child2@2x.png 2x" alt="image")
 	.container
 		.feedback-content
 			.brand-logo
-				img(src="img/logo/brand.png", alt="logo")
-			h1.title-3 Запись на бесплатный пробный день
+				+brand-logoBig
+			h3.title-3 Запись на бесплатный пробный день
 			.feedback-info
 				p Посещения пробного дня не обязывает к платному обучению
-				p Мы хотим, чтобы перед поступлением в сад, вы были уверены, <br> что «Champion Park» станет надежным вторым дом для вашего ребенка 
+				p Мы хотим, чтобы перед поступлением в сад, вы были уверены, <br> что «Champion Park» станет надежным вторым дом для вашего ребенка
 			.feedback-form
 				form.contact-form.fedback-form(action="#")
 					.form-group
@@ -27,6 +28,42 @@ section.feedback#feedback
 					.agree-info
 						p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
 						p Не шлем спам и надежно храним персональные данные
+
+//========= МОДАЛЬНАЯ ФОРМА КЛИК ПО КАРТОЧКЕ ВЫБРАТЬ ТАРИФ  =========
+section.feedback.feedback-tariff#selectTariff
+	.close-modal
+		+close
+	.child-img
+		picture
+			img.lazy(data-src="img/header/child2.png", data-srcset="img/header/child2@2x.png 2x", alt="image")
+	.container
+		.feedback-content
+			.brand-logo
+				
+			.feedback-content__body
+				h3.title-3 Запись на полный день обучения в «Champion Park»
+				.feedback-info.text-20
+					.badge.badge-azure 
+						span.text-20 65 000 
+						span.text-16 p/месяц
+					p.text-20 7:30 — 22:00
+					p.text-20 6-разовое питание 
+					
+				.feedback-form
+					form.contact-form.fedback-form(action="#")
+						.form-group
+							input(type="text", name="userName" )
+							.badge ваше имя
+							.fake-placeholder Ваше имя
+						.form-group
+							input.phone(type="text", name="tel")
+							.badge телефон
+							.fake-placeholder Телефон
+						.form-button
+							input(type="submit" value="Отправить")
+						.agree-info
+							p Нажимая на кнопку вы принимаете <br> #[a(href="#") политику конфиденциальности]
+							p Не шлем спам и надежно храним персональные данные
 
 
 

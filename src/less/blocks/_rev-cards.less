@@ -1,17 +1,26 @@
 .review-cards {
 	padding-top: 50px;
+	position: relative;
 }
+
+
 
 .rev-card {
 	background: #FFFFFF;
 	box-shadow: 0px 15px 30px rgba(82, 82, 82, 0.15);
 	border-radius: 15px;
-	padding: 20px 30px 30px 20px;
+	padding: 20px 30px 34px 20px;
 	cursor: pointer;
+	min-height: 372px;
+
+	@media(max-width:1349px) {
+		min-height: 424px;
+	}
 
 	.rev-card_quote {
 		p {
 			.text-20;
+			line-height: 1.4;
 			margin-bottom: 10px;
 		}
 
@@ -21,7 +30,6 @@
 
 		span+span {
 			font-size: 14px;
-			margin-top: 4px;
 			color: @blackOp2;
 		}
 	}
@@ -29,8 +37,17 @@
 	.rev-card_text {
 		margin-top: 30px;
 		position: relative;
-
 		font-family: @fc;
+		min-height: 160px;
+		overflow: hidden;
+
+		@media(max-width:1349px) {
+			min-height: 180px;
+		}
+
+		p+p {
+			line-height: 1.6;
+		}
 
 		&:after {
 			content: "";
@@ -39,7 +56,7 @@
 			left: 0;
 			width: 100%;
 			margin: 0;
-			height: 3.0em;
+			height: 5.0em;
 			background-color: rgba(255, 255, 255, 0);
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), to(#fefefe));
 			background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, #fefefe 100%);
@@ -69,4 +86,8 @@
 	.rev-card_text:after {
 		display: none;
 	}
+}
+
+.video-review .video-review__text .quote-decor {
+	width: 65px;
 }

@@ -2,13 +2,12 @@
 section.educational-complex#educational-complex--modal
     .close-modal
         +close
-    .bg-img
-        img(src="img/logo/brand2.png" alt="logo")
-
+    .educ-img
+        +fullRoundLogo
     .container
         .title-group
             h1.section-title Образовательный комплекс
-            button.button-light#show-all-objects на карте
+            button.button-light.show-all-objects на карте
         .educational-menu
             nav.text-20
                 a(href="#") Концепция
@@ -29,7 +28,8 @@ section.educational-complex#educational-complex--modal
                     .educational-card
                         .educational-card__head
                             .card__head-logo
-                                img.lazy(data-src="img/logo/card-educ1.png" alt="logo")
+                                picture
+                                    img.lazy(data-src="img/logo/card-educ1.png" data-srcset="img/logo/card-educ1@2x.png 2x" alt="logo")
                             .sochial
                                 a(href="#!").icon-fb
                                     +facebook
@@ -40,35 +40,36 @@ section.educational-complex#educational-complex--modal
                         .educational-card__body
                             nav
                                 a(href="#!").active
-                                    h4.title-4.badge-inner Champion Park
-                                        .badge.badge--small.badge-red вы здесь
-                                    .text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+                                    h4.title-4.badge-inner(itemprop="name") Champion Park
+                                        span.badge.badge--small.badge-red вы здесь
+                                    .text-16(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
 
                                 a(href="#!")
-                                    h4.title-4 Garden Square
-                                    .text-16  ул. Ефремова 10, корп. 1
+                                    h4.title-4(itemprop="name") Garden Square
+                                    .text-16(itemprop="streetAddress")  ул. Ефремова 10, корп. 1
                                 a(href="#!")
-                                    h4.title-4 Marfino
-                                    .text-16  ул. Большая Марфинская 1, корп. 2
+                                    h4.title-4(itemprop="name") Marfino
+                                    .text-16(itemprop="streetAddress")  ул. Большая Марфинская 1, корп. 2
 
                     // ============ ВТОРАЯ КАРТОЧКА ============
                     .educational-card
                         .educational-card__head
                             .card__head-logo
-                                img.lazy(data-src="img/logo/card-educ2.png" alt="logo")
+                                picture
+                                    img.lazy(data-src="img/logo/card-educ2.png" data-srcset="img/logo/card-educ2@2x.png 2x" alt="logo")
 
                         h2.text-40.title-label Школы
                             span 7 &mdash; 11 лет
                         .educational-card__body
                             nav
                                 a(href="#!")
-                                    h4.title-4 Champion Park
-                                    .text-16 Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
+                                    h4.title-4(itemprop="name") Champion Park
+                                    .text-16(itemprop="streetAddress") Мичуринский пр-т, ул. Олимпийская Деревня 1, корп.1
 
                                 a(href="#!")
-                                    h4.title-4.badge-inner Garden Square
-                                        .badge.badge--small.badge-azure скоро открытие
-                                    .text-16  ул. Усачева, 11
+                                    h4.title-4.badge-inner(itemprop="name") Garden Square
+                                        span.badge.badge--small.badge-azure скоро открытие
+                                    .text-16(itemprop="streetAddress")  ул. Усачева, 11
                             .sochial.sochial--abs
                                 a(href="#!").icon-fb
                                     +facebook
@@ -77,7 +78,7 @@ section.educational-complex#educational-complex--modal
 
                 .educational-column.sidebar-block
                     .contacts.text-28
-                        a(href="tel:84957960504") 8 (495) 796-05-04
+                        a(itemprop="telephone" href="tel:84957960504") 8 (495) 796-05-04
                         .form-wrapper
                             button.button-light.showOrderCallForm заказать звонок
                             // ============ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК
@@ -100,9 +101,10 @@ section.educational-complex#educational-complex--modal
                             // ============ КОНЕЦ ВЫПАДАЮЩАЯ ФОРМА ЗАКАЗАТЬ ЗВОНОК ============
 
                             // ============ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
-                            //	.success-orderCallForm
+                            .success-orderCallForm
                                 .icon-box
-                                    img(src="img/emoji/happy.png" alt="emoji")
+                                    picture
+                                        img.lazy(data-src="img/emoji/happy.png" data-srcset="img/emoji/happy@2x.png 2x" alt="emoji")
                                 .text-16
                                     p Ваша заявка получена, позвоним вам в ближайшее время. Обычно в течение 30 — 45 минут
                             //  ============ КОНЕЦ ОКНО ОБ УСПЕШНОЙ ОТПРАВЕ ФОРМЫ ============
@@ -113,7 +115,8 @@ section.educational-complex#educational-complex--modal
             //============ БЛОК С БАННЕРОМ НИЖНИЙ ============
             .educational-block
                 .educational-banner
-                    img(src="img/banners/educ-banner.jpg" alt="banner")
+                    picture
+                        img.lazy(data-src="img/banners/educ-banner.jpg" data-srcset="img/banners/educ-banner@2x.jpg 2x" height='460' width='960' alt="banner")
                     .img-layout
                         h3.title-3 Летняя программа
                         p Игры, квесты, продуктивная и&nbsp;познавательно&#8209;исследовательская деятельность, чтение художественной литературы, сюжетно-ролевые игры и многое другое

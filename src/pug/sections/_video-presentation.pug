@@ -1,11 +1,17 @@
 section.video-presentasion
 	.container
 		.video-presentasion__frame
-			.video
-				img(src="img/video/video1.jpg", alt="video")
+			.video(itemprop="url" href="#" )
+				span.d-none(itemprop="name" content="Название видео")
+				span.d-none(itemprop="description" content="Описание видео")
+				picture
+					img(src="img/video/video1.jpg" alt="" srcset="img/video/video1@2x.jpg 2x" width='1290')
+				//- iframe(width="100%" height="100%" src="https://www.youtube.com/embed/PBcouzgj70k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 			button.play-button.play-button--big
-				img(src="img/video/play.png", alt="icon")
+				picture
+					img.lazy(data-src="img/video/play.png" data-srcset="img/video/play@2x.png 2x" alt="icon")
 				span 1:07
+					meta(itemprop="duration")
 			.badge Видеопрезентация
 			.video-presentasion__text.text-40
 				p Антонина Захарова, заместитель управляющего, рассказывает и показывает детский сад «Champion Park»

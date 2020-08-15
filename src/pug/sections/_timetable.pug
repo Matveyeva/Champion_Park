@@ -1,7 +1,7 @@
 section.timetable
     .container
         .timetable-top
-            h2.titile-2 Расписание
+            h2.title-2 Расписание
             nav.age-nav
                 button.active(data-age="1")
                     span.age-value 6 &mdash; 7
@@ -47,8 +47,9 @@ section.timetable
                                     span Физическая культура
                                 .table-cell(data-index="dance_1")
                                     span Хореография
-                                    span.cell-img
-                                        img(src="img/emoji/ballet.png" alt="img")
+                                    span.cell-img.cell-img--ballet
+                                        picture
+                                            img.lazy(data-src="img/emoji/ballet2.png" data-srcset="img/emoji/ballet2@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell
@@ -70,7 +71,8 @@ section.timetable
                                 .table-cell.clicked-item(data-index="music-1")
                                     span Музыка
                                     span.cell-img
-                                        img(src="img/emoji/piano.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/piano.png" data-srcset="img/emoji/piano@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell
@@ -97,13 +99,15 @@ section.timetable
                                 .table-cell.clicked-item(data-index="maths")
                                     span Математический<br> интенсив
                                     span.cell-img
-                                        img(src="img/emoji/calc.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/calc.png" data-srcset="img/emoji/calc@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell.clicked-item(data-index="speaker")
                                     span Ораторское<br>мастерство
                                     span.cell-img
-                                        img(src="img/emoji/mic.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/mic.png" data-srcset="img/emoji/mic@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell
@@ -134,7 +138,8 @@ section.timetable
                         .timetable-grid-item.drop-wrapper
                             .table-row-group
                                 .cell-img
-                                    img(src="img/emoji/sleep.png" alt="img")
+                                    picture
+                                        img.lazy(data-src="img/emoji/sleep.png" data-srcset="img/emoji/sleep@2x.png 2x" alt="img")
                                 .table-cell
                                     span 13:00 &mdash; 15:00
                                 .table-cell
@@ -155,13 +160,15 @@ section.timetable
                                 .table-cell
                                     span Литературное<br>чтение
                                     .cell-img
-                                        img(src="img/emoji/book.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/book.png" data-srcset="img/emoji/book@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell.clicked-item(data-index="dance_2")
                                     span Шахматы
                                     .cell-img
-                                        img(src="img/emoji/chess.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/chess.png" data-srcset="img/emoji/chess@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                             .table-row-description
@@ -172,7 +179,8 @@ section.timetable
                                 .table-cell
                                     span Компьютерная<br>грамотность 
                                     span.cell-img
-                                        img(src="img/emoji/comp.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/comp.png" data-srcset="img/emoji/comp@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell
@@ -180,13 +188,15 @@ section.timetable
                                 .table-cell.clicked-item(data-index="finance")
                                     span Финансовая<br>грамотность
                                     .cell-img
-                                        img(src="img/emoji/wallet.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/wallet.png" data-srcset="img/emoji/wallet@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell.clicked-item(data-index="english")
                                     span Разговорный<br>английский
                                     .cell-img
-                                        img(src="img/emoji/flag.png" alt="img")
+                                        picture
+                                            img.lazy(data-src="img/emoji/flag.png" data-srcset="img/emoji/flag@2x.png 2x" alt="img")
                                     span.info-icon
                                         +info
                                 .table-cell
@@ -230,12 +240,13 @@ section.timetable
 
         .timetable-footer.section-quote
             .decor-img
-            +quote
+                +quoteBig
             .section-quote__text.text-40
                 p Методика воспитания в детском саду, режим дня, расписание игр и занятий продуманы таким образом, чтобы чередовать физическую и умственную активность, #[span а также поддерживать интерес детей к совместной деятельности]
             .section-quote__author
                 .quote__author-img
-                    img(src="img/avatar/av1.jpg" alt="photo")
+                    picture
+                        img.lazy(data-src="img/avatar/av1.jpg" data-srcset="img/avatar/av1@2x.jpg 2x" alt="photo")
                 .quote__author-info.text-20
                     p Юлия Хащук
                     p
