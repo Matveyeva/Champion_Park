@@ -247,8 +247,6 @@
 	position: absolute;
 	top: -10px;
 	right: -5%;
-	// width: 460px;
-	// height: 460px;
 	z-index: 3;
 }
 
@@ -268,6 +266,11 @@
 	padding-top: 5px;
 	cursor: pointer;
 	.tr;
+
+	@media(max-width:1439px) {
+		top: 3%;
+		right: 2%;
+	}
 
 	&:hover {
 		background-color: @black;
