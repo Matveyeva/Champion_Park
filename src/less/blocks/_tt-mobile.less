@@ -1,0 +1,99 @@
+.timetable-wrapper-mobile {
+	position: relative;
+	display: none;
+	height: 500px;
+
+	@media(max-width: 1364px) {
+		display: block;
+	}
+}
+
+.tt-day {
+	position: absolute;
+	top: 55px;
+	left: 0px;
+
+	.table-cell {
+		height: 80px;
+		width: auto;
+		margin-bottom: 20px;
+		padding-left: 0;
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+		border-radius: 0px;
+
+		&+.table-cell {
+			margin-left: 0;
+		}
+
+		span {
+			font-size: 28px;
+		}
+
+	}
+}
+
+.tt-grid-clock {
+	margin-bottom: 16px;
+
+	span {
+		font-size: 28px;
+		padding-left: 14px;
+	}
+}
+
+.tt-body {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	margin-left: 60px;
+	margin-top: 50px;
+
+	span {
+		white-space: pre-wrap;
+	}
+
+	// -webkit-overflow-scrolling: touch;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.tt-grid-block {
+	&+.tt-grid-block {
+		margin-left: 20px;
+	}
+}
+
+.tt-grid {
+	width: 1000px;
+	display: flex;
+}
+
+.tt-grid-row {
+	display: flex;
+
+	&+.tt-grid-row {
+		margin-top: 20px;
+	}
+
+}
+
+.tt-grid-cell {
+	height: 80px;
+	width: 220px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&+.tt-grid-cell {
+		margin-left: 10px;
+	}
+}
+
+.tt-block--yellow .tt-grid-cell {
+	background-color: #FFF3D1;
+}

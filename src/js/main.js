@@ -193,7 +193,12 @@ $(document).ready(function () {
 	// Показать всех сотрудников
 	const btnShowRev = document.querySelector('#btnShowRev');
 	const otherRevCards = document.querySelector('#otherRevCards');
-	showHideCards(btnShowRev, otherRevCards);
+	if (window.innerWidth > 767) {
+		if (otherRevCards) {
+			showHideCards(btnShowRev, otherRevCards);
+		}
+	}
+
 
 	const btnShowServ = document.querySelector('#btnShowServ');
 	const otherServCards = document.querySelector('#otherServiceCards');
@@ -351,6 +356,39 @@ $(document).ready(function () {
 			}
 
 		})
+	}
+	// слайдер с отзывами на мобилках +  дестрой на десктопах
+
+	let $homeSlider = $(".review-cards-slider");
+
+	$(window).resize(function () {
+		showHomeSlider();
+	});
+
+	function showHomeSlider() {
+		if ($homeSlider.data("owlCarousel") !== "undefined") {
+			if (window.matchMedia('(max-width: 767px)').matches) {
+				initialHomeSlider();
+			} else {
+				destroyHomeSlider();
+			}
+		}
+	}
+	showHomeSlider();
+
+	function initialHomeSlider() {
+		$homeSlider.addClass("owl-carousel").owlCarousel({
+			items: 1,
+			stagePadding: 15,
+			loop: true,
+			// autoplay: true,
+			autoplayTimeout: 2000,
+			smartSpeed: 1000
+		});
+	}
+
+	function destroyHomeSlider() {
+		$homeSlider.trigger("destroy.owl.carousel").removeClass("owl-carousel");
 	}
 
 })

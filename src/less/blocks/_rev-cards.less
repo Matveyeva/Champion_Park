@@ -3,6 +3,14 @@
 	position: relative;
 }
 
+.review-cards-slider {
+	display: flex;
+	justify-content: space-between;
+
+	@media(max-width:767px) {
+		display: block;
+	}
+}
 
 
 .rev-card {
@@ -12,9 +20,15 @@
 	padding: 20px 30px 34px 20px;
 	cursor: pointer;
 	min-height: 372px;
+	width: 410px;
 
 	@media(max-width:1349px) {
 		min-height: 424px;
+	}
+
+	@media(max-width:767px) {
+		width: 300px;
+		min-height: 410px;
 	}
 
 	.rev-card_quote {

@@ -2,25 +2,115 @@ section.timetable
     .container
         .timetable-top
             h2.title-2 Расписание
-            nav.age-nav
-                button.active(data-age="1")
-                    span.age-value 6 &mdash; 7
-                    span.age-text лет
-                button(data-age="2")
-                    span.age-value 5 &mdash; 6
-                    span.age-text лет
-                button(data-age="3")
-                    span.age-value 4 &mdash; 5
-                    span.age-text лет
-                button(data-age="4")
-                    span.age-value 3 &mdash; 4
-                    span.age-text лет
-                button(data-age="5")
-                    span.age-value 2 &mdash; 3
-                    span.age-text лет
-                button(data-age="6")
-                    span.age-value 1 &mdash; 2
-                    span.age-text лет
+            .fix-wrapper--nav
+                nav.age-nav
+                    button.active(data-age="1")
+                        span.age-value 6 &mdash; 7
+                        span.age-text лет
+                    button(data-age="2")
+                        span.age-value 5 &mdash; 6
+                        span.age-text лет
+                    button(data-age="3")
+                        span.age-value 4 &mdash; 5
+                        span.age-text лет
+                    button(data-age="4")
+                        span.age-value 3 &mdash; 4
+                        span.age-text лет
+                    button(data-age="5")
+                        span.age-value 2 &mdash; 3
+                        span.age-text лет
+                    button(data-age="6")
+                        span.age-value 1 &mdash; 2
+                        span.age-text лет
+        .timetable-wrapper-mobile
+            .tt-day
+                .table-cell
+                    span ПН
+                .table-cell
+                    span ВТ
+                .table-cell
+                    span СР
+                .table-cell
+                    span ЧТ
+                .table-cell
+                    span ПТ
+
+            .tt-body
+                .tt-grid
+                    // ====== желтый блок с 8 до 10  на мобилках ======
+                    .tt-grid-block.tt-block--yellow
+                        .tt-grid-clock
+                            span 8:00&mdash;10:00
+                        // ====== мобильное расписание на понедельник
+                        .tt-grid-row
+                            .table-cell
+                                span Физическая культура
+                            .table-cell.clicked-item
+                                span Музыка
+                                span.cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/piano.png" data-srcset="img/emoji/piano@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell
+                                span Английский язык
+                            .table-cell.disable
+                        // ====== мобильное расписание на вторник
+                        .tt-grid-row
+                            .table-cell
+                                span Хореография
+                                span.cell-img.cell-img--ballet
+                                    picture
+                                        img.lazy(data-src="img/emoji/ballet2.png" data-srcset="img/emoji/ballet2@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell
+                                 span Подготовка к школе
+                            .table-cell
+                                 span Развивающее занятие с&nbsp;логопедом
+                            .table-cell.disable
+                        // ====== мобильное расписание на среду
+                        .tt-grid-row
+                            .table-cell
+                                span Физическая культура
+                            .table-cell
+                                 span Английский язык
+                            .table-cell.clicked-item
+                                span Математический<br> интенсив
+                                span.cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/calc.png" data-srcset="img/emoji/calc@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell.disable
+                        // ====== мобильное расписание на четверг
+                        .tt-grid-row
+                            .table-cell
+                                span Дзюдо
+                            .table-cell
+                                span Подготовка к школе
+                            .table-cell.clicked-item
+                                span Ораторское<br>мастерство
+                                span.cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/mic.png" data-srcset="img/emoji/mic@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell.disable
+                        // ====== мобильное расписание на пятницу
+                        .tt-grid-row
+                            .table-cell.clicked-item
+                                span Хореография
+                                span.info-icon
+                                    +info
+                            .table-cell.clicked-item
+                                span Музыка
+                            .table-cell
+                                span Английский язык
+                            .table-cell
+                                span Оздоровительная гимнастика
+
+        //- таблица на экранах от 1365
         .timetable-wrapper
             .timetable-header
                 .table-row-group.table-row-group--day
@@ -34,7 +124,9 @@ section.timetable
                         span ЧТ
                     .table-cell
                         span ПТ
+            //============= подложка, при скролле появляется при фиксации дней недели
             .timetable-header-2
+            
             //============ КОНТЕНТ РАСПИСАНИЯ 7-6 ЛЕТ ============
             .timetable-body.active(data-age="1")
                 //============ ЖЕЛТЫЕ ЯЧЕЙКИ РАСПИСАНИЯ ============
@@ -95,7 +187,7 @@ section.timetable
                                 .table-cell
                                     span Английский язык
                                 .table-cell
-                                    span Развивающее занятие с логопедом
+                                    span Развивающее занятие с&nbsp;логопедом
                                 .table-cell.clicked-item(data-index="maths")
                                     span Математический<br> интенсив
                                     span.cell-img
