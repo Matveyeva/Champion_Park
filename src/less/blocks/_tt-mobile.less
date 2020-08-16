@@ -47,13 +47,10 @@
 	width: 100%;
 	overflow-x: auto;
 	overflow-y: hidden;
-	white-space: nowrap;
+	// white-space: nowrap;
 	margin-left: 60px;
 	margin-top: 50px;
 
-	span {
-		white-space: pre-wrap;
-	}
 
 	// -webkit-overflow-scrolling: touch;
 	&::-webkit-scrollbar {
@@ -96,4 +93,43 @@
 
 .tt-block--yellow .tt-grid-cell {
 	background-color: #FFF3D1;
+}
+
+.tt-grid-block.tt-block-sleep .table-cell {
+	display: block;
+
+	padding: 28px 24px 20px;
+	background-color: #FAF3EF;
+	font-size: 18px;
+	height: 480px;
+
+	.table-cell-title {
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 5px;
+	}
+
+	.table-cell-text {
+		font-family: @fc;
+		line-height: 22px;
+		font-weight: 400;
+	}
+
+	.table-cell-theme {
+		font-size: 14px;
+		color: @blackOp;
+		margin-top: 14px;
+
+	}
+
+	.cell-img {
+		bottom: 30px;
+		right: 30px;
+	}
+}
+
+.tt-grid-block.tt-block--green {
+	.table-cell {
+		background-color: #E4EDE7;
+	}
 }

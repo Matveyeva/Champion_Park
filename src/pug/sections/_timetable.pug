@@ -109,7 +109,101 @@ section.timetable
                                 span Английский язык
                             .table-cell
                                 span Оздоровительная гимнастика
+                    // ====== розовый блок Тихий час  на мобилках ======
+                    .tt-grid-block.tt-block-sleep
+                        .tt-grid-clock
+                            span 13:00&mdash;15:00
+                        .tt-grid-row
+                            .table-cell
+                                .cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/sleep.png" data-srcset="img/emoji/sleep@2x.png 2x" alt="img")
+                                .table-cell-title
+                                    p Тихий час
+                                .table-cell-text
+                                    p Перед сном читаем сказки или включаем классическую музыку. Один из воспитателей находится в спальне вместе с детьми. Если ребенок не хочет спать, второй воспитатель поиграет с ним в игровой
+                                .table-cell-theme
+                                    p О важности сна
+                    
+                    // зеленый блок расписания 
+                    .tt-grid-block.tt-block--green
+                        .tt-grid-clock
+                            span 13:00&mdash;15:00
+                        // ====== мобильное расписание на понедельник
+                        .tt-grid-row
+                            .table-cell
+                                span Художественное творчество
+                            .table-cell
+                                span Компьютерная<br>грамотность 
+                                span.cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/comp.png" data-srcset="img/emoji/comp@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell
+                                span Подготовка к школе
+                                
+                        // ====== мобильное расписание на вторник
+                        .tt-grid-row
+                            .table-cell
+                                span Дзюдо
+                            .table-cell
+                                span Физическая культура
+                            .table-cell
+                                span Разговорный<br>английский
+                                span.info-icon
+                                        +info
+                            
+                        // ====== мобильное расписание на среду
+                        .tt-grid-row
+                            .table-cell
+                                span Подготовка к школе
+                            .table-cell.clicked-item
+                                span Финансовая<br>грамотность
+                                .cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/wallet.png" data-srcset="img/emoji/wallet@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell
+                                span Литературное чтение
+                                span.info-icon
+                                    +info
+                            
+                        // ====== мобильное расписание на четверг
+                        .tt-grid-row
+                            .table-cell
+                                span Литературное<br>чтение
+                                .cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/book.png" data-srcset="img/emoji/book@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell.clicked-item
+                                span Разговорный<br>английский
+                                .cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/flag.png" data-srcset="img/emoji/flag@2x.png 2x" alt="img")
+                                span.info-icon
+                                    +info
+                            .table-cell
+                                span Развивающее занятие с психологом
+                            
+                        // ====== мобильное расписание на пятницу
+                        .tt-grid-row
+                            .table-cell.clicked-item
+                                span Шахматы
+                                .cell-img
+                                    picture
+                                        img.lazy(data-src="img/emoji/chess.png" data-srcset="img/emoji/chess@2x.png 2x" alt="img")
+                                span.info-icon
+                                     +info
+                            .table-cell
+                                span Подготовка к школе
+                            .table-cell
+                                span Художественное творчество
 
+                            
         //- таблица на экранах от 1365
         .timetable-wrapper
             .timetable-header
