@@ -112,6 +112,19 @@
   background: @bcg-block;
   border-radius: 20px;
 
+  @media(max-width: 767px) {
+    padding: 70px 18px 40px 22px;
+    flex-direction: column-reverse;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 0px;
+
+    .quote-block__img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
   .quote-author {
     margin-top: 30px;
 

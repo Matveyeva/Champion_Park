@@ -36,6 +36,7 @@
 	width: 91.5%;
 	max-width: 1180px;
 	margin-bottom: 56px;
+	align-items: center;
 
 
 	@media(max-width:1199px) {
@@ -51,6 +52,7 @@
 		right: 0;
 		left: 20px;
 		width: 100%;
+		width: calc(~'100% - 20px');
 		overflow-x: auto;
 		overflow-y: hidden;
 		white-space: nowrap;
@@ -575,9 +577,35 @@
 	.decor-img {
 		width: 310px;
 
+		@media(max-width:767px) {
+			width: 130px;
+		}
+
 		path {
 			fill: #FFF3D1;
 			;
+		}
+	}
+
+	@media(max-width:767px) {
+		margin-top: 100px;
+
+		.quote__author-info {
+			margin-top: 20px;
+		}
+
+		.quote__author-info p span {
+			display: inline;
+
+			&+span {
+				padding-left: 4px;
+			}
+		}
+
+		.quote__author-info p:last-child {
+			max-width: 100%;
+			position: relative;
+			z-index: 5;
 		}
 	}
 }

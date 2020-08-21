@@ -42,11 +42,14 @@ $(document).ready(function () {
 	}
 
 	// закрыть вторую карту с табами
-	hideAllObjects.addEventListener('click', function () {
-		mapAllObjects.classList.remove('active');
-		bodyEl.classList.remove('noscroll');
+	if (hideAllObjects) {
+		hideAllObjects.addEventListener('click', function () {
+			mapAllObjects.classList.remove('active');
+			bodyEl.classList.remove('noscroll');
 
-	})
+		});
+	}
+
 	// КЛИК НА КНОПКУ ЗАПИСАТЬСЯ В ШАПКЕ
 	openFormBtn.addEventListener('click', function () {
 		modalForm.classList.add('active')
